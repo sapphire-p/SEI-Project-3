@@ -1,12 +1,7 @@
 # SEI-Project-3
 
-<<<<<<< HEAD
-team members:
-SAPPHIRE
-=======
 Team memebers
-Oliver
-Isaac
-Kumar
-Sapphire
->>>>>>> development
+Oliver S
+Isaac F
+Kumar M
+Sapphire P

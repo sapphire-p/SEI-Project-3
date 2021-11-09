@@ -1,7 +1,8 @@
 # SEI-Project-3
 
-Team memebers
-Oliver
+Team members
+
+Oliver s
 Isaac
 Kumar
 Sapphire

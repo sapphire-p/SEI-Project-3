@@ -1,0 +1,17 @@
+{
+  "name": "SEI-Project-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Olys6/SEI-Project-3.git",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14"
+  },
+  "type": "module",
+  "scripts": {
+    "serve": "npx nodemon index.js",
+    "seed": "node db/seeds.js"
+  }
+}

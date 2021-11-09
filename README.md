@@ -1,17 +1,17 @@
 # SEI-Project-3
 
-<<<<<<< HEAD
-team members:
-SAPPHIRE
-=======
-Team memebers
-Oliver
+Team members
+
+Oliver s
 Isaac
 Kumar
 Sapphire
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 Cool Feature
 =======
 >>>>>>> development
+>>>>>>> development
+=======
 >>>>>>> development

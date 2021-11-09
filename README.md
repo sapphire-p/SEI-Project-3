@@ -1,12 +1,9 @@
 # SEI-Project-3
 
-<<<<<<< HEAD
-team members:
-SAPPHIRE
-=======
-Team memebers
+Some New Test Branch Updates!
+
+Team members
 Oliver
 Isaac
 Kumar
 Sapphire
->>>>>>> development

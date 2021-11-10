@@ -1,7 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import { port, dbURI } from './config/environment.js'
-// import Museum from './models/museum.js'
 import router from './config/router.js'
 
 const app = express()

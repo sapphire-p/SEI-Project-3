@@ -19,6 +19,7 @@ const seedDatabase = async () => {
 
   } catch (err) {
     console.log('🆘 Something has gone wrong seeding the db')
+    console.log(err)
   }
 }
 

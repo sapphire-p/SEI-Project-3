@@ -6,7 +6,7 @@ const museumSchema = new mongoose.Schema({
   address: { type: String, required: true, unique: true },
   region: { type: String, required: true },
   date_established: { type: Number, required: true },
-  description: { type: String, required: true, maxlength: 300 },
+  description: { type: String, required: true, maxlength: 5000 },
   collection_types: [{ type: String, required: true }]
 })
 

@@ -21,7 +21,8 @@ const startServer = async () => {
     // body parser
     app.use(express.json())
 
-    app.use(router)
+    // * middleware for router to handle incoming requests
+    app.use('/api', router)
 
     app.listen(port, () => console.log(`🚀 Express is up and running  on port ${port}`))
   } catch (err) {

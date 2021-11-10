@@ -6,7 +6,6 @@ const router = express.Router()
 router.route('/museums')
   .get(getAllMuseums)
 
-
 router.route('/museums/:id')
   .get(getSingleMuseum)
 

@@ -2,19 +2,16 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import uniqueValidator from 'mongoose-unique-validator'
 
+// const favouriteSchema = new mongoose.Schema({
+//   favouriteMuseums: [{ type: mongoose.Schema.ObjectId, ref: 'Museum' }] 
+// })
+
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 30 },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true }
+  // favourites: [favouriteSchema]
 })
-
-// * reverse relationship to show reviews user has made
-
-// userSchema.virtual('createdReviews', {
-//   ref: 'Museum',
-//   localField: '_id',
-//   foreignField: 'owner'
-// })
 
 // * remove password and email when returning user as json
 

@@ -10,11 +10,11 @@ const userSchema = new mongoose.Schema({
 
 // * reverse relationship to show reviews user has made
 
-userSchema.virtual('createdReviews', {
-  ref: 'Museum.reviews',
-  localField: '_id',
-  foreignField: 'owner'
-})
+// userSchema.virtual('createdReviews', {
+//   ref: 'Museum',
+//   localField: '_id',
+//   foreignField: 'owner'
+// })
 
 // * remove password and email when returning user as json
 

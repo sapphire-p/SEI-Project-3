@@ -298,7 +298,7 @@ export default [
       'Geology (mineralogy, rocks, minerals)',
       'Zoology (animals)'
     ],
-    website: 'haslemeremuseum.co.uk'
+    website: 'https://haslemeremuseum.co.uk'
   },
   {
     name: 'Kendal Museum',
@@ -311,7 +311,7 @@ export default [
       'Geology (mineralogy, rocks, minerals)',
       'Zoology (animals)'
     ],
-    website: 'kendalmuseum.org.uk'
+    website: 'https://kendalmuseum.org.uk'
   },
   {
     name: 'Keswick Museum',
@@ -325,7 +325,7 @@ export default [
       'Zoology (animals)', 
       'Botany (plants)'
     ],
-    website: 'keswickmuseum.org.uk'
+    website: 'https://keswickmuseum.org.uk'
   },
   {
     name: 'Lapworth Museum of Geology',
@@ -338,7 +338,7 @@ export default [
       'Geology (mineralogy, rocks, minerals)',
       'Palaeontology (ancient organisms, fossils)' 
     ],
-    website: 'Birmingham.ac.uk/facilities/lapworth-museum/index.aspx'
+    website: 'https://Birmingham.ac.uk/facilities/lapworth-museum/index.aspx'
   },
   {
     name: 'Leeds City Museum',
@@ -350,7 +350,7 @@ export default [
     collection_types: [
       'Entomology (insects)'
     ],
-    website: 'museumsandgalleries.leeds.gov.uk/leeds-city-museum'
+    website: 'https://museumsandgalleries.leeds.gov.uk/leeds-city-museum'
   },
   {
     name: 'Manchester Museum',
@@ -364,6 +364,71 @@ export default [
       'Geology (mineralogy, rocks, minerals)',
       'Palaeontology (ancient organisms, fossils)'
     ],
-    website: 'museum.manchester.ac.uk'
+    website: 'https://museum.manchester.ac.uk'
+  },
+  {
+    name: 'Dinosaur Isle',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Dinosaur_Isle.JPG/200px-Dinosaur_Isle.JPG',
+    address: 'Culver Parade, Sandown, GB PO36 8QA',
+    region: 'South East',
+    date_established: 2001,
+    description: 'Dinosaur isle museum was established in 2001 and was designed by Rainey Pretrie Johns. This museum type is Paleontological and it\'s curator is Martin Munt.',
+    collection_types: [
+      'Palaeontology (ancient organisms, fossils)'
+    ],
+    website: 'http://www.dinosaurisle.com/newhomepage.aspx'
+  },
+  {
+    name: 'Dinosaurland Fossil Museum',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F5%2F51%2FDinosaurland_Fossil_Museum%252C_Lyme_Regis_(2795).jpg&f=1&nofb=1',
+    address: 'Coombe Street, Lyme Regis, Dorset, DT7 3PY',
+    region: 'South East',
+    date_established: 1755,
+    description: 'Dinosaurland Fossil Museum is a privately owned fossil museum that hold a wide variety of fossils from the Jurassic coast',
+    collection_types: [
+      'Palaeontology (ancient organisms, fossils)'
+    ],
+    website: 'https://www.dinosaurland.co.uk'
+  },
+  {
+    name: 'Dorman Museum',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Dorman_museum_angled_view.JPG/280px-Dorman_museum_angled_view.JPG',
+    address: 'Linthorpe Road, Middlesbrough, GB TS5 6LA',
+    region: 'North East',
+    date_established: 1904,
+    description: 'The Dorman Museum is a local and social history museum that was founded by Arthur Dorman, this museum holds natural sciences and galleries.',
+    collection_types: [
+      'Botany (plants)',
+      'Zoology (animals)',
+      'Mineralogy (geology, rocks, minerals)',
+      'Palaeontology (ancient organisms, fossils)'
+    ],
+    website: 'http://www.dormanmuseum.co.uk/'
+  },
+  {
+    name: 'Grant Museum of Zoology and Comparative Anatomy',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Grant_Museum_of_Zoology_%289201048849%29.jpg/250px-Grant_Museum_of_Zoology_%289201048849%29.jpg',
+    address: '21 University Street, London, GB WC1E 6DE',
+    region: 'London',
+    date_established: 1828,
+    description: 'This museum is a natural history museum holding collections of zoological specimens and is the last remaining natural history museum in Lindon',
+    collection_types: [
+      'Palaeontology (ancient organisms, fossils)',
+      'Zoology (animals)'
+    ],
+    website: 'https://www.ucl.ac.uk/culture/grant-museum-zoology'
+  },
+  {
+    name: 'Great North Museum: Hancock',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/The_Hancock_Museum_Newcastle_September_2009.jpg/220px-The_Hancock_Museum_Newcastle_September_2009.jpg',
+    address: 'Great North Museum: Hancock Barras Bridge Newcastle upon Tyne NE2 4PT',
+    region: 'London',
+    date_established: 1884,
+    description: 'The Great North Museum: Hancock was establushed in 1884 and had major refurbishments in 2009. This museum contains a full sized replica of a T-Rex skeleton and a full suzed African Elephant as well as many other fossils.',
+    collection_types: [
+      'Palaeontology (ancient organisms, fossils)',
+      'Zoology (animals)'
+    ],
+    website: 'https://greatnorthmuseum.org.uk'
   }
 ]

@@ -8,6 +8,25 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 })
 
+// * reverse relationship to show reviews user has made
+
+userSchema.virtual('createdReviews', {
+  ref: 'Museum.reviews',
+  localField: '_id',
+  foreignField: 'owner'
+})
+
+// * remove password and email when returning user as json
+
+userSchema.set('toJSON', {
+  virtuals: true,
+  transform(_doc, json) {
+    delete json.password
+    delete json.email
+    return json
+  }
+})
+
 // * creating virtual field for password confirmation
 
 userSchema
@@ -36,12 +55,12 @@ userSchema
     next()
   })
 
-  // * defining a custom method that will be avvailable to sue for all instances of the user
+// * defining a custom method that will be avvailable to sue for all instances of the user
 
 userSchema.methods.validatePassword = function(password) {
   return bcrypt.compareSync(password, this.password)
 }
 
-  userSchema.plugin(uniqueValidator)
+userSchema.plugin(uniqueValidator)
 
 export default mongoose.model('User', userSchema)

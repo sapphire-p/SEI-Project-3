@@ -15,6 +15,10 @@ export const secureRoute = async (req, res, next) => {
     console.log('USER TO VERIFY ->', userToVerify)
     // otherwise unauthorized
     if (!userToVerify) throw new Error()
+
+    // set new key to req object 'currentUser' , sets value as user object from request above
+    req.currentUser = userToVerify
+
     next()
   } catch (err) {
     console.log(err)

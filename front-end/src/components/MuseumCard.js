@@ -15,8 +15,8 @@ const MuseumCard = ({ _id, name, image, region }) => {
               <img src={image} alt={`Picture of ${name}`} />
             </figure>
           </div>
-          <div className='card-content'>
-            <h4>{region}</h4>
+          <div className='card-content p-2'>
+            <h4 className='is-size-7'>{region}</h4>
           </div>
         </div>
       </Link>

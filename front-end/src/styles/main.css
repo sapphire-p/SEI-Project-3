@@ -1,24 +1,4 @@
-#showAllTitle {
-  padding-bottom: 10px;
-}
 
-#showAllSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#museumTitle {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-#showAllHead {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 30px;
-}
 
 .link {
   color: #FFF;
@@ -33,3 +13,13 @@
 .a:hover {
   color: #00F
 }
+
+.showAllHero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../AssetsTest/dinoskeleton2.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+

@@ -16,21 +16,25 @@ const MuseumsIndex = () => {
 
   // console.log('museums ->', museums.sort())
   return (
-    <section id='showAllSection' className='section'>
-      <div id='showAllHead'>
-        <h1 id='showAllTitle'>Museums</h1>
-        <h2>Check out these fascinating natural history collections across England</h2>
-      </div>
-      <div className='container'>
-        <div className='columns is-multiline'>
-          {museums.map(museum => {
-            return (
-              <MuseumCard key={museum._id} {...museum} />
-            )
-          })}
+    <>
+      <section className='hero is-medium'>
+        <div className='hero-body showAllHero'>
+          <p className='title has-text-white'>Museums</p>
+          <p className='subtitle has-text-white'>Check out these fascinating natural history collections across England</p>
         </div>
-      </div>
-    </section>
+      </section>
+      <section className='section'>
+        <div className='container'>
+          <div className='columns is-multiline'>
+            {museums.map(museum => {
+              return (
+                <MuseumCard key={museum._id} {...museum} />
+              )
+            })}
+          </div>
+        </div>
+      </section>
+    </>
   )
 
 }

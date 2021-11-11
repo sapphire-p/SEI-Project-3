@@ -28,6 +28,7 @@ const Hero = () => {
       try {
         const { data } = await axios.get('/api/museums')
         console.log(data)
+        // setFeaturedMuseums(data[2])
         setFeaturedMuseums(data[Math.floor(Math.random() * 31)])
         // console.log('ONE OF THE MUSEUMS ->', featuredMuseums)
       } catch (err) {
@@ -37,21 +38,22 @@ const Hero = () => {
     getData()
   }, [])
 
-  // const randomMuseum = featuredMuseums[Math.floor(Math.random() * 31)]
-  // console.log('RANDOM MUSEUM ->', randomMuseum)
-  // console.log('FEATURED MUSEUM ->', featuredMuseums[2])
+
 
   return (
-    <section className="hero is-warning is-halfheight">
+    <section className="hero is-black is-fullheight">
       <div className="hero-body">
         <div className="columns container is-full">
-          <div className="column is-half custom-flex heroTitleSubtitleHome">
+          <div className="column is-half custom-flex ">
             <h1 className="title hero-title mb-6 has-text-centered is-size-2">{featuredMuseums.name}</h1>
             <p className="subtitle hero-subtitle">{featuredMuseums.description}</p>
-            <p className="subtitle hero-subtitle">Located in {featuredMuseums.region}</p>
+            <p className="subtitle hero-subtitle">Location: <strong>{featuredMuseums.region}</strong></p>
+            <p className="subtitle hero-subtitle">Date established: <strong>{featuredMuseums.date_established}</strong></p>
+            <p className="subtitle hero-subtitle">Address: <strong>{featuredMuseums.address}</strong></p>
           </div>
-          <div className="column is-half show-size">
+          <div className="column is-half show-size ">
             <img className="heroImageHome" src={featuredMuseums.image}/>
+            <a href={featuredMuseums.website} target="_blank" rel="noreferrer" className="button is-white is-fullwidth visitWebiteBtn is-large"><i className="fas fa-globe"> </i> Visit Website </a>
           </div>
         </div>
       </div>

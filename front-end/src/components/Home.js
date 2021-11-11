@@ -1,5 +1,5 @@
 import React from 'react'
-// import Hero from './Hero'
+import Hero from './Hero'
 // import { useLocation } from 'react-router-dom'
 
 const Home = () => {
@@ -12,8 +12,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <Hero /> */}
-      <p>wassup</p>
+      <Hero />
     </>
   )
 }

@@ -1,31 +1,32 @@
-import React, { useState } from 'react'
-import axios from 'axios'
-import { useHistory } from 'react-router-dom'
+// import React, { useState } from 'react'
+import React from 'react'
+// import axios from 'axios'
+// import { useHistory } from 'react-router-dom'
 
 
 const Register = () => {
 
-  const history = useHistory()
+  // const history = useHistory()
 
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-    passwordConfirmation: ''
-  })
+  // const [formData, setFormData] = useState({
+  //   username: '',
+  //   email: '',
+  //   password: '',
+  //   passwordConfirmation: ''
+  // })
 
-  const [errors, setErrors] = useState({
-    username: '',
-    email: '',
-    password: '',
-    passwordConfirmation: ''
-  })
+  // const [errors, setErrors] = useState({
+  //   username: '',
+  //   email: '',
+  //   password: '',
+  //   passwordConfirmation: ''
+  // })
 
 
 
   return (
     <section className='section'>
-      <div className='container'>
+      {/* <div className='container'>
         <div className='columns'>
           <form className='column is-half is-offset-one-quarter box'>
             <div className='control'>
@@ -42,7 +43,7 @@ const Register = () => {
             </div>
           </form>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 

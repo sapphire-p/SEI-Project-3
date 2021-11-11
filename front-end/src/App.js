@@ -6,6 +6,7 @@ import MuseumShow from './components/MuseumShow'
 import Login from './components/Login'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -19,8 +20,8 @@ const App = () => {
         <Route exact path='/museums/:id' component={MuseumShow}/>
         <Route exact path='/login' component={Login} />
         <Route exact path='/' component={Home} />
-
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }

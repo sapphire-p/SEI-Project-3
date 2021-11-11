@@ -26,7 +26,5 @@ router.route('/museums/:id/reviews/:reviewsId')
 router.route('/profile')
   .get(secureRoute, getUserProfile)
 
-// router.route('/museums/:id/favourites')
-//   .post(secureRoute, addFavourite)
 
 export default router

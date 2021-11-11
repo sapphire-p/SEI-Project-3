@@ -1,0 +1,21 @@
+#showAllTitle {
+  padding-bottom: 10px;
+}
+
+#showAllSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#museumTitle {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#showAllHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}

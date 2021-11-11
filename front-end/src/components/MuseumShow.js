@@ -28,8 +28,8 @@ const MuseumShow = () => {
     <section className='section'>
       <div className='container'>
         {museum ?
-          <div>
-            <h2>{museum.name}</h2>
+          <div id='singleMuseumInfo'>
+            <h2 id='museumTitle'>{museum.name}</h2>
             <div className='columns'>
               <div className='column'>
                 <figure className='image'>
@@ -62,18 +62,16 @@ const MuseumShow = () => {
                   <ul>
                     {museum.reviews.map(review => {
                       console.log(review)
-                      return <div key={review._id}>
-                        <li>
-                          <div className='columns'>
-                            <div className='column'>
-                              <p>{review.comment}</p>
-                            </div>
-                            <div className='column'>
-                              <p>{review.rating}/5</p>
-                            </div>
+                      return <li key={review._id}>
+                        <div className='columns'>
+                          <div className='column'>
+                            <p>{review.comment}</p>
                           </div>
-                        </li>
-                      </div>
+                          <div className='column'>
+                            <p>{review.rating}/5</p>
+                          </div>
+                        </div>
+                      </li>
                     })}
                   </ul>
                 </div>

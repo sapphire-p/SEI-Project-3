@@ -30,9 +30,9 @@ const Register = () => {
     event.preventDefault()
     try {
       await axios.post('/api/register', formData) // Uses '/api' prefix from our proxy (see setupProxy.js)
-      history.push('/') // Uses '/api' prefix from our proxy (see setupProxy.js) to navigate to Homepage
+      history.push('/login') // Uses '/api' prefix from our proxy (see setupProxy.js) to navigate to Homepage
     } catch (err) {
-      console.log(err)
+      // console.log(err)
       setErrors(err.response.data.errors)
     }
   }
@@ -43,8 +43,10 @@ const Register = () => {
       <div className='container'>
         <div className='columns'>
           <form className='column is-half is-offset-one-quarter box' onSubmit={handleSubmit}>
+            <h1 className='title'>Create your account</h1>
+            <p>As a registered MuseumMapper user you&apos;ll be able to review museums and save your favourites to view later!</p>
             <div className='field'>
-              <label className='label'>Username</label>
+              <label className='label mt-4'>Username:</label>
               <div className='control'>
                 <input
                   className={`input ${errors.username ? 'is-danger' : ''}`}
@@ -54,10 +56,10 @@ const Register = () => {
                   onChange={handleChange}
                 />
               </div>
-              {errors.username && <p className='help is-danger'>username must be unique</p>}
+              {errors.username && <p className='help is-danger'>Username must be unique</p>}
             </div>
             <div className='field'>
-              <label className='label'>Email</label>
+              <label className='label'>Email:</label>
               <div className='control'>
                 <input
                   className={`input ${errors.email ? 'is-danger' : ''}`}
@@ -67,10 +69,10 @@ const Register = () => {
                   onChange={handleChange}
                 />
               </div>
-              {errors.email && <p className='help is-danger'>email must be unique</p>}
+              {errors.email && <p className='help is-danger'>Email must be unique</p>}
             </div>
             <div className='field'>
-              <label className='label'>Password</label>
+              <label className='label'>Password:</label>
               <div className='control'>
                 <input
                   className={`input ${errors.password ? 'is-danger' : ''}`}
@@ -80,10 +82,10 @@ const Register = () => {
                   onChange={handleChange}
                 />
               </div>
-              {errors.password && <p className='help is-danger'>password does not match</p>}
+              {errors.password && <p className='help is-danger'>Password does not match</p>}
             </div>
             <div className='field'>
-              <label className='label'>Password Confirmation</label>
+              <label className='label'>Password Confirmation:</label>
               <div className='control'>
                 <input
                   className={`input ${errors.passwordConfirmation ? 'is-danger' : ''}`}
@@ -93,10 +95,10 @@ const Register = () => {
                   onChange={handleChange}
                 />
               </div>
-              {errors.passwordConfirmation && <p className='help is-danger'>password does not match</p>}
+              {errors.passwordConfirmation && <p className='help is-danger'>Password does not match</p>}
             </div>
             <div className='field'>
-              <button type='submit' className='button is-fullwidth is-warning'>Register</button>
+              <button type='submit' className='button is-fullwidth is-warning mt-5'>Register</button>
             </div>
           </form>
         </div>

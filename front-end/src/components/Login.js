@@ -2,41 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 
-
-const Register = () => {
-
-  const history = useHistory()
-
-  const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-    passwordConfirmation: ''
-  })
-
-  const [errors, setErrors] = useState({
-    username: '',
-    email: '',
-    password: '',
-    passwordConfirmation: ''
-  })
-
-  const handleChange = (event) => {
-    const newFormData = { ...formData, [event.target.name]: event.target.value }
-    setFormData(newFormData)
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    try {
-      await axios.post('/api/register', formData) // Uses '/api' prefix from our proxy (see setupProxy.js)
-      history.push('/') // Uses '/api' prefix from our proxy (see setupProxy.js) to navigate to Homepage
-    } catch (err) {
-      console.log(err)
-      setErrors(err.response.data.errors)
-    }
-  }
-
+const Login = () => {
 
   return (
     <section className='section'>
@@ -55,19 +21,6 @@ const Register = () => {
                 />
               </div>
               {errors.username && <p className='help is-danger'>username must be unique</p>}
-            </div>
-            <div className='field'>
-              <label className='label'>Email</label>
-              <div className='control'>
-                <input
-                  className={`input ${errors.email ? 'is-danger' : ''}`}
-                  placeholder='Email'
-                  name='email'
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </div>
-              {errors.email && <p className='help is-danger'>email must be unique</p>}
             </div>
             <div className='field'>
               <label className='label'>Password</label>
@@ -106,4 +59,4 @@ const Register = () => {
 
 }
 
-export default Register
+export default Login

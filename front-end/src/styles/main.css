@@ -19,3 +19,17 @@
   align-items: center;
   padding-bottom: 30px;
 }
+
+.link {
+  color: #FFF;
+}
+.link:hover {
+  color: #00F
+}
+
+.a {
+  color: #FFF;
+}
+.a:hover {
+  color: #00F
+}

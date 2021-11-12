@@ -1,6 +1,49 @@
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+
 * {
   font-family: 'Quicksand', sans-serif;
 }
+
+.site-wrapper{
+  min-height: calc(100vh - 206px);
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-wrapper{
+    min-height: calc(100vh - 462px);
+  }
+  #hero-container{
+    margin-top: 220px;
+  }
+  #login-container{
+    margin-top: 220px;
+  }
+  #register-container{
+    margin-top: 220px;
+  }
+  #featured-container{
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .site-wrapper{
+    min-height: calc(100vh - 462px);
+  }
+  #hero-container{
+    margin-top: 220px;
+  }
+  #login-container{
+    margin-top: 220px;
+  }
+  #register-container{
+    margin-top: 220px;
+  }
+  #featured-container{
+    margin-top: 150px;
+  }
+}
+
 
 .link {
   color: #FFF;
@@ -25,8 +68,6 @@
 .col img {
   margin-top: 35px;
 }
-  /* color: #00F
-} */
 
 .showAllHero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../AssetsTest/dinoskeleton2.jpeg');
@@ -50,4 +91,60 @@
 
 .hero {
   margin-top: -70px;
+}
+
+nav {
+  border-bottom: 0.1px solid whitesmoke;
+}
+
+/* Filter Panel */
+
+#filter-panel {
+  font-family: 'Quicksand', sans-serif;
+}
+.featuredMuseumTitle {
+  margin-top: 20px;
+}
+
+.featuredMuseumSection {
+  position: fixed;
+}
+
+.arrowBelowTitle {
+  margin-top: -15px;
+}
+
+.mainHero {
+  background-image: url("https://i.imgur.com/qCmUKsV.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.HeroTitle {
+  margin-top: -50px;
+}
+
+.heroSubtitle {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 1020px) {
+
+  .HeroTitle {
+    margin-top: 0px;
+  }
+
+}
+
+@media only screen and (max-width: 764px) {
+
+  .HeroTitle {
+    margin-top: 100px;
+  }
+
+  .heroSubtitle {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
 }

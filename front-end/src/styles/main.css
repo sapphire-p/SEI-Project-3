@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/css?family=Oswald');
+
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -95,3 +97,54 @@ nav {
   border-bottom: 0.1px solid whitesmoke;
 }
 
+/* Filter Panel */
+
+#filter-panel {
+  font-family: 'Quicksand', sans-serif;
+}
+.featuredMuseumTitle {
+  margin-top: 20px;
+}
+
+.featuredMuseumSection {
+  position: fixed;
+}
+
+.arrowBelowTitle {
+  margin-top: -15px;
+}
+
+.mainHero {
+  background-image: url("https://i.imgur.com/qCmUKsV.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.HeroTitle {
+  margin-top: -50px;
+}
+
+.heroSubtitle {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 1020px) {
+
+  .HeroTitle {
+    margin-top: 0px;
+  }
+
+}
+
+@media only screen and (max-width: 764px) {
+
+  .HeroTitle {
+    margin-top: 100px;
+  }
+
+  .heroSubtitle {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+}

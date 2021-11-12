@@ -1,14 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../AssetsTest/logo3.png'
-import { getPayload } from './helpers/auth'
+
 
 
 const NavBar = () => {
+  // const history = useHistory()
+  // const location = useLocation() 
 
+  // useEffect(() =>{
+    
+  // }, [location.pathname])
 
+  // const userIsAuthenticated = () => {
+  //   const payload = getPayload()
+  //   if (!payload) return false
+  //   const now = Math.round(Date.now() / 1000)
+  //   return now < payload.exp
+  // }
 
-
+  // const handleLogout = () => {
+  //   window.localStorage.removeItem('token')
+  //   history.push('/')
+  // }
 
   return (
     <nav className="navbar is-black is-fixed-top">

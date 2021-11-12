@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import AddReviewForm from './AddReviewForm'
-// import { Carousel } from 'react-carousel-minimal'
+import { Carousel } from 'react-carousel-minimal'
 
 const MuseumShow = () => {
 
@@ -12,7 +12,7 @@ const MuseumShow = () => {
 
   const [userId, setUserId] = useState()
 
-  // const [galleryData, setGalleryData] = useState([])
+  const [galleryData, setGalleryData] = useState([])
 
   useEffect(() => {
     const getData = async () => {
@@ -65,32 +65,29 @@ const MuseumShow = () => {
   }
 
   // ------------------------
+  // ------------------------ CAROUSEL
 
 
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data } = await axios.get(`/api/museums/${id}`)
+        const multiImages = data.multiple_images
+        const imagesJoined = multiImages.map(image => {
+          return  { 
+            image
+          }
+        })
+        setGalleryData(imagesJoined)
+      } catch (err) {
+        setHasError(true)
+        console.log(hasError)
+      }
+    }
+    getData()
+  }, [id])
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const { data } = await axios.get(`/api/museums/${id}`)
-  //       // console.log('data ->', data)
-  //       setGalleryData([data.image])
-  //       // setGalleryData(data)
-  //     } catch (err) {
-  //       setHasError(true)
-  //       console.log(hasError)
-  //     }
-  //   }
-  //   getData()
-  // }, [id])
-
-  // const galleryData = [
-  //   {
-  //     image: 'https://i.imgur.com/IglrZwg.png'
-  //   }
-  // ]
-
-  // console.log('gallery data->', museum.image)
-  // console.log(galleryData)
+  console.log(galleryData)
   return (
     <>
       {museum ?
@@ -174,9 +171,10 @@ const MuseumShow = () => {
                 </div>
               </div>
               <div>
-                {/* <Carousel 
-                  
-                /> */}
+                <Carousel 
+                  data={galleryData}
+                  dots={true}
+                />
               </div>
             </div>
           </section>

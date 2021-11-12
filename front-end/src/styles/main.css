@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Quicksand', sans-serif;
+}
 
 .link {
   color: #FFF;
@@ -20,6 +22,20 @@
   background-size: cover;
 }
 
+.heroImageHome {
+  border: 5px solid white;
+}
 
+.heroTitleSubtitleHome {
+  border: 1px solid black;
+  background-color: white;
+}
 
+.visitWebiteBtn {
+  padding-top: 20px;
+  padding-bottom: 20x;
+}
 
+.hero {
+  margin-top: -70px;
+}

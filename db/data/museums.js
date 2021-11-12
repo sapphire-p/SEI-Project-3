@@ -2,7 +2,7 @@ export default [
 
   {
     name: 'Cambridge University Museum of Zoology',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Zoology_museum%2C_Cambridge.jpg/440px-Zoology_museum%2C_Cambridge.jpg',
+    image: 'https://i.imgur.com/IglrZwg.png',
     address: 'Downing Pl, Cambridge, CB2 3EJ',
     region: 'East of England',
     date_established: 1865,
@@ -17,7 +17,7 @@ export default [
   },
   {
     name: 'Chelmsford Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Oaklands_House_-_August_2012_-_panoramio.jpg/440px-Oaklands_House_-_August_2012_-_panoramio.jpg',
+    image: 'https://i.imgur.com/TMHCty9.png',
     address: 'Oaklands Park, Moulsham St, Chelmsford, CM2 9AQ',
     region: 'East of England',
     date_established: 1930,
@@ -30,7 +30,7 @@ export default [
   },
   {
     name: 'Cliffe Castle Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Cliffecastlemus_001.jpg/440px-Cliffecastlemus_001.jpg',
+    image: 'https://i.imgur.com/q8PI2bb.png',
     address: 'Spring Gardens Lane, Keighley, BD20 6LH',
     region: 'Yorkshire and the Humber',
     date_established: 1959,
@@ -43,7 +43,7 @@ export default [
   },
   {
     name: 'Cole Museum of Zoology',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cole_Museum_of_Zoology_Elephant_Skeleton.JPG/400px-Cole_Museum_of_Zoology_Elephant_Skeleton.JPG',
+    image: 'https://i.imgur.com/bvxHy8b.png',
     address: 'Tower Road, Reading, RG6 6UA',
     region: 'South East',
     date_established: 1906,
@@ -56,7 +56,7 @@ export default [
   },
   {
     name: 'Oxford University Museum of Natural History',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Oxford_University_Museum_of_Natural_History_exterior.JPG/440px-Oxford_University_Museum_of_Natural_History_exterior.JPG',
+    image: 'https://i.imgur.com/yDWgDux.png',
     address: 'Parks Rd, Oxford, OX1 3PW',
     region: 'South East',
     date_established: 1850,
@@ -71,7 +71,7 @@ export default [
   },
   {
     name: 'Penrith and Eden Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/en/8/8b/Penrith_and_Eden_Museum.jpg',
+    image: 'https://i.imgur.com/bnf8jZc.png',
     address: 'Robinson\'s School, 42 Middlegate, Penrith, CA11 7PT',
     region: 'North West',
     date_established: 1985,
@@ -84,7 +84,7 @@ export default [
   },
   {
     name: 'Potteries Museum & Art Gallery',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Potteries_museum_%26_art_gallery.JPG/560px-Potteries_museum_%26_art_gallery.JPG',
+    image: 'https://i.imgur.com/bnf8jZc.png',
     address: 'Bethesda St, Hanley, Stoke-on-Trent, ST1 3DW',
     region: 'West Midlands',
     date_established: 1911,
@@ -99,7 +99,7 @@ export default [
   },
   {
     name: 'Powell-Cotton Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Entrance_facade_to_Powell-Cotton_Museum_at_Quex_Park_Birchington_Kent_England.jpg/440px-Entrance_facade_to_Powell-Cotton_Museum_at_Quex_Park_Birchington_Kent_England.jpg',
+    image: 'https://i.imgur.com/e7Nz2Po.png',
     address: 'Quex Park, Birchington-on-Sea, CT7 0BH',
     region: 'South East',
     date_established: 1896,
@@ -112,7 +112,7 @@ export default [
   },
   {
     name: 'Warrington Museum & Art Gallery',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Front_of_Museum.jpg/400px-Front_of_Museum.jpg',
+    image: 'https://i.imgur.com/Ijfw3HE.png',
     address: 'Pop-up Museum & Library Golden Square shopping centre, Warrington WA1 1UZ',
     region: 'North West',
     date_established: 1857,
@@ -126,7 +126,7 @@ export default [
   },
   {
     name: 'Wells and Mendip Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Wells_and_Mendip_Museum.JPG/440px-Wells_and_Mendip_Museum.JPG',
+    image: 'https://i.imgur.com/CDT5y2z.png',
     address: '8 Cathedral Grn, Wells, BA5 2UE',
     region: 'South West',
     date_established: 1893,
@@ -139,7 +139,7 @@ export default [
   },
   {
     name: 'Weston Park Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Weston_Park_Museum%2C_main_entrance.jpg/440px-Weston_Park_Museum%2C_main_entrance.jpg',
+    image: 'https://i.imgur.com/XZc3hfd.png',
     address: 'Western Bank, Sheffield S10 2TP',
     region: 'Yorkshire and the Humber',
     date_established: 1875,
@@ -153,7 +153,7 @@ export default [
   },
   {
     name: 'Wisbech & Fenland Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Museum_Square._-_geograph.org.uk_-_1091228.jpg/440px-Museum_Square._-_geograph.org.uk_-_1091228.jpg',
+    image: 'https://i.imgur.com/6JOjO58.png',
     address: 'Museum Square, Wisbech PE13 1ES',
     region: 'East of England',
     date_established: 1835,
@@ -168,7 +168,7 @@ export default [
   },
   {
     name: 'Wollaton Hall Natural History Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Wollaton_Hall_Nov2010.jpg/480px-Wollaton_Hall_Nov2010.jpg',
+    image: 'https://i.imgur.com/m7bcM01.png',
     address: 'Wollaton Park, Wollaton, Nottingham, NG8 2AE',
     region: 'East Midlands',
     date_established: 1926,
@@ -184,7 +184,7 @@ export default [
   },
   {
     name: 'World Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/World_Museum_Liverpool_-_2014-11-16_%282%29.jpg/440px-World_Museum_Liverpool_-_2014-11-16_%282%29.jpg',
+    image: 'https://i.imgur.com/PcYqm0Z.jpg',
     address: 'William Brown St, Liverpool, L3 8EN',
     region: 'North West',
     date_established: 1851,
@@ -200,7 +200,7 @@ export default [
   },
   {
     name: 'Natural History Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Natural_History_Museum_London_Jan_2006.jpg/220px-Natural_History_Museum_London_Jan_2006.jpg',
+    image: 'https://i.imgur.com/ECRmvzY.png',
     address: 'Cromwell Rd, South Kensington, London SW7 5BD',
     region: 'London',
     date_established: 1881,
@@ -216,7 +216,7 @@ export default [
   },
   {
     name: 'Bath Royal Literary and Scientific Institution',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Bath_Royal_Literary_and_Scientific_Institution_-_Bath%2C_England_-_DSC09709.jpg/800px-Bath_Royal_Literary_and_Scientific_Institution_-_Bath%2C_England_-_DSC09709.jpg',
+    image: 'https://i.imgur.com/tI23VhN.png',
     address: '16-18 Queen Square, Bath BA1 2HN',
     region: 'South West',
     date_established: 1824,
@@ -231,7 +231,7 @@ export default [
   },
   {
     name: 'Bolton Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Bolton_Civic_Centre1.jpg',
+    image: 'https://i.imgur.com/9apPTD6.png',
     address: 'Le Mans Cres, Bolton BL1 1SE',
     region: 'North West',
     date_established: 1852,
@@ -247,7 +247,7 @@ export default [
   },
   {
     name: 'Booth Museum of Natural History',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Booth_Museum_of_Natural_History%2C_Dyke_Road%2C_Brighton_%28IoE_Code_480614%29.JPG/800px-Booth_Museum_of_Natural_History%2C_Dyke_Road%2C_Brighton_%28IoE_Code_480614%29.JPG',
+    image: 'https://i.imgur.com/ACwWFQJ.png',
     address: '194 Dyke Rd, Brighton BN1 5AA',
     region: 'South East',
     date_established: 1874,
@@ -262,7 +262,7 @@ export default [
   },
   {
     name: 'Bristol City Museum and Art Gallery',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Bristol_art_gallery_and_museum_2_%283763133570%29.jpg/220px-Bristol_art_gallery_and_museum_2_%283763133570%29.jpg',
+    image: 'https://i.imgur.com/Z7uV4BS.png',
     address: 'Queens Rd, Bristol BS8 1RL',
     region: 'South West',
     date_established: 1823,
@@ -276,7 +276,7 @@ export default [
   },
   {
     name: 'Sedgwick Museum of Earth Sciences',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/The_Sedgwick_Museum_-_Cambridge_-_geograph.org.uk_-_2407891.jpg/220px-The_Sedgwick_Museum_-_Cambridge_-_geograph.org.uk_-_2407891.jpg',
+    image: 'https://i.imgur.com/6uNeYmR.png',
     address: 'Sedgwick Museum of Earth Sciences, University of Cambridge, Downing Street, Cambridge, CB2 3EQ',
     region: 'East of England',
     date_established: 1728,
@@ -289,7 +289,7 @@ export default [
   },
   {
     name: 'Haslemere Educational Museum ',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/My_very_first_school_trip_-_geograph.org.uk_-_1101134.jpg/220px-My_very_first_school_trip_-_geograph.org.uk_-_1101134.jpg',
+    image: 'https://i.imgur.com/d1eqD9C.png',
     address: '78 High St, Haslemere GU27 2LA',
     region: 'South East',
     date_established: 1888,
@@ -302,7 +302,7 @@ export default [
   },
   {
     name: 'Kendal Museum',
-    image: 'https://eu-assets.simpleview-europe.com/golakes/imageresizer/?image=%2Fdmsimgs%2FKM-Photo-1_640735649.jpg&action=ProductDetailProFullWidth',
+    image: 'https://i.imgur.com/cQ5hqYv.png',
     address: 'Station Rd, Kendal LA9 6BT',
     region: 'Yorkshire and the Humber',
     date_established: 1796,
@@ -315,7 +315,7 @@ export default [
   },
   {
     name: 'Keswick Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Keswick_Museum_and_Art_Gallery.jpg/220px-Keswick_Museum_and_Art_Gallery.jpg',
+    image: 'https://i.imgur.com/S2Z3NlE.jpg',
     address: 'Station Rd, Keswick CA12 4NF',
     region: 'Yorkshire and the Humber',
     date_established: 1873,
@@ -329,7 +329,7 @@ export default [
   },
   {
     name: 'Lapworth Museum of Geology',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lapworth_Museum.jpg/220px-Lapworth_Museum.jpg',
+    image: 'https://i.imgur.com/WhCMi8E.png',
     address: 'Aston Webb Building, University of Birmingham, Birmingham B15 2TT',
     region: 'West Midlands',
     date_established: 1880,
@@ -342,7 +342,7 @@ export default [
   },
   {
     name: 'Leeds City Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Leeds-city-museum.jpg/250px-Leeds-city-museum.jpg',
+    image: 'https://i.imgur.com/P4xVPWC.png',
     address: 'Millennium Square, Leeds LS2 8BH',
     region: 'Yorkshire and the Humber',
     date_established: 1880,
@@ -354,7 +354,7 @@ export default [
   },
   {
     name: 'Manchester Museum',
-    image: 'https://offloadmedia.feverup.com/secretmanchester.com/wp-content/uploads/2020/09/01120856/manchester-museum.jpg',
+    image: 'https://i.imgur.com/lTVi18r.png',
     address: 'University of, Oxford Rd, Manchester M13 9PL',
     region: 'North West',
     date_established: 1867,
@@ -368,7 +368,7 @@ export default [
   },
   {
     name: 'Dinosaur Isle',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Dinosaur_Isle.JPG/200px-Dinosaur_Isle.JPG',
+    image: 'https://i.imgur.com/j8o8YCz.jpg',
     address: 'Culver Parade, Sandown, GB PO36 8QA',
     region: 'South East',
     date_established: 2001,
@@ -380,7 +380,7 @@ export default [
   },
   {
     name: 'Dinosaurland Fossil Museum',
-    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F5%2F51%2FDinosaurland_Fossil_Museum%252C_Lyme_Regis_(2795).jpg&f=1&nofb=1',
+    image: 'https://i.imgur.com/Ore4D7L.png',
     address: 'Coombe Street, Lyme Regis, Dorset, DT7 3PY',
     region: 'South East',
     date_established: 1755,
@@ -392,7 +392,7 @@ export default [
   },
   {
     name: 'Dorman Museum',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Dorman_museum_angled_view.JPG/280px-Dorman_museum_angled_view.JPG',
+    image: 'https://i.imgur.com/flecHGa.jpg',
     address: 'Linthorpe Road, Middlesbrough, GB TS5 6LA',
     region: 'North East',
     date_established: 1904,
@@ -407,7 +407,7 @@ export default [
   },
   {
     name: 'Grant Museum of Zoology and Comparative Anatomy',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Grant_Museum_of_Zoology_%289201048849%29.jpg/250px-Grant_Museum_of_Zoology_%289201048849%29.jpg',
+    image: 'https://i.imgur.com/Yv7Uhed.png',
     address: '21 University Street, London, GB WC1E 6DE',
     region: 'London',
     date_established: 1828,
@@ -420,7 +420,7 @@ export default [
   },
   {
     name: 'Great North Museum: Hancock',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/The_Hancock_Museum_Newcastle_September_2009.jpg/220px-The_Hancock_Museum_Newcastle_September_2009.jpg',
+    image: 'https://i.imgur.com/kToKLoT.png',
     address: 'Great North Museum: Hancock Barras Bridge Newcastle upon Tyne NE2 4PT',
     region: 'London',
     date_established: 1884,

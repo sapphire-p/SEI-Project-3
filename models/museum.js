@@ -20,6 +20,7 @@ const museumSchema = new mongoose.Schema({
   description: { type: String, required: true, maxlength: 5000 },
   collection_types: [{ type: String, required: true }],
   website: { type: String, required: true },
+  multiple_images: [{ type: String, required: false }],
   reviews: [reviewSchema]
 })
 

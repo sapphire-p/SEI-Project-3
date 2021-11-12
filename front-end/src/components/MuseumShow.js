@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import AddReviewForm from './AddReviewForm'
+// import { Carousel } from 'react-carousel-minimal'
 
 const MuseumShow = () => {
 
@@ -11,12 +12,15 @@ const MuseumShow = () => {
 
   const [userId, setUserId] = useState()
 
+  // const [galleryData, setGalleryData] = useState([])
+
   useEffect(() => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/museums/${id}`)
         // console.log('data ->', data)
         setMuseum(data)
+        // setGalleryData(data)
       } catch (err) {
         setHasError(true)
         console.log(hasError)
@@ -25,8 +29,9 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-  const [token, setToken] = useState()
+  // ------------ for delete
 
+  const [token, setToken] = useState()
 
   useEffect(() => {
     const getTokenFromLocalStorage = () => {
@@ -55,7 +60,37 @@ const MuseumShow = () => {
     getUserId()
   }, [token])
 
-  console.log(userId)
+  const handleDelete = () => {
+    console.log('delete pressed')
+  }
+
+  // ------------------------
+
+
+
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const { data } = await axios.get(`/api/museums/${id}`)
+  //       // console.log('data ->', data)
+  //       setGalleryData([data.image])
+  //       // setGalleryData(data)
+  //     } catch (err) {
+  //       setHasError(true)
+  //       console.log(hasError)
+  //     }
+  //   }
+  //   getData()
+  // }, [id])
+
+  // const galleryData = [
+  //   {
+  //     image: 'https://i.imgur.com/IglrZwg.png'
+  //   }
+  // ]
+
+  // console.log('gallery data->', museum.image)
+  // console.log(galleryData)
   return (
     <>
       {museum ?
@@ -119,7 +154,7 @@ const MuseumShow = () => {
                             </div>
                             <div className='is-flex is-flex-direction-row-reverse reviewOwner'>
                               <div>
-                                {(review.owner._id === userId.id) ? <button>X</button> : <div></div> }
+                                {(review.owner._id === userId.id) ? <button className='button' onClick={handleDelete}>X</button> : <div></div> }
                               </div>
                               <p>- {review.owner.username}</p>
                             </div>
@@ -137,6 +172,11 @@ const MuseumShow = () => {
                     <p>{museum.website}</p>
                   </div>
                 </div>
+              </div>
+              <div>
+                {/* <Carousel 
+                  
+                /> */}
               </div>
             </div>
           </section>

@@ -13,7 +13,8 @@ export default [
       'Palaeontology (ancient organisms, fossils)',
       'Zoology (animals)'
     ],
-    website: 'https://www.museum.zoo.cam.ac.uk/'
+    website: 'https://www.museum.zoo.cam.ac.uk/',
+    multiple_images: [ 'https://i.imgur.com/IglrZwg.png', 'https://i.ibb.co/KVGWMhK/camb-pic-1.jpg' ]
   },
   {
     name: 'Chelmsford Museum',

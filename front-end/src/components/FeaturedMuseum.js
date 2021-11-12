@@ -39,7 +39,7 @@ const FeaturedMuseum = () => {
   return (
     <section className="hero is-black is-fullheight" id="featured-container">
       <h2 className="title has-text-centered is-size-1 featuredMuseumTitle">Featured Museum</h2>
-      <p className="has-text-centered arrowBelowTitle"><i className="fas fa-angle-down"></i></p>
+      <p className="has-text-centered arrowBelowTitle animate__animated animate__infinite animate__slower animate__bounce"><i className="fas fa-angle-down"></i></p>
       <div className="hero-body">
         <div className="columns container is-full">
           <div className="column is-half custom-flex ">
@@ -56,23 +56,6 @@ const FeaturedMuseum = () => {
                 </i> More Info
               </a>
             </Link>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p>
-            <p>more stuff</p><p>more stuff</p>
-            <p>more stuff</p>
           </div>
           <div className="column is-half show-size ">
             <img className="heroImageHome" src={featuredMuseums.image} />

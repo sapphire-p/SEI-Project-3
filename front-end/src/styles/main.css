@@ -111,7 +111,7 @@ nav {
 }
 
 .arrowBelowTitle {
-  margin-top: -15px;
+  margin-top: -5px;
 }
 
 .mainHero {
@@ -131,7 +131,7 @@ nav {
 @media only screen and (max-width: 1020px) {
 
   .HeroTitle {
-    margin-top: 0px;
+    margin-top: 30px;
   }
 
 }
@@ -139,11 +139,11 @@ nav {
 @media only screen and (max-width: 764px) {
 
   .HeroTitle {
-    margin-top: 100px;
+    margin-top: 140px;
   }
 
   .heroSubtitle {
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 100px;
   }
 

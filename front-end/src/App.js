@@ -16,16 +16,17 @@ const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
-      <Switch>
-        <Route exact path='/register' component={Register} />
-        <Route exact path='/museums' component={MuseumsIndex} />
-        <Route exact path='/museums/:id' component={MuseumShow} />
-        <Route exact path='/login' component={Login} />
-        <Route exact path='/' component={Home} />
-        <Route exact path='/filterpanel' component={FilterPanel} />
-        <Route exact path='/filteredmuseums' component={FilteredMuseums} />
-
-      </Switch>
+      <div className="site-wrapper">
+        <Switch>
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/museums' component={MuseumsIndex} />
+          <Route exact path='/museums/:id' component={MuseumShow} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/filterpanel' component={FilterPanel} />
+          <Route exact path='/filteredmuseums' component={FilteredMuseums} />
+        </Switch>
+      </div>
       <Footer />
     </BrowserRouter>
   )

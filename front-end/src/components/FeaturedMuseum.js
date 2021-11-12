@@ -41,7 +41,7 @@ const FeaturedMuseum = () => {
 
 
   return (
-    <section className="hero is-black is-fullheight">
+    <section className="hero is-black is-fullheight" id="featured-container">
       <div className="hero-body">
         <div className="columns container is-full">
           <div className="column is-half custom-flex ">

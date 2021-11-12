@@ -39,7 +39,7 @@ const Register = () => {
 
 
   return (
-    <section className='section'>
+    <section className='section' id="register-container">
       <div className='container'>
         <div className='columns'>
           <form className='column is-half is-offset-one-quarter box' onSubmit={handleSubmit}>

@@ -17,7 +17,7 @@ const MuseumsIndex = () => {
   // console.log('museums ->', museums.sort())
   return (
     <>
-      <section className='hero is-medium'>
+      <section className='hero is-medium' id="hero-container">
         <div className='hero-body showAllHero'>
           <p className='title has-text-white'>Museums</p>
           <p className='subtitle has-text-white'>Check out these fascinating natural history collections across England</p>

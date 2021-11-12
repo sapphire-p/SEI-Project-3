@@ -2,6 +2,47 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+.site-wrapper{
+  min-height: calc(100vh - 206px);
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-wrapper{
+    min-height: calc(100vh - 462px);
+  }
+  #hero-container{
+    margin-top: 220px;
+  }
+  #login-container{
+    margin-top: 220px;
+  }
+  #register-container{
+    margin-top: 220px;
+  }
+  #featured-container{
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .site-wrapper{
+    min-height: calc(100vh - 462px);
+  }
+  #hero-container{
+    margin-top: 220px;
+  }
+  #login-container{
+    margin-top: 220px;
+  }
+  #register-container{
+    margin-top: 220px;
+  }
+  #featured-container{
+    margin-top: 150px;
+  }
+}
+
+
 .link {
   color: #FFF;
 }
@@ -25,8 +66,6 @@
 .col img {
   margin-top: 35px;
 }
-  /* color: #00F
-} */
 
 .showAllHero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../AssetsTest/dinoskeleton2.jpeg');
@@ -51,3 +90,8 @@
 .hero {
   margin-top: -70px;
 }
+
+nav {
+  border-bottom: 0.1px solid whitesmoke;
+}
+

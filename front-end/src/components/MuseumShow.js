@@ -25,71 +25,82 @@ const MuseumShow = () => {
   // console.log('single museum ->>>', museum)
   // console.log('single museum ->>>', museum.reviews)
   return (
-    <section className='section'>
-      <div className='container'>
-        {museum ?
-          <div id='singleMuseumInfo'>
-            <h2 id='museumTitle'>{museum.name}</h2>
-            <div className='columns'>
-              <div className='column'>
-                <figure className='image'>
-                  <img src={museum.image} alt={`Picture of ${museum.name}`} />
-                </figure>
-              </div>
-              <div className='column'>
-                <h3>Region: {museum.region}</h3>
-                <h3>Date Established: {museum.date_established}</h3>
-                <hr />
-                <p>{museum.description}</p>
-                <hr />
-                <div>
-                  <h3>Collections:</h3>
-                  <ul>
-                    {museum.collection_types.map(type => {
-                      return <li key={type}>{type}</li>
-                    })}
-                  </ul>
+    <>
+      {museum ?
+        <>
+          <section className='hero is-small has-text-centered'>
+            <div className='hero-body'>
+              <p className='title'>{museum.name}</p>
+            </div>
+          </section><section className='section px-6 py-3'>
+            <div className='container'>
+              <div>
+                {/* <h2 className='has-text-centered pb-5'>{museum.name}</h2> */}
+                <div className='columns'>
+                  <div className='column'>
+                    <figure className='image'>
+                      <img src={museum.image} alt={`Picture of ${museum.name}`} />
+                    </figure>
+                  </div>
+                  <div className='column'>
+                    <h3>Region: {museum.region}</h3>
+                    <h3>Date Established: {museum.date_established}</h3>
+                    <hr />
+                    <p>{museum.description}</p>
+                    <hr />
+                    <div>
+                      <h3>Collections:</h3>
+                      <ul>
+                        {museum.collection_types.map(type => {
+                          return <li key={type}>{type}</li>
+                        })}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className='columns'>
+                  <div className='column'>
+                    <div>
+                      <h3>Reviews</h3>
+                      <h3>Average Rating: {museum.averageRating}</h3>
+                    </div>
+                    <div>
+                      <ul>
+                        {museum.reviews.map(review => {
+                          console.log(review)
+                          return <li key={review._id}>
+                            <div className='columns'>
+                              <div className='column'>
+                                <p>{review.comment}</p>
+                              </div>
+                              <div className='column'>
+                                <p>{review.rating}/5</p>
+                              </div>
+                            </div>
+                            <div className='is-flex is-flex-direction-row-reverse reviewOwner'>
+                              <p>- {review.owner.username}</p>
+                            </div>
+                          </li>
+                        })}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className='column'>
+                    <h3>Address</h3>
+                    <p>{museum.address}</p>
+                    <hr />
+                    <h3>Museum Website</h3>
+                    <p>{museum.website}</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className='columns'>
-              <div className='column'>
-                <div>
-                  <h3>Reviews</h3>
-                  <h3>Average Rating: {museum.averageRating}</h3>
-                </div>
-                <div>
-                  <ul>
-                    {museum.reviews.map(review => {
-                      console.log(review)
-                      return <li key={review._id}>
-                        <div className='columns'>
-                          <div className='column'>
-                            <p>{review.comment}</p>
-                          </div>
-                          <div className='column'>
-                            <p>{review.rating}/5</p>
-                          </div>
-                        </div>
-                      </li>
-                    })}
-                  </ul>
-                </div>
-              </div>
-              <div className='column'>
-                <h3>Address</h3>
-                <p>{museum.address}</p>
-                <hr />
-                <h3>Museum Website</h3>
-                <p>{museum.website}</p>
-              </div>
-            </div>
-          </div>
-          :
-          <h2>{hasError ? 'Something went wrong' : 'Page Loading...'}</h2>
-        }
-      </div>
-    </section>
+          </section>
+        </>
+        :
+        <h2>{hasError ? 'Something went wrong' : 'Page Loading...'}</h2>
+      }
+    </>
   )
 
 }

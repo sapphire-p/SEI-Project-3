@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 // import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-const Hero = () => {
+const FeaturedMuseum = () => {
 
   // const [randomMuseum, setRandomMuseum] = useState([])
   const [featuredMuseums, setFeaturedMuseums] = useState([])
@@ -62,7 +62,7 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default FeaturedMuseum
 
 // {
 //   params: { id: '' }

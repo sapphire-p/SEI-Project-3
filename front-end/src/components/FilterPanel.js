@@ -94,7 +94,7 @@ const FilterPanel = () => {
           </div>
           <div>
             <div className='control'>
-              <Link to={{ pathname: '/filterresults', state: formData }} className='button is-link has-background-danger has-text-white has-text-weight-bold is-fullwidth'>Find museums!</Link>
+              <Link to={{ pathname: '/filteredmuseums', state: formData }} className='button is-link has-background-danger has-text-white has-text-weight-bold is-fullwidth'>Find museums!</Link>
             </div>
           </div>
         </div>

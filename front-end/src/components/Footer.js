@@ -12,16 +12,14 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            {/* <figure> */}
             <img src={Logo} alt="Museum Mapper logo" width="150px" />
-            {/* </figure> */}
           </div>
           <div className="col">
-            <h4>Museum Mapper</h4>
-            <ul className="list-unstyled">
-              <li>Cromwell Rd</li>
-              <li>South Kensington</li>
-              <li>London</li>
+            <h4 className="has-text-white is-size-5">Museum Mapper</h4>
+            <ul className="list-unstyled has-text-white is-size-7">
+              <li>Cromwell Rd,</li>
+              <li>South Kensington,</li>
+              <li>London,</li>
               <li>SW7 5BD</li>
             </ul>
           </div>

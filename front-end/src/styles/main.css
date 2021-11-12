@@ -33,3 +33,13 @@
 .a:hover {
   color: #00F;
 }
+
+.row {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.col img {
+  margin-top: 35px;
+}

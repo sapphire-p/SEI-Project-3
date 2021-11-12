@@ -27,7 +27,7 @@ const NavBar = () => {
         <div className="navbar-menu">
           <div className="navbar-start">
             <div className="navbar-item">
-              <Link to="/museums" className="link">Show All</Link>
+              <Link to="/museums" className="link">All museums</Link>
             </div>
           </div>
           <div className="navbar-end">

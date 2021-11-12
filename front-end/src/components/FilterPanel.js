@@ -1,28 +1,99 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+// import { Link } from 'react-router-dom'
 
 const FilterPanel = () => {
 
-  const [formData, setFormData] = useState({
-    region: 'all',
-    geology: false,
-    palaeontology: false,
-    botany: false,
-    zoology: false,
-    entomology: false
-  })
+  //all museums array // set after axios request
+  const [allMuseums, setAllMuseums] = useState(null)
+
+  //all collection types selected array
+  // const [selectedCollections, setSelectedCollections] = useState([])
+  let selectedCollections = []
+
+  //region value
+  // const [selectedRegion, setSelectedRegion] = useState(null)
+
+  // filteredMuseums array //set after axios request //update in setregion and setcollection types functions
+
+
+  useEffect(() => {
+
+    const getAllMuseumsData = async () => {
+      try {
+        const { data } = await axios.get('/api/museums')
+        // console.log(data)
+        setAllMuseums(data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getAllMuseumsData()
+
+  }, [])
+
 
   const handleChange = (event) => {
-    if (event.target.name === 'regions') {
-      const newFormData = { ...formData, region: event.target.value }
-      console.log(newFormData)
-      setFormData(newFormData)
-    } else {
-      const newFormData = { ...formData, [event.target.name]: event.target.checked }
-      console.log(newFormData)
-      setFormData(newFormData)
+    console.log(event.target.name)
+    console.log(event.target.checked)
+    if (event.target.checked) {
+      selectedCollections = selectedCollections.push(event.target.name)
+      // console.log('selectedCollections in handleChange ->', selectedCollections)
+      // selectedCollections.push(event.target.name)
+
+      // setSelectedCollections(selectedCollections.push(event.target.name))
+      // const selectedCollectionsState = selectedCollections
+      // const newSelectedCollections = selectedCollectionsState.push(event.target.name)
+      // setSelectedCollections(newSelectedCollections)
+
+      // const newSelectedCollection = { ...selectedCollections, region: event.target.value }
+      //     console.log(newFormData)
+      //     setFormData(newFormData)
+      return
     }
+    return
   }
+
+  console.log('All Museums from GET request ->', allMuseums)
+  console.log('selectedCollections ->', selectedCollections)
+
+
+
+
+  // const [formData, setFormData] = useState({
+  //   region: 'all',
+  //   collection_types: []
+  //   // geology: false,
+  //   // palaeontology: false,
+  //   // botany: false,
+  //   // zoology: false,
+  //   // entomology: false
+  // })
+
+
+  // //setregion
+  // const handleChange = (event) => {
+  //   if (event.target.name === 'regions') {
+  //     const newFormData = { ...formData, region: event.target.value }
+  //     console.log(newFormData)
+  //     setFormData(newFormData)
+  //   } else {
+  //     const newFormData = { ...formData, [event.target.name]: event.target.checked }
+  //     console.log(newFormData)
+  //     setFormData(newFormData)
+  //   }
+  // }
+  // //set filteredMuseums
+
+  // //setcollection_types
+  // const handleCollectionChange = (event) => {
+  //   if (event.target.name === 'geology') {
+  //     setFormData(...formData, collection_types: event.target.checked)
+  //   }
+  // }
+  // //set FilteredMuseums
+
+
 
 
   return (
@@ -32,7 +103,7 @@ const FilterPanel = () => {
           <div className='field'>
             <div className='control'>
               <div className='select is-danger'>
-                <select className='has-background-warning-light has-text-weight-bold pr-1' name='regions' onChange={handleChange}>
+                <select className='has-background-warning-light has-text-weight-bold pr-1' id='filter-panel' name='regions' onChange={handleChange}>
                   <option >Region</option>
                   <option value='eastOfEngland'>East of England</option>
                   <option value='eastMidlands'>East Midlands</option>
@@ -94,7 +165,7 @@ const FilterPanel = () => {
           </div>
           <div>
             <div className='control'>
-              <Link to={{ pathname: '/filteredmuseums', state: formData }} className='button is-link has-background-danger has-text-white has-text-weight-bold is-fullwidth'>Find museums!</Link>
+              {/* <Link to={{ pathname: '/filteredmuseums', state: formData }} className='button is-link has-background-danger has-text-white has-text-weight-bold is-fullwidth'>Find museums!</Link> */}
             </div>
           </div>
         </div>
@@ -106,6 +177,43 @@ const FilterPanel = () => {
 }
 
 export default FilterPanel
+
+
+
+
+// const [formData, setFormData] = useState({
+//   region: 'all',
+//   collection_types: []
+//   // geology: false,
+//   // palaeontology: false,
+//   // botany: false,
+//   // zoology: false,
+//   // entomology: false
+// })
+
+
+// //setregion
+// const handleChange = (event) => {
+//   if (event.target.name === 'regions') {
+//     const newFormData = { ...formData, region: event.target.value }
+//     console.log(newFormData)
+//     setFormData(newFormData)
+//   } else {
+//     const newFormData = { ...formData, [event.target.name]: event.target.checked }
+//     console.log(newFormData)
+//     setFormData(newFormData)
+//   }
+// }
+// //set filteredMuseums
+
+// //setcollection_types
+// const handleCollectionChange = (event) => {
+//   if (event.target.name === 'geology') {
+//     setFormData(...formData, collection_types: event.target.checked)
+//   }
+// }
+// //set FilteredMuseums
+
 
 
 

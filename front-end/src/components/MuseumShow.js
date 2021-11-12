@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import AddReviewForm from './AddReviewForm'
 
 const MuseumShow = () => {
 
@@ -8,11 +9,13 @@ const MuseumShow = () => {
   const { id } = useParams()
   const [hasError, setHasError] = useState(false)
 
+  const [userId, setUserId] = useState()
+
   useEffect(() => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/museums/${id}`)
-        // console.log('data ->>', data)
+        // console.log('data ->', data)
         setMuseum(data)
       } catch (err) {
         setHasError(true)
@@ -22,20 +25,49 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-  // console.log('single museum ->>>', museum)
-  // console.log('single museum ->>>', museum.reviews)
+  const [token, setToken] = useState()
+
+
+  useEffect(() => {
+    const getTokenFromLocalStorage = () => {
+      setToken(window.localStorage.getItem('token'))
+    }
+    getTokenFromLocalStorage()
+  }, [])
+
+  useEffect(() => {
+    const getUserId = async () => {
+      try {
+        if (!token) return setUserId({
+          id: ''
+        }) 
+        const { data } = await axios.get(
+          '/api/profile',
+          {
+            headers: { Authorization: `Bearer ${token}` }
+          }
+        )
+        setUserId(data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getUserId()
+  }, [token])
+
+  console.log(userId)
   return (
     <>
       {museum ?
         <>
-          <section className='hero is-small has-text-centered'>
+          <section className='hero is-small has-text-centered m-2'>
             <div className='hero-body'>
               <p className='title'>{museum.name}</p>
             </div>
-          </section><section className='section px-6 py-3'>
+          </section>
+          <section className='section px-6 py-3'>
             <div className='container'>
               <div>
-                {/* <h2 className='has-text-centered pb-5'>{museum.name}</h2> */}
                 <div className='columns'>
                   <div className='column'>
                     <figure className='image'>
@@ -63,6 +95,14 @@ const MuseumShow = () => {
                     <div>
                       <h3>Reviews</h3>
                       <h3>Average Rating: {museum.averageRating}</h3>
+                      <hr />
+                    </div>
+                    <div className='add-review-form'>
+                      <h2>Write your own review to let the Museum know your thoughts!</h2>
+                      <hr />
+                      <div>
+                        <AddReviewForm />
+                      </div>
                     </div>
                     <div>
                       <ul>
@@ -78,12 +118,16 @@ const MuseumShow = () => {
                               </div>
                             </div>
                             <div className='is-flex is-flex-direction-row-reverse reviewOwner'>
+                              <div>
+                                {(review.owner._id === userId.id) ? <button>X</button> : <div></div> }
+                              </div>
                               <p>- {review.owner.username}</p>
                             </div>
                           </li>
                         })}
                       </ul>
                     </div>
+                    
                   </div>
                   <div className='column'>
                     <h3>Address</h3>

@@ -8,8 +8,8 @@ const FilterPanel = () => {
   const [allMuseums, setAllMuseums] = useState(null)
 
   //all collection types selected array
-  // const [selectedCollections, setSelectedCollections] = useState([])
-  let selectedCollections = []
+  const [selectedCollections, setSelectedCollections] = useState([])
+  // let selectedCollections = []
 
   //region value
   // const [selectedRegion, setSelectedRegion] = useState(null)
@@ -22,7 +22,6 @@ const FilterPanel = () => {
     const getAllMuseumsData = async () => {
       try {
         const { data } = await axios.get('/api/museums')
-        // console.log(data)
         setAllMuseums(data)
       } catch (err) {
         console.log(err)
@@ -37,7 +36,15 @@ const FilterPanel = () => {
     console.log(event.target.name)
     console.log(event.target.checked)
     if (event.target.checked) {
-      selectedCollections = selectedCollections.push(event.target.name)
+
+      const newSelectedCollections = [...selectedCollections, event.target.name]
+      // const newSelectedCollections = selectedCollections.push(event.target.name)
+      console.log(newSelectedCollections)
+      setSelectedCollections(newSelectedCollections)
+
+      // selectedCollections = selectedCollections.push(event.target.name)
+
+
       // console.log('selectedCollections in handleChange ->', selectedCollections)
       // selectedCollections.push(event.target.name)
 
@@ -49,6 +56,12 @@ const FilterPanel = () => {
       // const newSelectedCollection = { ...selectedCollections, region: event.target.value }
       //     console.log(newFormData)
       //     setFormData(newFormData)
+      return
+    } else if (!event.target.checked) {
+      const updatedSelectedCollections = selectedCollections.filter(collection => {
+        return collection !== event.target.name
+      })
+      setSelectedCollections(updatedSelectedCollections)
       return
     }
     return

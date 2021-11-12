@@ -47,13 +47,14 @@ const Hero = () => {
           <div className="column is-half custom-flex ">
             <h1 className="title hero-title mb-6 has-text-centered is-size-2">{featuredMuseums.name}</h1>
             <p className="subtitle hero-subtitle">{featuredMuseums.description}</p>
-            <p className="subtitle hero-subtitle">Location: <strong>{featuredMuseums.region}</strong></p>
+            {/* <p className="subtitle hero-subtitle">Location: <strong>{featuredMuseums.region}</strong></p>
             <p className="subtitle hero-subtitle">Date established: <strong>{featuredMuseums.date_established}</strong></p>
-            <p className="subtitle hero-subtitle">Address: <strong>{featuredMuseums.address}</strong></p>
+            <p className="subtitle hero-subtitle">Address: <strong>{featuredMuseums.address}</strong></p> */}
+            <a href={featuredMuseums.website} target="_blank" rel="noreferrer" className="button is-white is-fullwidth visitWebiteBtn is-large"><i className="fas fa-info-circle"></i> More Info </a>
           </div>
           <div className="column is-half show-size ">
             <img className="heroImageHome" src={featuredMuseums.image}/>
-            <a href={featuredMuseums.website} target="_blank" rel="noreferrer" className="button is-white is-fullwidth visitWebiteBtn is-large"><i className="fas fa-globe"> </i> Visit Website </a>
+            
           </div>
         </div>
       </div>

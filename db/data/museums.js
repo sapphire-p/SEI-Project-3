@@ -126,7 +126,7 @@ export default [
   },
   {
     name: 'Wells and Mendip Museum',
-    image: 'https://i.imgur.com/MKdPv2a.png',
+    image: 'https://i.imgur.com/CDT5y2z.png',
     address: '8 Cathedral Grn, Wells, BA5 2UE',
     region: 'South West',
     date_established: 1893,

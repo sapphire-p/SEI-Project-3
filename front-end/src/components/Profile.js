@@ -11,6 +11,7 @@ const Profile = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get('/api/museums')
+        console.log(data)
         setUser(data)
       } catch (err) {
         console.log(err)
@@ -21,7 +22,7 @@ const Profile = () => {
 
   return (
     <>
-      <section className="hero is-black is-fullheight">
+      <section className="hero is-black is-medium">
         <div className="hero-body">
           <p className="title has-text-centered">
             Welcome Back {user.username}

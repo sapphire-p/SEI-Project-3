@@ -26,7 +26,7 @@ const MuseumsIndex = () => {
       <section className='section MuseumsSection'>
         <div className='container museumsCardContainer'>
           <div className='columns is-multiline'>
-            {museums.map(museum => {
+            {museums.sort((a, b) => a - b).map(museum => {
               return (
                 <MuseumCard key={museum._id} {...museum} />
               )

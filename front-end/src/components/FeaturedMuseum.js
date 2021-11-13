@@ -50,11 +50,11 @@ const FeaturedMuseum = () => {
             {/* <p className="subtitle hero-subtitle">Location: <strong>{featuredMuseums.region}</strong></p>
             <p className="subtitle hero-subtitle">Date established: <strong>{featuredMuseums.date_established}</strong></p>
             <p className="subtitle hero-subtitle">Address: <strong>{featuredMuseums.address}</strong></p> */}
-            <Link to={`/museums/${featuredMuseums.id}`}>
-              <a target="_blank" rel="noreferrer" className="button is-white is-fullwidth visitWebiteBtn is-large">
+            <Link to={`/museums/${featuredMuseums.id}`} >
+              <button  className="button is-white is-fullwidth visitWebiteBtn is-large">
                 <i className="fas fa-info-circle infoIcon">
                 </i> More Info
-              </a>
+              </button>
             </Link>
           </div>
           <div className="column is-half show-size ">

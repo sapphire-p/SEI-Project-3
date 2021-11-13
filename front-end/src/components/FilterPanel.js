@@ -71,36 +71,36 @@ const FilterPanel = () => {
 
   //?
 
-  const handleRegionChange = (event) => {
-    console.log(event.target.value)
-    setSelectedRegion(event.target.value)
-  }
+  // const handleRegionChange = (event) => {
+  //   console.log(event.target.value)
+  //   setSelectedRegion(event.target.value)
+  // }
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    if (!selectedRegion) {
-      console.log('no region selected')
-      return
-    } else {
-      // let filteredByRegion = []
-      const regionFilteredMuseums = allMuseums.filter(museum => {
-        return museum.region === selectedRegion
-      })
-      console.log(regionFilteredMuseums)
-    }
+  //   if (!selectedRegion) {
+  //     console.log('no region selected')
+  //     return
+  //   } else {
+  //     // let filteredByRegion = []
+  //     const regionFilteredMuseums = allMuseums.filter(museum => {
+  //       return museum.region === selectedRegion
+  //     })
+  //     console.log(regionFilteredMuseums)
+  //   }
 
-  }, [selectedRegion])
+  // }, [selectedRegion])
 
   //?
 
 
   useEffect(() => {
 
-    if (selectedCollections.length === 0) {
+    if (selectedCollections.length === 0 && !selectedRegion) {
       // console.log('selectedCollections is empty array')
       return //* Return if selectedCollections array is empty (no collections selected)
-    } else {
-      // console.log(`selectedCollections array contains ${selectedCollections.length} collections`)
+    } else if (selectedCollections.length !== 0 && (!selectedRegion || selectedRegion === 'Region')) {
+      console.log(`selectedCollections array contains ${selectedCollections.length} collections, NO selectedRegion`)
 
       let filteredByCollections = []
 
@@ -118,19 +118,48 @@ const FilterPanel = () => {
       //* The 'new Set()' is spread into an array, because otherwise the 'new Set()' on is own here would be an object full of museum objects (as opposed to array full of museum objects)
       console.log('filteredByCollectionsDeduplicated ->', filteredByCollectionsDeduplicated)
       setFilteredMuseumsArr(filteredByCollectionsDeduplicated) //* set the value of the filteredMuseumsArr piece of state to the value of the de-duplicated array
+    } else if (selectedCollections.length === 0 && selectedRegion) {
+      console.log(`selectedCollections is empty array, selectedRegion is ${selectedRegion}`)
+      const regionFilteredMuseums = allMuseums.filter(museum => {
+        return museum.region === selectedRegion
+      })
+      setFilteredMuseumsArr(regionFilteredMuseums)
+    } else if (selectedCollections.length !== 0 && selectedRegion) {
+      console.log(`selectedCollections array contains ${selectedCollections.length} collections, selectedRegion is ${selectedRegion}`)
+      let filteredByCollections = []
+      let filteredByBoth = []
+
+      for (let i = 0; i < selectedCollections.length; i++) {
+        const collectionFilteredMuseums = allMuseums.filter(museum => {
+          return museum.collection_types.includes(selectedCollections[i])
+        })
+        // console.log('collectionFilteredMuseums ->', collectionFilteredMuseums)
+        filteredByCollections = [...filteredByCollections, ...collectionFilteredMuseums]
+        // console.log('filteredByCollections ->', filteredByCollections)
+      }
+
+      if (filteredByCollections.length !== 0) {
+        filteredByBoth = filteredByCollections.filter(museum => {
+          return museum.region === selectedRegion
+        })
+      }
+
+      //* De-duplicate the filteredByBoth array of museum objects:
+      const filteredByBothDeduplicated = [...new Set(filteredByBoth)]
+      // console.log('filteredByBoth ->', filteredByBoth)
+      setFilteredMuseumsArr(filteredByBothDeduplicated) //* set the value of the filteredMuseumsArr piece of state to the value of the de-duplicated array
     }
 
-  }, [selectedCollections])
+  }, [selectedCollections, selectedRegion])
 
 
 
 
   // console.log('All Museums from GET request ->', allMuseums)
   // console.log('selectedCollections ->', selectedCollections)
-  console.log('filteredMuseumsArr ->', filteredMuseumsArr)
   console.log('selectedRegion ->', selectedRegion)
-
-
+  console.log('selectedCollections ->', selectedCollections)
+  console.log('FILTEREDMUSEUMSARR ->', filteredMuseumsArr)
 
 
 
@@ -178,7 +207,7 @@ const FilterPanel = () => {
           <div className='field'>
             <div className='control'>
               <div className='select is-danger'>
-                <select className='has-background-warning-light has-text-weight-bold pr-1' id='filter-panel' name='regions' onChange={handleRegionChange}>
+                <select className='has-background-warning-light has-text-weight-bold pr-1' id='filter-panel' name='regions' onChange={handleChange}>
                   <option >Region</option>
                   <option value='East of England'>East of England</option>
                   <option value='East Midlands'>East Midlands</option>

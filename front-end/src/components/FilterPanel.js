@@ -11,10 +11,13 @@ const FilterPanel = () => {
   const [selectedCollections, setSelectedCollections] = useState([])
   // let selectedCollections = []
 
-  //region value
-  // const [selectedRegion, setSelectedRegion] = useState(null)
-
   // filteredMuseums array //set after axios request //update in setregion and setcollection types functions
+  const [filteredMuseumsArr, setFilteredMuseumsArr] = useState([])
+
+  //region value
+  const [selectedRegion, setSelectedRegion] = useState(null)
+
+
 
 
   useEffect(() => {
@@ -33,42 +36,101 @@ const FilterPanel = () => {
 
 
   const handleChange = (event) => {
-    console.log(event.target.name)
-    console.log(event.target.checked)
-    if (event.target.checked) {
 
-      const newSelectedCollections = [...selectedCollections, event.target.name]
-      // const newSelectedCollections = selectedCollections.push(event.target.name)
-      console.log(newSelectedCollections)
-      setSelectedCollections(newSelectedCollections)
+    // console.log(event.target.name)
+    // console.log(event.target.checked)
 
-      // selectedCollections = selectedCollections.push(event.target.name)
+    // if (event.target.checked) {
+    //   const newSelectedCollections = [...selectedCollections, event.target.name]
+    //   // console.log(newSelectedCollections)
+    //   setSelectedCollections(newSelectedCollections)
+    // } else if (!event.target.checked) {
+    //   const updatedSelectedCollections = selectedCollections.filter(collection => {
+    //     return collection !== event.target.name
+    //   })
+    //   setSelectedCollections(updatedSelectedCollections)
+    // }
 
-
-      // console.log('selectedCollections in handleChange ->', selectedCollections)
-      // selectedCollections.push(event.target.name)
-
-      // setSelectedCollections(selectedCollections.push(event.target.name))
-      // const selectedCollectionsState = selectedCollections
-      // const newSelectedCollections = selectedCollectionsState.push(event.target.name)
-      // setSelectedCollections(newSelectedCollections)
-
-      // const newSelectedCollection = { ...selectedCollections, region: event.target.value }
-      //     console.log(newFormData)
-      //     setFormData(newFormData)
-      return
-    } else if (!event.target.checked) {
-      const updatedSelectedCollections = selectedCollections.filter(collection => {
-        return collection !== event.target.name
-      })
-      setSelectedCollections(updatedSelectedCollections)
-      return
+    if (event.target.name === 'regions') {
+      setSelectedRegion(event.target.value)
+    } else {
+      if (event.target.checked) {
+        const newSelectedCollections = [...selectedCollections, event.target.name]
+        // console.log(newSelectedCollections)
+        setSelectedCollections(newSelectedCollections)
+      } else if (!event.target.checked) {
+        const updatedSelectedCollections = selectedCollections.filter(collection => {
+          return collection !== event.target.name
+        })
+        setSelectedCollections(updatedSelectedCollections)
+      }
     }
-    return
+
   }
 
-  console.log('All Museums from GET request ->', allMuseums)
-  console.log('selectedCollections ->', selectedCollections)
+
+  //?
+
+  const handleRegionChange = (event) => {
+    console.log(event.target.value)
+    setSelectedRegion(event.target.value)
+  }
+
+  useEffect(() => {
+
+    if (!selectedRegion) {
+      console.log('no region selected')
+      return
+    } else {
+      // let filteredByRegion = []
+      const regionFilteredMuseums = allMuseums.filter(museum => {
+        return museum.region === selectedRegion
+      })
+      console.log(regionFilteredMuseums)
+    }
+
+  }, [selectedRegion])
+
+  //?
+
+
+  useEffect(() => {
+
+    if (selectedCollections.length === 0) {
+      // console.log('selectedCollections is empty array')
+      return //* Return if selectedCollections array is empty (no collections selected)
+    } else {
+      // console.log(`selectedCollections array contains ${selectedCollections.length} collections`)
+
+      let filteredByCollections = []
+
+      for (let i = 0; i < selectedCollections.length; i++) { //* for every item in the selectedCollections array:
+        const collectionFilteredMuseums = allMuseums.filter(museum => { //* filter through the allMuseums array
+          return museum.collection_types.includes(selectedCollections[i]) //* for each museum object, if museum.collection_types array contains selectedCollections[i], store it in the collectionFilteredMuseums (array)
+        })
+        // console.log('collectionFilteredMuseums ->', collectionFilteredMuseums)
+        filteredByCollections = [...filteredByCollections, ...collectionFilteredMuseums] //* update the value of filteredByCollections array, spreading in collectionFilteredMuseums - the result is an array containing duplicates
+        // console.log('filteredByCollections ->', filteredByCollections)
+      }
+
+      //* De-duplicate the filteredByCollections array of museum objects:
+      const filteredByCollectionsDeduplicated = [...new Set(filteredByCollections)] //* uses JS 'Set' constructor to create a collection of unique items (of any data type), where each item can only occur once in the Set
+      //* The 'new Set()' is spread into an array, because otherwise the 'new Set()' on is own here would be an object full of museum objects (as opposed to array full of museum objects)
+      console.log('filteredByCollectionsDeduplicated ->', filteredByCollectionsDeduplicated)
+      setFilteredMuseumsArr(filteredByCollectionsDeduplicated) //* set the value of the filteredMuseumsArr piece of state to the value of the de-duplicated array
+    }
+
+  }, [selectedCollections])
+
+
+
+
+  // console.log('All Museums from GET request ->', allMuseums)
+  // console.log('selectedCollections ->', selectedCollections)
+  console.log('filteredMuseumsArr ->', filteredMuseumsArr)
+  console.log('selectedRegion ->', selectedRegion)
+
+
 
 
 
@@ -116,17 +178,17 @@ const FilterPanel = () => {
           <div className='field'>
             <div className='control'>
               <div className='select is-danger'>
-                <select className='has-background-warning-light has-text-weight-bold pr-1' id='filter-panel' name='regions' onChange={handleChange}>
+                <select className='has-background-warning-light has-text-weight-bold pr-1' id='filter-panel' name='regions' onChange={handleRegionChange}>
                   <option >Region</option>
-                  <option value='eastOfEngland'>East of England</option>
-                  <option value='eastMidlands'>East Midlands</option>
-                  <option value='london'>London</option>
-                  <option value='northEast'>North East</option>
-                  <option value='northWest'>North West</option>
-                  <option value='southEast'>South East</option>
-                  <option value='southWest'>South West</option>
-                  <option value='westMidlands'>West Midlands</option>
-                  <option value='yorkshireAndTheHumber'>Yorkshire and the Humber</option>
+                  <option value='East of England'>East of England</option>
+                  <option value='East Midlands'>East Midlands</option>
+                  <option value='London'>London</option>
+                  <option value='North East'>North East</option>
+                  <option value='North West'>North West</option>
+                  <option value='South East'>South East</option>
+                  <option value='South West'>South West</option>
+                  <option value='West Midlands'>West Midlands</option>
+                  <option value='Yorkshire and the Humber'>Yorkshire and the Humber</option>
                 </select>
               </div>
             </div>

@@ -87,6 +87,11 @@
 .visitWebiteBtn {
   padding-top: 20px;
   padding-bottom: 20x;
+  transition: .2s;
+}
+
+.visitWebiteBtn:hover {
+  transform: scale(1.03);
 }
 
 .hero {
@@ -115,7 +120,7 @@ nav {
 }
 
 .mainHero {
-  background-image: url("https://i.imgur.com/qCmUKsV.png");
+  background-image: url("https://i.imgur.com/aqvbG6x.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -128,8 +133,32 @@ nav {
   margin-top: 50px;
 }
 
+.infoIcon {
+  margin-right: 5px;
+}
+
+.MuseumsSection {
+  margin-top: 10px;
+  background-image: url("https://i.imgur.com/X1pqlqD.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* 
+.MuseumsSection2 {
+  margin-top: 40px;
+  background-image: url("https://i.imgur.com/63Sg6cb.png");
+  background-repeat: no-repeat;
+} */
+
+.museumsCardContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  transform: scale(1.03);
+}
+
 .museumCard {
-  transition: transform .4s; /* Animation */
+  transition: transform .25s; /* Animation */
 }
 
 .museumCard:hover {

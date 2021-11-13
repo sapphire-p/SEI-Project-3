@@ -52,7 +52,7 @@ const FeaturedMuseum = () => {
             <p className="subtitle hero-subtitle">Address: <strong>{featuredMuseums.address}</strong></p> */}
             <Link to={`/museums/${featuredMuseums.id}`}>
               <a target="_blank" rel="noreferrer" className="button is-white is-fullwidth visitWebiteBtn is-large">
-                <i className="fas fa-info-circle">
+                <i className="fas fa-info-circle infoIcon">
                 </i> More Info
               </a>
             </Link>

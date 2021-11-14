@@ -7,7 +7,7 @@ import Login from './components/Login'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import Footer from './components/Footer'
-import FilterPanel from './components/FilterPanel'
+// import FilterPanel from './components/FilterPanel'
 import Profile from './components/Profile'
 import FilteredMuseums from './components/FilteredMuseums'
 
@@ -24,7 +24,7 @@ const App = () => {
           <Route exact path='/museums/:id' component={MuseumShow} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/' component={Home} />
-          <Route exact path='/filterpanel' component={FilterPanel} />
+          {/* <Route exact path='/filterpanel' component={FilterPanel} /> */}
           <Route exact path='/filteredmuseums' component={FilteredMuseums} />
           <Route exact path='/profile' component={Profile} />
         </Switch>

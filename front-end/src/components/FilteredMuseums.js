@@ -12,7 +12,8 @@ const FilteredMuseums = () => {
   // all museums returned from axios GET request
   const [allMuseums, setAllMuseums] = useState(null)
 
-
+  // error handling
+  const [hasError, setHasError] = useState(false)
 
 
   useEffect(() => {
@@ -28,6 +29,7 @@ const FilteredMuseums = () => {
         setAllMuseums(data)
       } catch (err) {
         console.log(err)
+        setHasError(true)
       }
     }
     getAllMuseumsData()
@@ -83,7 +85,7 @@ const FilteredMuseums = () => {
           :
           <section className='hero is-medium' id="hero-container">
             <div className='hero-body showAllHero'>
-              <p className='title has-text-white'>Loading...</p>
+              <p className='title has-text-white'>{hasError ? 'Oops! Something went wrong...' : 'Loading...'}</p>
             </div>
           </section>
       }

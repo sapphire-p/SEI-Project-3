@@ -89,9 +89,11 @@
   padding-bottom: 20x;
 }
 
-.hero {
+/* Removed so FilterPanel visible on Home page: */
+
+/* .hero {
   margin-top: -70px;
-}
+} */
 
 nav {
   border-bottom: 0.1px solid whitesmoke;
@@ -102,6 +104,8 @@ nav {
 #filter-panel {
   font-family: 'Quicksand', sans-serif;
 }
+
+
 .featuredMuseumTitle {
   margin-top: 20px;
 }
@@ -120,26 +124,39 @@ nav {
   background-size: cover;
 }
 
-.HeroTitle {
+
+/* Removed so FilterPanel visible on Home page - not necessary: */
+
+/* .HeroTitle {
   margin-top: -50px;
-}
+} */
 
-.heroSubtitle {
+/* .heroSubtitle {
   margin-top: 50px;
-}
+} */
 
-@media only screen and (max-width: 1020px) {
+/* #HeroTitle {
+  margin: 0;
+}  */
+
+
+
+
+/* @media only screen and (max-width: 1020px) {
 
   .HeroTitle {
     margin-top: 30px;
   }
 
-}
+} */
 
-@media only screen and (max-width: 764px) {
+/* @media only screen and (max-width: 764px) {
 
-  .HeroTitle {
+
+  #HeroTitle {
     margin-top: 140px;
+    text-align: center;
+    width: 100%;
   }
 
   .heroSubtitle {
@@ -147,4 +164,4 @@ nav {
     margin-bottom: 100px;
   }
 
-}
+} */

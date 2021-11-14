@@ -1,6 +1,7 @@
 import React from 'react'
 import FeaturedMuseum from './FeaturedMuseum'
 import Hero from './Hero'
+import FilterPanel from './FilterPanel'
 // import { useLocation } from 'react-router-dom'
 
 const Home = () => {
@@ -13,6 +14,9 @@ const Home = () => {
 
   return (
     <>
+      <section>
+        <FilterPanel />
+      </section>
       <Hero />
       <FeaturedMuseum />
     </>

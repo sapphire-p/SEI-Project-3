@@ -130,14 +130,15 @@ const FilterPanel = () => {
 
 
   return (
-    <section className='has-background-warning'>
+    // className='has-background-warning' removed from section in favour of id to allow colour change on decreased screen width
+    <section id='filter-panel'>
       {!hasError ?
         <div className='field is-horizontal is-grouped is-grouped-centered p-3'>
           <div className='field-body'>
             <div className='field'>
               <div className='control'>
                 <div className='select is-danger'>
-                  <select className='has-background-warning-light has-text-weight-bold' id='filter-panel' name='regions' onChange={handleChange}>
+                  <select className='has-background-warning-light has-text-weight-bold' id='filter-panel-region' name='regions' onChange={handleChange}>
                     <option value='Region'>Region</option>
                     <option value='East of England'>East of England</option>
                     <option value='East Midlands'>East Midlands</option>
@@ -154,12 +155,12 @@ const FilterPanel = () => {
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label className='label is-fullwidth'>Collection types:</label>
+                <label id='checkboxes-text1' className='label is-fullwidth'>Collection types:</label>
               </div>
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label className='checkbox'>
+                <label id='checkboxes-text2' className='checkbox'>
                   <input type='checkbox' name='geology' onChange={handleChange} />
                   Geology
                 </label>
@@ -167,7 +168,7 @@ const FilterPanel = () => {
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label className='checkbox'>
+                <label id='checkboxes-text3' className='checkbox'>
                   <input type='checkbox' name='palaeontology' onChange={handleChange} />
                   Palaeontology
                 </label>
@@ -175,7 +176,7 @@ const FilterPanel = () => {
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label className='checkbox'>
+                <label id='checkboxes-text4' className='checkbox'>
                   <input type='checkbox' name='botany' onChange={handleChange} />
                   Botany
                 </label>
@@ -183,7 +184,7 @@ const FilterPanel = () => {
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label className='checkbox'>
+                <label id='checkboxes-text5' className='checkbox'>
                   <input type='checkbox' name='zoology' onChange={handleChange} />
                   Zoology
                 </label>
@@ -191,7 +192,7 @@ const FilterPanel = () => {
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label className='checkbox'>
+                <label id='checkboxes-text6' className='checkbox'>
                   <input type='checkbox' name='entomology' onChange={handleChange} />
                   Entomology (insects)
                 </label>
@@ -205,7 +206,7 @@ const FilterPanel = () => {
           </div>
         </div>
         :
-        <div className='has-text-centered is-size-5 p-4'>Something went wrong when loading the filter panel - please refresh the page</div> // If there is an error (caused by an issue with the axios GET request on first render)
+        <div id='something-went-wrong-text' className='has-text-centered is-size-5 p-4'>Something went wrong when loading the filter panel - please refresh the page</div> // If there is an error (caused by an issue with the axios GET request on first render)
       }
 
     </section>

@@ -101,8 +101,21 @@ nav {
 
 /* Filter Panel */
 
+
 #filter-panel {
+  background-color: #FFE189;
+}
+#filter-panel-region {
   font-family: 'Quicksand', sans-serif;
+}
+
+@media only screen and (max-width: 753px) {
+  #filter-panel {
+    background-color: #6D6D6D;
+  }
+  #checkboxes-text1, #checkboxes-text2, #checkboxes-text3, #checkboxes-text4, #checkboxes-text5, #checkboxes-text6, #something-went-wrong-text {
+    color: white;
+  }
 }
 
 

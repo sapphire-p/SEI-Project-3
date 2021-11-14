@@ -14,9 +14,7 @@ const Home = () => {
 
   return (
     <>
-      <section>
-        <FilterPanel />
-      </section>
+      <FilterPanel />
       <Hero />
       <FeaturedMuseum />
     </>

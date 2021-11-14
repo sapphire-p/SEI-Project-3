@@ -45,7 +45,7 @@ const MuseumShow = () => {
       try {
         if (!token) return setUserId({
           id: ''
-        }) 
+        })
         const { data } = await axios.get(
           '/api/profile',
           {
@@ -60,11 +60,20 @@ const MuseumShow = () => {
     getUserId()
   }, [token])
 
-  const handleDelete = () => {
-    console.log('delete pressed')
+  const handleDelete = async (event) => {
+    console.log(`/api/museums/${id}/reviews/${event.target.id}`)
+    try {
+      axios.delete(
+        `/api/museums/${id}/reviews/${event.target.id}`, 
+        {
+          headers: { Authorization: `Bearer ${token}` }
+        }
+      )
+    } catch (err) {
+      console.log(err)
+    }
   }
 
-  // ------------------------
   // ------------------------ CAROUSEL
 
 
@@ -74,7 +83,7 @@ const MuseumShow = () => {
         const { data } = await axios.get(`/api/museums/${id}`)
         const multiImages = data.multiple_images
         const imagesJoined = multiImages.map(image => {
-          return  { 
+          return {
             image
           }
         })
@@ -87,14 +96,23 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-  console.log(galleryData)
+  // console.log(galleryData)
   return (
     <>
       {museum ?
         <>
-          <section className='hero is-small has-text-centered m-2'>
-            <div className='hero-body'>
-              <p className='title'>{museum.name}</p>
+          <section className='hero is-small m-2'>
+            <div className='hero-body is-flex is-justify-content-space-between is-align-content-center'>
+              <div className='has-text-left'>
+                <p className='title'>{museum.name}</p>
+                <hr />
+                <a href={museum.website}>Official Website</a>
+              </div>
+              <p className='subtitle has-text-right'>
+                Region: {museum.region}
+                <br />
+                Date Established: {museum.date_established}
+              </p>
             </div>
           </section>
           <section className='section px-6 py-3'>
@@ -107,9 +125,6 @@ const MuseumShow = () => {
                     </figure>
                   </div>
                   <div className='column'>
-                    <h3>Region: {museum.region}</h3>
-                    <h3>Date Established: {museum.date_established}</h3>
-                    <hr />
                     <p>{museum.description}</p>
                     <hr />
                     <div>
@@ -120,10 +135,15 @@ const MuseumShow = () => {
                         })}
                       </ul>
                     </div>
+                    <div>
+                      <hr />
+                      <h3>Address</h3>
+                      <p>{museum.address}</p>
+                    </div>
                   </div>
                 </div>
                 <div className='columns'>
-                  <div className='column'>
+                  <div className='column is-half'>
                     <div>
                       <h3>Reviews</h3>
                       <h3>Average Rating: {museum.averageRating}</h3>
@@ -132,14 +152,10 @@ const MuseumShow = () => {
                     <div className='add-review-form'>
                       <h2>Write your own review to let the Museum know your thoughts!</h2>
                       <hr />
-                      <div>
-                        <AddReviewForm />
-                      </div>
                     </div>
                     <div>
                       <ul>
                         {museum.reviews.map(review => {
-                          console.log(review)
                           return <li key={review._id}>
                             <div className='columns'>
                               <div className='column'>
@@ -151,7 +167,7 @@ const MuseumShow = () => {
                             </div>
                             <div className='is-flex is-flex-direction-row-reverse reviewOwner'>
                               <div>
-                                {(review.owner._id === userId.id) ? <button className='button' onClick={handleDelete}>X</button> : <div></div> }
+                                {(review.owner._id === userId.id) ? <button className='button' id={review._id} onClick={handleDelete}>X</button> : <div></div>}
                               </div>
                               <p>- {review.owner.username}</p>
                             </div>
@@ -159,22 +175,20 @@ const MuseumShow = () => {
                         })}
                       </ul>
                     </div>
-                    
                   </div>
                   <div className='column'>
-                    <h3>Address</h3>
-                    <p>{museum.address}</p>
-                    <hr />
-                    <h3>Museum Website</h3>
-                    <p>{museum.website}</p>
+                    <AddReviewForm />
                   </div>
                 </div>
               </div>
-              <div>
-                <Carousel 
-                  data={galleryData}
-                  dots={true}
-                />
+              <div className='columns'>
+                <div className='column is-half'>
+                  <Carousel
+                    data={galleryData}
+                    dots={true}
+                    slideImageFit='cover'
+                  />
+                </div>
               </div>
             </div>
           </section>

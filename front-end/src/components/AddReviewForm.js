@@ -5,6 +5,7 @@ import { useParams } from 'react-router'
 const AddReviewForm = () => {
 
   const { id } = useParams()
+  // const history = useHistory()
 
   const [formData, setFormData] = useState({
     comment: '',
@@ -32,7 +33,7 @@ const AddReviewForm = () => {
   }
 
   const handleSubmit = async () => {
-    // event.preventDefault() <- INTETIONALLY COMMENTED OUT
+    // event.preventDefault()
     try {
       await axios.post(
         `/api/museums/${id}/reviews`, 
@@ -41,13 +42,15 @@ const AddReviewForm = () => {
           headers: { Authorization: `Bearer ${token}` }
         }
       )
+      // history.push(`/museums/${id}`)
     } catch (err) {
-      console.log(err)
+      console.log('ERROR ->>>', err)
       // setErrors(err.response.data.errors)
       setErrors(true)
     }
   }
 
+  // console.log(errors)
   return (
     <form className='review-add' onSubmit={handleSubmit}>
       <div className='field'>

@@ -132,7 +132,7 @@ const FilterPanel = () => {
   return (
     <section className='has-background-warning'>
       {!hasError ?
-        <div className='field is-horizontal is-grouped is-grouped-centered'>
+        <div className='field is-horizontal is-grouped is-grouped-centered p-3'>
           <div className='field-body'>
             <div className='field'>
               <div className='control'>
@@ -152,12 +152,12 @@ const FilterPanel = () => {
                 </div>
               </div>
             </div>
-            <div className='field'>
+            <div className='field is-flex is-align-items-center'>
               <div className='control'>
                 <label className='label is-fullwidth'>Collection types:</label>
               </div>
             </div>
-            <div className='field'>
+            <div className='field is-flex is-align-items-center'>
               <div className='control'>
                 <label className='checkbox'>
                   <input type='checkbox' name='geology' onChange={handleChange} />
@@ -165,7 +165,7 @@ const FilterPanel = () => {
                 </label>
               </div>
             </div>
-            <div className='field'>
+            <div className='field is-flex is-align-items-center'>
               <div className='control'>
                 <label className='checkbox'>
                   <input type='checkbox' name='palaeontology' onChange={handleChange} />
@@ -173,7 +173,7 @@ const FilterPanel = () => {
                 </label>
               </div>
             </div>
-            <div className='field'>
+            <div className='field is-flex is-align-items-center'>
               <div className='control'>
                 <label className='checkbox'>
                   <input type='checkbox' name='botany' onChange={handleChange} />
@@ -181,7 +181,7 @@ const FilterPanel = () => {
                 </label>
               </div>
             </div>
-            <div className='field'>
+            <div className='field is-flex is-align-items-center'>
               <div className='control'>
                 <label className='checkbox'>
                   <input type='checkbox' name='zoology' onChange={handleChange} />
@@ -189,7 +189,7 @@ const FilterPanel = () => {
                 </label>
               </div>
             </div>
-            <div className='field'>
+            <div className='field is-flex is-align-items-center'>
               <div className='control'>
                 <label className='checkbox'>
                   <input type='checkbox' name='entomology' onChange={handleChange} />
@@ -205,7 +205,7 @@ const FilterPanel = () => {
           </div>
         </div>
         :
-        <div></div> // If there is an error (caused by an issue with the axios GET request on first render), FilterPanel will disappear
+        <div className='has-text-centered is-size-5 p-4'>Something went wrong when loading the filter panel - please refresh the page</div> // If there is an error (caused by an issue with the axios GET request on first render)
       }
 
     </section>

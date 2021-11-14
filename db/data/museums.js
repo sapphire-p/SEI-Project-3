@@ -289,7 +289,7 @@ export default [
     website: 'http://www.sedgwickmuseum.org/'
   },
   {
-    name: 'Haslemere Educational Museum ',
+    name: 'Haslemere Educational Museum',
     image: 'https://i.imgur.com/d1eqD9C.png',
     address: '78 High St, Haslemere GU27 2LA',
     region: 'South East',
@@ -370,7 +370,7 @@ export default [
   {
     name: 'Dinosaur Isle',
     image: 'https://i.imgur.com/j8o8YCz.jpg',
-    address: 'Culver Parade, Sandown, GB PO36 8QA',
+    address: 'Culver Parade, Sandown, PO36 8QA',
     region: 'South East',
     date_established: 2001,
     description: 'Dinosaur isle museum was established in 2001 and was designed by Rainey Pretrie Johns. This museum type is Paleontological and it\'s curator is Martin Munt.',

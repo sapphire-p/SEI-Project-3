@@ -14,6 +14,8 @@ const MuseumShow = () => {
 
   const [galleryData, setGalleryData] = useState([])
 
+  const [avgRat, setAvgRat] = useState(0)
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -23,7 +25,7 @@ const MuseumShow = () => {
         // setGalleryData(data)
       } catch (err) {
         setHasError(true)
-        console.log(hasError)
+        // console.log(hasError)
       }
     }
     getData()
@@ -56,26 +58,43 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-  // console.log(galleryData)
+  // ------ STAR FIX <- if museum isn't rated the return in the back-end is 'not yet rated', 
+  // ------------------ so this function says if a non-number is being returned, then return 0
+
+  useEffect(() => {
+    const getRating = async () => {
+      try {
+        if (isNaN(museum.averageRating)) setAvgRat(0)
+        else setAvgRat(museum.averageRating)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getRating()
+  }, [museum])
+
+  console.log(avgRat)
   return (
     <>
       {museum ?
         <>
-          <section className='hero is-small m-2'>
-            <div className='hero-body is-flex is-justify-content-space-between is-align-content-center'>
+          <section className='hero is-small'>
+            <div className='hero-body is-flex is-justify-content-space-between is-align-content-center singleMuseumHeroBody'>
               <div className='has-text-left'>
                 <p className='title'>{museum.name}</p>
                 <hr />
                 <div className='is-flex is-justify-content-space-between'>
                   <a href={museum.website}>Official Website</a>
                   <StarRatings
-                    rating={parseFloat(museum.averageRating)}
+                    rating={parseFloat(avgRat)}
                     numberOfStars={5}
                     starRatedColor='gold'
                     starDimension='25px'
                     starSpacing='3px'
                   />
                 </div>
+              </div>
+              <div>
               </div>
               <p className='subtitle has-text-right'>
                 <a onClick={handleClick} className="bookmark far animate__animated animate__faster  fa-bookmark"></a>

@@ -75,6 +75,12 @@
   background-size: cover;
 }
 
+.singleMuseumHeroBody {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../AssetsTest/dinoskeleton2.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
 .heroImageHome {
   border: 5px solid white;
 }

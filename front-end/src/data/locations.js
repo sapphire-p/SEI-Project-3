@@ -4,7 +4,7 @@ export default [
   { id: 3, name: 'Cliffe Castle Museum', longitude: -1.913579, latitude: 53.875034, icon: '🏛' },
   { id: 4, name: 'Cole Museum of Zoology', longitude: -0.945003, latitude: 51.442005, icon: '🏛' },
   { id: 5, name: 'Oxford University Museum of Natural History', longitude: -1.255102, latitude: 51.756206, icon: '🏛' },
-  { id: 6, name: 'Penrith and Eden Museum', longitude: 2.754257, latitude: 54.665778, icon: '🏛' },
+  { id: 6, name: 'Penrith and Eden Museum', longitude: -2.754257, latitude: 54.665778, icon: '🏛' },
   { id: 7, name: 'Potteries Museum & Art Gallery', longitude: -2.104116, latitude: 53.012244, icon: '🏛' },
   { id: 8, name: 'Powell-Cotton Museum', longitude: 1.315304, latitude: 51.367496, icon: '🏛' },
   { id: 9, name: 'Warrington Museum & Art Gallery', longitude: -2.595651, latitude: 53.390766, icon: '🏛' },

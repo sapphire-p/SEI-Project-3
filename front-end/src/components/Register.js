@@ -39,10 +39,10 @@ const Register = () => {
 
 
   return (
-    <section className='section' id="register-container">
+    <section className='section'>
       <div className='container'>
         <div className='columns'>
-          <form className='column is-half is-offset-one-quarter box' onSubmit={handleSubmit}>
+          <form className='column is-half is-offset-one-quarter box has-background-grey-lighter' onSubmit={handleSubmit}>
             <h1 className='title'>Create your account</h1>
             <p>As a registered MuseumMapper user you&apos;ll be able to review museums and save your favourites to view later!</p>
             <div className='field'>
@@ -100,7 +100,7 @@ const Register = () => {
               {errors.passwordConfirmation && <p className='help is-danger'>Password does not match</p>}
             </div>
             <div className='field'>
-              <button type='submit' className='button is-fullwidth is-warning mt-5'>Register</button>
+              <button type='submit' className='button is-rounded is-fullwidth is-danger has-text-weight-bold mt-5'>Register</button>
             </div>
           </form>
         </div>

@@ -42,8 +42,6 @@ const FilterPanel = () => {
   //* handleChange function, updates selectedRegion or selectedCollections on each interaction with Region dropdown or collection types checkboxes *//
 
   const handleChange = (event) => {
-    event.target.classList.toggle('animate__swing')
-    event.target.classList.toggle('animate__bounce')
     if (event.target.name === 'regions') {
       setSelectedRegion(event.target.value)
     } else {
@@ -133,85 +131,84 @@ const FilterPanel = () => {
 
   return (
     // className='has-background-warning' removed from section in favour of id to allow colour change on decreased screen width
-    <section className='filter-panel-section is-two-thirds is-flex is-justify-content-center mt-4'>
-      <div id='filter-panel'>
-        {!hasError ?
-          <div className='field is-horizontal is-grouped is-grouped-centered p-3'>
-            <div className='field-body'>
-              <div className='field'>
-                <div className='control'>
-                  <div className='select is-white'>
-                    <select className='has-background-white has-text-weight-bold has-text-black' id='filter-panel-region' name='regions' onChange={handleChange}>
-                      <option value='Region has-text-black'>Region</option>
-                      <option value='East of England'>East of England</option>
-                      <option value='East Midlands'>East Midlands</option>
-                      <option value='London'>London</option>
-                      <option value='North East'>North East</option>
-                      <option value='North West'>North West</option>
-                      <option value='South East'>South East</option>
-                      <option value='South West'>South West</option>
-                      <option value='West Midlands'>West Midlands</option>
-                      <option value='Yorkshire and the Humber'>Yorkshire and the Humber</option>
-                    </select>
-                  </div>
+    <section id='filter-panel'>
+      {!hasError ?
+        <div className='field is-horizontal is-grouped is-grouped-centered p-3'>
+          <div className='field-body'>
+            <div className='field'>
+              <div className='control'>
+                <div className='select is-danger is-rounded'>
+                  <select className='has-background-white has-text-weight-bold has-text-black' id='filter-panel-region' name='regions' onChange={handleChange}>
+                    <option value='Region'>Region</option>
+                    <option value='East of England'>East of England</option>
+                    <option value='East Midlands'>East Midlands</option>
+                    <option value='London'>London</option>
+                    <option value='North East'>North East</option>
+                    <option value='North West'>North West</option>
+                    <option value='South East'>South East</option>
+                    <option value='South West'>South West</option>
+                    <option value='West Midlands'>West Midlands</option>
+                    <option value='Yorkshire and the Humber'>Yorkshire and the Humber</option>
+                  </select>
                 </div>
               </div>
-              <div className='field is-flex is-align-items-center'>
-                <div className='control'>
-                  <label id='checkboxes-text1' className='label is-fullwidth has-text-black collectionType'>Collection Types:</label>
-                </div>
+            </div>
+            <div className='field is-flex is-align-items-center'>
+              <div className='control'>
+                <label id='checkboxes-text1' className='label is-fullwidth has-text-black'>Collection Types:</label>
               </div>
-              <div className='field is-flex is-align-items-center'>
-                <div className='control '>
-                  <label id='checkboxes-text2' className='checkbox has-text-black is-flex '>
-                    <input type='checkbox' name='geology' className='checkboxes animate__animated animate__faster' onChange={handleChange} />
-                    <span className="pl-1">Geology</span>
-                  </label>
-                </div>
+            </div>
+            <div className='field is-flex is-align-items-center'>
+              <div className='control'>
+                <label id='checkboxes-text2' className='checkbox has-text-black'>
+                  <input type='checkbox' name='geology' onChange={handleChange} />
+                  <span className="pl-1">Geology</span>
+                </label>
               </div>
-              <div className='field is-flex is-align-items-center'>
-                <div className='control'>
-                  <label id='checkboxes-text3' className='checkbox has-text-black is-flex'>
-                    <input type='checkbox' name='palaeontology' className='checkboxes animate__animated animate__faster' onChange={handleChange} />
-                    <span className="pl-1">Palaeontology</span>
-                  </label>
-                </div>
+            </div>
+            <div className='field is-flex is-align-items-center'>
+              <div className='control'>
+                <label id='checkboxes-text3' className='checkbox has-text-black'>
+                  <input type='checkbox' name='palaeontology' onChange={handleChange} />
+                  <span className="pl-1">Palaeontology</span>
+                </label>
               </div>
-              <div className='field is-flex is-align-items-center'>
-                <div className='control'>
-                  <label id='checkboxes-text4' className='checkbox has-text-black is-flex'>
-                    <input type='checkbox' name='botany' className='checkboxes animate__animated animate__faster' onChange={handleChange} />
-                    <span className="pl-1">Botany</span>
-                  </label>
-                </div>
+            </div>
+            <div className='field is-flex is-align-items-center'>
+              <div className='control'>
+                <label id='checkboxes-text4' className='checkbox has-text-black'>
+                  <input type='checkbox' name='botany' onChange={handleChange} />
+                  <span className="pl-1">Botany</span>
+                </label>
               </div>
-              <div className='field is-flex is-align-items-center'>
-                <div className='control'>
-                  <label id='checkboxes-text5' className='checkbox has-text-black is-flex'>
-                    <input type='checkbox' name='zoology' className='checkboxes animate__animated animate__faster' onChange={handleChange} />
-                    <span className="pl-1">Zoology</span>
-                  </label>
-                </div>
+            </div>
+            <div className='field is-flex is-align-items-center'>
+              <div className='control'>
+                <label id='checkboxes-text5' className='checkbox has-text-black'>
+                  <input type='checkbox' name='zoology' onChange={handleChange} />
+                  <span className="pl-1">Zoology</span>
+                </label>
               </div>
-              <div className='field is-flex is-align-items-center'>
-                <div className='control'>
-                  <label id='checkboxes-text6' className='checkbox has-text-black is-flex'>
-                    <input type='checkbox' name='entomology' className='checkboxes animate__animated animate__faster' onChange={handleChange} />
-                    <span className="pl-1">Entomology (insects)</span>
-                  </label>
-                </div>
+            </div>
+            <div className='field is-flex is-align-items-center'>
+              <div className='control'>
+                <label id='checkboxes-text6' className='checkbox has-text-black'>
+                  <input type='checkbox' name='entomology' onChange={handleChange} />
+                  <span className="pl-1">Entomology (insects)</span>
+                </label>
               </div>
             </div>
             <div>
               <div className='control'>
-                <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-danger has-text-white has-text-weight-bold is-fullwidth is-rounded'><i className="fas fa-search mr-1"></i>Find Museums</Link>
+                <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-rounded has-background-danger has-text-white has-text-weight-bold is-fullwidth'><i className="fas fa-search mr-1"></i>Find Museums</Link>
               </div>
             </div>
           </div>
-          :
-          <div id='something-went-wrong-text' className='has-text-centered is-size-5 p-4'><i className="fas fa-exclamation-triangle"></i> Something went wrong when loading the filter panel - please refresh the page</div> // If there is an error (caused by an issue with the axios GET request on first render)
-        }
-      </div>
+        </div>
+        :
+        <div id='something-went-wrong-text' className='has-text-centered is-size-5 p-4'><i className="fas fa-exclamation-triangle"></i> Something went wrong when loading the filter panel - please refresh the page</div> // If there is an error (caused by an issue with the axios GET request on first render)
+      }
+
     </section>
   )
 

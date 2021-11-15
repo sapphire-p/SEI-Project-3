@@ -38,14 +38,14 @@ const Login = () => {
   const setItemToLocalStorage2 = () => {
     window.localStorage.setItem('username', formData.username)
   }
-  
+
 
 
   return (
-    <section className='section' id="login-container">
+    <section className='section is-medium'>
       <div className='container'>
         <div className='columns'>
-          <form className='column is-half is-offset-one-quarter box' onSubmit={handleSubmit}>
+          <form className='column is-half is-offset-one-quarter box has-background-grey-lighter' onSubmit={handleSubmit}>
             <h1 className='title'>Log in</h1>
             <p>Please log in to your account to access features including museum reviews and favourites.</p>
             <div className='field'>
@@ -75,7 +75,7 @@ const Login = () => {
               {error && <p className='help is-danger'>Your username and/or password is incorrect</p>}
             </div>
             <div className='field'>
-              <button type='submit' className='button is-fullwidth is-warning mt-5'>Log in</button>
+              <button type='submit' className='button is-rounded is-fullwidth is-danger has-text-weight-bold mt-5'>Log in</button>
             </div>
           </form>
         </div>

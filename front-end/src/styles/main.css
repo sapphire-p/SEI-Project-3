@@ -87,11 +87,18 @@
 .visitWebiteBtn {
   padding-top: 20px;
   padding-bottom: 20x;
+  transition: .2s;
 }
 
-.hero {
-  margin-top: -70px;
+.visitWebiteBtn:hover {
+  transform: scale(1.03);
 }
+
+/* Removed so FilterPanel visible on Home page: */
+
+/* .hero {
+  margin-top: -70px;
+} */
 
 nav {
   border-bottom: 0.1px solid whitesmoke;
@@ -99,9 +106,25 @@ nav {
 
 /* Filter Panel */
 
+
 #filter-panel {
+  background-color: #FFE189;
+}
+#filter-panel-region {
   font-family: 'Quicksand', sans-serif;
 }
+
+@media only screen and (max-width: 753px) {
+  #filter-panel {
+    background-color: #6D6D6D;
+  }
+  #checkboxes-text1, #checkboxes-text2, #checkboxes-text3, #checkboxes-text4, #checkboxes-text5, #checkboxes-text6, #something-went-wrong-text {
+    color: white;
+  }
+}
+
+/* Featured Museum */
+
 .featuredMuseumTitle {
   margin-top: 20px;
 }
@@ -111,40 +134,48 @@ nav {
 }
 
 .arrowBelowTitle {
-  margin-top: -15px;
+  margin-top: -5px;
 }
 
 .mainHero {
-  background-image: url("https://i.imgur.com/qCmUKsV.png");
+  background-image: url("https://i.imgur.com/aqvbG6x.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.HeroTitle {
-  margin-top: -50px;
+
+
+.museumsCardContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  transform: scale(1.03);
 }
 
-.heroSubtitle {
-  margin-top: 50px;
+.museumCard {
+  transition: transform .25s; /* Animation */
 }
 
-@media only screen and (max-width: 1020px) {
-
-  .HeroTitle {
-    margin-top: 0px;
-  }
-
+.museumCard:hover {
+  padding: -50px;
+  transform: scale(1.2);
+  z-index: 1;
 }
 
-@media only screen and (max-width: 764px) {
+.cardRegion {
+  color: black;
+}
 
-  .HeroTitle {
-    margin-top: 100px;
-  }
+.bookmark {
+  font-size: 18px;
+  padding: 10px;
+  margin-top: -11px;
+  margin-right: px;
+  color: red;
+  transition: transform .1s;
+}
 
-  .heroSubtitle {
-    margin-top: 50px;
-    margin-bottom: 100px;
-  }
-
+.bookmark:hover {
+  color: red;
+  transform: scale(1.03);
 }

@@ -1,14 +1,14 @@
-import mongoose  from 'mongoose'
+import mongoose from 'mongoose'
 import uniqueValidator from 'mongoose-unique-validator'
 
 const reviewSchema = new mongoose.Schema({
   comment: { type: String, required: true, maxlength: 500 },
   rating: { type: Number, required: true, min: 1, max: 5 },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
-}, 
-{
-  timestamps: true
-}
+},
+  {
+    timestamps: true
+  }
 )
 
 const museumSchema = new mongoose.Schema({
@@ -26,7 +26,7 @@ const museumSchema = new mongoose.Schema({
 
 // Virtual Getter: virtual field added to object before it is json
 museumSchema.virtual('averageRating')
-  .get(function() {
+  .get(function () {
     // if there are no comments return a string
     if (!this.reviews.length) return 'Not Reviewed'
     // iterate through reviews, add up all ratings

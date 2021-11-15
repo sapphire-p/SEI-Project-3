@@ -5,6 +5,8 @@ import locationData from '../data/locations'
 
 const Map = () => {
 
+  const [userLocation, setUserLocation] = useState(null)
+
   const [viewPort, setViewPort] = useState({
 
     latitude: 51.509240,
@@ -12,7 +14,8 @@ const Map = () => {
     zoom: 7
   })
 
-  const [userLocation, setUserLocation] = useState(null)
+  // const [popup, setPopUp] = 
+
 
   // Set viewPort to { latitude: 51.509240, longitude: 0.005540 } initially if need be for testing
 

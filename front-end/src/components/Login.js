@@ -24,6 +24,7 @@ const Login = () => {
     try {
       const { data } = await axios.post('/api/login', formData)
       setItemToLocalStorage(data.token)
+      setItemToLocalStorage2(formData.username)
       history.push('/')
     } catch (err) {
       console.log(err)
@@ -34,6 +35,10 @@ const Login = () => {
   const setItemToLocalStorage = (token) => {
     window.localStorage.setItem('token', token)
   }
+  const setItemToLocalStorage2 = () => {
+    window.localStorage.setItem('username', formData.username)
+  }
+  
 
 
   return (

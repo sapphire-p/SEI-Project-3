@@ -2,6 +2,11 @@ export const getTokenFromLocalStorage = () => {
   return window.localStorage.getItem('token') // get token from local storage
 }
 
+export const getTokenFromLocalStorage2 = () => {
+  return window.localStorage.getItem('username') // get username from local storage
+}
+
+
 export const getPayload = () => {
   const token = getTokenFromLocalStorage() // store the response of get token function in variable
   if (!token) return // if no token exists just return here
@@ -10,3 +15,5 @@ export const getPayload = () => {
   const payloadString = splitToken[1] // get just the payload string from the array
   return JSON.parse(atob(payloadString)) // decode the payload string, using json.parse to convert from JSON to JS object
 }
+
+

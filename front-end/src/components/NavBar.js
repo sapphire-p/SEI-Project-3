@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
-import { getPayload } from './helpers/auth'
+import { getPayload, getTokenFromLocalStorage2 } from './helpers/auth'
 import Logo from '../AssetsTest/logo3.png'
 
 
@@ -24,6 +24,8 @@ const NavBar = () => {
     window.localStorage.removeItem('token')
     history.push('/')
   }
+
+  const username = getTokenFromLocalStorage2()
 
   return (
     // Removed className 'is-fixed-top' from nav to ensure visibility of Home page Hero and FilterPanel
@@ -52,7 +54,7 @@ const NavBar = () => {
             </>
             :
             <>
-              <div className="navbar-item"><Link to="/profile" className="link is-size-6 has-text-weight-light"><i className="fas fa-user"></i> Profile</Link></div>
+              <div className="navbar-item"><Link to="/profile" className="link is-size-6 has-text-weight-light"><i className="fas fa-user"></i> { username }</Link></div>
               <div className="navbar-item"><a className="link is-size-6 has-text-weight-light" onClick={handleLogout}><i className="fas fa-sign-out-alt"></i> Logout</a></div>
             </>
           }

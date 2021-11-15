@@ -131,14 +131,14 @@ const FilterPanel = () => {
 
   return (
     // className='has-background-warning' removed from section in favour of id to allow colour change on decreased screen width
-    <section id='filter-panel'>
+    <section id='filter-panel -has-background-white'>
       {!hasError ?
         <div className='field is-horizontal is-grouped is-grouped-centered p-3'>
           <div className='field-body'>
             <div className='field'>
               <div className='control'>
-                <div className='select is-danger'>
-                  <select className='has-background-warning-light has-text-weight-bold' id='filter-panel-region' name='regions' onChange={handleChange}>
+                <div className='select is-white'>
+                  <select className='has-background-black has-text-weight-bold has-text-white' id='filter-panel-region' name='regions' onChange={handleChange}>
                     <option value='Region'>Region</option>
                     <option value='East of England'>East of England</option>
                     <option value='East Midlands'>East Midlands</option>
@@ -155,58 +155,58 @@ const FilterPanel = () => {
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label id='checkboxes-text1' className='label is-fullwidth'>Collection types:</label>
+                <label id='checkboxes-text1' className='label is-fullwidth has-text-black'>Collection Types:</label>
               </div>
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label id='checkboxes-text2' className='checkbox'>
+                <label id='checkboxes-text2' className='checkbox has-text-black'> 
                   <input type='checkbox' name='geology' onChange={handleChange} />
-                  Geology
+                  <span className="pl-1">Geology</span>
                 </label>
               </div>
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label id='checkboxes-text3' className='checkbox'>
+                <label id='checkboxes-text3' className='checkbox has-text-black'>
                   <input type='checkbox' name='palaeontology' onChange={handleChange} />
-                  Palaeontology
+                  <span className="pl-1">Palaeontology</span>
                 </label>
               </div>
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label id='checkboxes-text4' className='checkbox'>
+                <label id='checkboxes-text4' className='checkbox has-text-black'>
                   <input type='checkbox' name='botany' onChange={handleChange} />
-                  Botany
+                  <span className="pl-1">Botany</span>
                 </label>
               </div>
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label id='checkboxes-text5' className='checkbox'>
+                <label id='checkboxes-text5' className='checkbox has-text-black'>
                   <input type='checkbox' name='zoology' onChange={handleChange} />
-                  Zoology
+                  <span className="pl-1">Zoology</span>
                 </label>
               </div>
             </div>
             <div className='field is-flex is-align-items-center'>
               <div className='control'>
-                <label id='checkboxes-text6' className='checkbox'>
+                <label id='checkboxes-text6' className='checkbox has-text-black'>
                   <input type='checkbox' name='entomology' onChange={handleChange} />
-                  Entomology (insects)
+                  <span className="pl-1">Entomology (insects)</span>
                 </label>
               </div>
             </div>
             <div>
               <div className='control'>
-                <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-link has-background-danger has-text-white has-text-weight-bold is-fullwidth'>Find museums!</Link>
+                <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-link has-background-black has-text-white has-text-weight-bold is-fullwidth'><i className="fas fa-search mr-1"></i>Find Museums</Link>
               </div>
             </div>
           </div>
         </div>
         :
-        <div id='something-went-wrong-text' className='has-text-centered is-size-5 p-4'>Something went wrong when loading the filter panel - please refresh the page</div> // If there is an error (caused by an issue with the axios GET request on first render)
+        <div id='something-went-wrong-text' className='has-text-centered is-size-5 p-4'><i className="fas fa-exclamation-triangle"></i> Something went wrong when loading the filter panel - please refresh the page</div> // If there is an error (caused by an issue with the axios GET request on first render)
       }
 
     </section>

@@ -22,7 +22,7 @@ const MuseumCard = ({ _id, name, image, region }) => {
       <div className='card'>
         <div className='card-header'>
           <div className='card-header-title cardTitle is-size-7'>{name}</div>
-          <a onClick={handleClick} className="bookmark far animate__animated animate__faster  fa-bookmark"></a>
+          <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={_id}></a>
         </div>
         {/* <Link to={`/museums/${_id}`} target="_blank" > */}
         <Link to={`/museums/${_id}`}>

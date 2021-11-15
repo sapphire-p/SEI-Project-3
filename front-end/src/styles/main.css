@@ -69,6 +69,10 @@
   margin-top: 35px;
 }
 
+.descAndPic {
+  background-color: black;
+}
+
 .showAllHero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../AssetsTest/dinoskeleton2.jpeg');
   background-position: center;
@@ -188,3 +192,7 @@ nav {
   height: 100vh;
   width: 100vw;
 }
+
+/* .mainContainer {
+  border: 0;
+} */

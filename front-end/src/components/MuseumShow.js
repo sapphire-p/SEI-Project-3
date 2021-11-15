@@ -14,6 +14,8 @@ const MuseumShow = () => {
 
   const [galleryData, setGalleryData] = useState([])
 
+  const [avgRat, setAvgRat] = useState(0)
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -23,7 +25,7 @@ const MuseumShow = () => {
         // setGalleryData(data)
       } catch (err) {
         setHasError(true)
-        console.log(hasError)
+        // console.log(hasError)
       }
     }
     getData()
@@ -56,20 +58,37 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-  // console.log(galleryData)
+  // ------ STAR FIX <- if museum isn't rated the return in the back-end is 'not yet rated', 
+  // ------------------ so this function says if a non-number is being returned, then return 0
+
+  useEffect(() => {
+    const getRating = async () => {
+      try {
+        if (isNaN(museum.averageRating)) setAvgRat(0)
+        else setAvgRat(museum.averageRating)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getRating()
+  }, [museum])
+
+  // ---------------------------------------
+
+  console.log(avgRat)
   return (
     <>
       {museum ?
         <>
-          <section className='hero is-small m-2'>
-            <div className='hero-body is-flex is-justify-content-space-between is-align-content-center'>
+          <section className='hero is-small'>
+            <div className='hero-body is-flex is-justify-content-space-between is-align-content-center singleMuseumHeroBody'>
               <div className='has-text-left'>
-                <p className='title'>{museum.name}</p>
+                <p className='title has-text-white'>{museum.name}</p>
                 <hr />
                 <div className='is-flex is-justify-content-space-between'>
-                  <a href={museum.website}>Official Website</a>
+                  <a href={museum.website} className='has-text-white'>Official Website</a>
                   <StarRatings
-                    rating={parseFloat(museum.averageRating)}
+                    rating={parseFloat(avgRat)}
                     numberOfStars={5}
                     starRatedColor='gold'
                     starDimension='25px'
@@ -77,8 +96,10 @@ const MuseumShow = () => {
                   />
                 </div>
               </div>
-              <p className='subtitle has-text-right'>
-                <a onClick={handleClick} className="bookmark far animate__animated animate__faster  fa-bookmark"></a>
+              <div>
+              </div>
+              <p className='subtitle has-text-right has-text-white'>
+                <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a>
                 <hr />
                 Region: {museum.region}
                 <br />
@@ -86,16 +107,18 @@ const MuseumShow = () => {
               </p>
             </div>
           </section>
-          <section className='section px-6 py-3'>
-            <div className='container'>
-              <div>
-                <div className='columns'>
-                  <div className='column'>
+          <section className='section px-0 py-3'>
+            <div className='is-marginless px-3 mainContainer'>
+              <section className='columns is-flex is-align-items-center descAndPic'>
+                <div className='column is-flex is-align-items-center'>
+                  <div className='card p-3'>
                     <figure className='image'>
                       <img src={museum.image} alt={`Picture of ${museum.name}`} />
                     </figure>
                   </div>
-                  <div className='column'>
+                </div>
+                <div className='column'>
+                  <div className='card p-3'>
                     <p>{museum.description}</p>
                     <hr />
                     <div>
@@ -113,18 +136,14 @@ const MuseumShow = () => {
                     </div>
                   </div>
                 </div>
-                <div className='columns'>
-                  <div className='column is-half'>
-                    {/* <div>
-                      <h3>Reviews</h3>
-                      <h3>Average Rating: {museum.averageRating}</h3>
-                      <hr />
+              </section>
+              <section className='columns reviewsAndForm'>
+                <div className='column is-half'>
+                  <div className='card'>
+                    <div className='card-header p-2 is-flex is-align-items-center'>
+                      <p className='card-header-title'>Reviews</p>
                     </div>
-                    <div className='add-review-form'>
-                      <h2>Write your own review to let the Museum know your thoughts!</h2>
-                      <hr />
-                    </div>
-                    <div>
+                    <div className='card-content'>
                       <ul>
                         {museum.reviews.map(review => {
                           return (
@@ -132,38 +151,24 @@ const MuseumShow = () => {
                           )
                         })}
                       </ul>
-                    </div> */}
-
-                    <div className='card'>
-                      <div className='card-header p-2 is-flex is-align-items-center'>
-                        <p className='card-header-title'>Reviews</p>
-                      </div>
-                      <div className='card-content'>
-                        <ul>
-                          {museum.reviews.map(review => {
-                            return (
-                              <ReviewsList key={review._id} {...review} />
-                            )
-                          })}
-                        </ul>
-                      </div>
                     </div>
-
-                  </div>
-                  <div className='column'>
-                    <AddReviewForm />
                   </div>
                 </div>
-              </div>
-              <div className='columns'>
-                <div className='column is-half'>
-                  <Carousel
-                    data={galleryData}
-                    dots={true}
-                    slideImageFit='cover'
-                  />
+                <div className='column'>
+                  <AddReviewForm />
                 </div>
-              </div>
+              </section>
+              <section>
+                <div className='columns'>
+                  <div className='column is-half'>
+                    <Carousel
+                      data={galleryData}
+                      dots={true}
+                      slideImageFit='cover'
+                    />
+                  </div>
+                </div>
+              </section>
             </div>
           </section>
         </>

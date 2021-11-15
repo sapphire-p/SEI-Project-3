@@ -1,13 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AddingDeletingToFavourites from './AddingDeletingToFavourites'
 
 const MuseumCard = ({ _id, name, image, region }) => {
-
-  const handleClick = event => {
-    // console.log('CLICKED')
-    event.target.classList.toggle('fas')
-    event.target.classList.toggle('animate__bounceIn')
-  }
 
   // const handleCardMouseEnter = event => {
   //   event.target.classList.add('grow')
@@ -22,7 +17,11 @@ const MuseumCard = ({ _id, name, image, region }) => {
       <div className='card'>
         <div className='card-header'>
           <div className='card-header-title cardTitle is-size-7'>{name}</div>
-          <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={_id}></a>
+          {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={_id}></a> */}
+          <AddingDeletingToFavourites /> 
+
+          {/* ^^^ doesn't work on index page yet */}
+
         </div>
         {/* <Link to={`/museums/${_id}`} target="_blank" > */}
         <Link to={`/museums/${_id}`}>

@@ -23,15 +23,17 @@ const MuseumsIndex = () => {
           <p className='subtitle has-text-white'>Check out these fascinating natural history collections across England</p>
         </div>
       </section>
-      <section className='section'>
-        <div className='container'>
+      <section className='section MuseumsSection'>
+        <div className='container museumsCardContainer'>
           <div className='columns is-multiline'>
-            {museums.map(museum => {
+            {museums.sort((a, b) => a - b).map(museum => {
               return (
                 <MuseumCard key={museum._id} {...museum} />
               )
             })}
+            <div className="MuseumsSection2"></div>
           </div>
+          
         </div>
       </section>
     </>

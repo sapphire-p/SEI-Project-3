@@ -26,7 +26,7 @@ const NavBar = () => {
   }
 
   return (
-    // Removed className 'is-fixed-top' from nav to ensure Hero and FilterPanel visible
+    // Removed className 'is-fixed-top' from nav to ensure visibility of Home page Hero and FilterPanel
     <nav className="navbar is-black">
       <div className="container">
         <div className="navbar-brand">

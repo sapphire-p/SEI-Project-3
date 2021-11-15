@@ -18,7 +18,7 @@ const Hero = () => {
 export default Hero
 
 
-//* Older version for reference - commented out, can delete:
+//* Older version:
 
 // import React from 'react'
 

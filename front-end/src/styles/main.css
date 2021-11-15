@@ -123,6 +123,7 @@ nav {
 }
 
 .checkboxes {
+  margin-top: 5px;
   transform: scale(1.2);
 }
 

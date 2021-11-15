@@ -3,14 +3,14 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import AddReviewForm from './AddReviewForm'
 import { Carousel } from 'react-carousel-minimal'
+import ReviewsList from './ReviewsList'
+import StarRatings from 'react-star-ratings'
 
 const MuseumShow = () => {
 
   const [museum, setMuseum] = useState()
   const { id } = useParams()
   const [hasError, setHasError] = useState(false)
-
-  const [userId, setUserId] = useState()
 
   const [galleryData, setGalleryData] = useState([])
 
@@ -29,53 +29,13 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-  // ------------ for delete
-
-  const [token, setToken] = useState()
-
-  useEffect(() => {
-    const getTokenFromLocalStorage = () => {
-      setToken(window.localStorage.getItem('token'))
-    }
-    getTokenFromLocalStorage()
-  }, [])
-
-  useEffect(() => {
-    const getUserId = async () => {
-      try {
-        if (!token) return setUserId({
-          id: ''
-        })
-        const { data } = await axios.get(
-          '/api/profile',
-          {
-            headers: { Authorization: `Bearer ${token}` }
-          }
-        )
-        setUserId(data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getUserId()
-  }, [token])
-
-  const handleDelete = async (event) => {
-    console.log(`/api/museums/${id}/reviews/${event.target.id}`)
-    try {
-      axios.delete(
-        `/api/museums/${id}/reviews/${event.target.id}`, 
-        {
-          headers: { Authorization: `Bearer ${token}` }
-        }
-      )
-    } catch (err) {
-      console.log(err)
-    }
+  const handleClick = event => {
+    // console.log('CLICKED')
+    event.target.classList.toggle('fas')
+    event.target.classList.toggle('animate__bounceIn')
   }
 
   // ------------------------ CAROUSEL
-
 
   useEffect(() => {
     const getData = async () => {
@@ -106,9 +66,20 @@ const MuseumShow = () => {
               <div className='has-text-left'>
                 <p className='title'>{museum.name}</p>
                 <hr />
-                <a href={museum.website}>Official Website</a>
+                <div className='is-flex is-justify-content-space-between'>
+                  <a href={museum.website}>Official Website</a>
+                  <StarRatings
+                    rating={parseFloat(museum.averageRating)}
+                    numberOfStars={5}
+                    starRatedColor='gold'
+                    starDimension='25px'
+                    starSpacing='3px'
+                  />
+                </div>
               </div>
               <p className='subtitle has-text-right'>
+                <a onClick={handleClick} className="bookmark far animate__animated animate__faster  fa-bookmark"></a>
+                <hr />
                 Region: {museum.region}
                 <br />
                 Date Established: {museum.date_established}
@@ -144,7 +115,7 @@ const MuseumShow = () => {
                 </div>
                 <div className='columns'>
                   <div className='column is-half'>
-                    <div>
+                    {/* <div>
                       <h3>Reviews</h3>
                       <h3>Average Rating: {museum.averageRating}</h3>
                       <hr />
@@ -156,25 +127,28 @@ const MuseumShow = () => {
                     <div>
                       <ul>
                         {museum.reviews.map(review => {
-                          return <li key={review._id}>
-                            <div className='columns'>
-                              <div className='column'>
-                                <p>{review.comment}</p>
-                              </div>
-                              <div className='column'>
-                                <p>{review.rating}/5</p>
-                              </div>
-                            </div>
-                            <div className='is-flex is-flex-direction-row-reverse reviewOwner'>
-                              <div>
-                                {(review.owner._id === userId.id) ? <button className='button' id={review._id} onClick={handleDelete}>X</button> : <div></div>}
-                              </div>
-                              <p>- {review.owner.username}</p>
-                            </div>
-                          </li>
+                          return (
+                            <ReviewsList key={review._id} {...review} />
+                          )
                         })}
                       </ul>
+                    </div> */}
+
+                    <div className='card'>
+                      <div className='card-header p-2 is-flex is-align-items-center'>
+                        <p className='card-header-title'>Reviews</p>
+                      </div>
+                      <div className='card-content'>
+                        <ul>
+                          {museum.reviews.map(review => {
+                            return (
+                              <ReviewsList key={review._id} {...review} />
+                            )
+                          })}
+                        </ul>
+                      </div>
                     </div>
+
                   </div>
                   <div className='column'>
                     <AddReviewForm />

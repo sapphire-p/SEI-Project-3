@@ -24,7 +24,8 @@ const MuseumCard = ({ _id, name, image, region }) => {
           <div className='card-header-title cardTitle is-size-7'>{name}</div>
           <a onClick={handleClick} className="bookmark far animate__animated animate__faster  fa-bookmark"></a>
         </div>
-        <Link to={`/museums/${_id}`} target="_blank" >
+        {/* <Link to={`/museums/${_id}`} target="_blank" > */}
+        <Link to={`/museums/${_id}`}>
           <div className='card-image'>
             <figure className='image is-1'>
               <img src={image} alt={`Picture of ${name}`} />

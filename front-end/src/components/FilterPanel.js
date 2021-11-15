@@ -200,7 +200,7 @@ const FilterPanel = () => {
             </div>
             <div>
               <div className='control'>
-                <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-link has-background-black has-text-white has-text-weight-bold is-fullwidth'><i className="fas fa-search mr-1"></i>Find Museums</Link>
+                <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-danger has-text-white has-text-weight-bold is-fullwidth is-rounded'><i className="fas fa-search mr-1"></i>Find Museums</Link>
               </div>
             </div>
           </div>

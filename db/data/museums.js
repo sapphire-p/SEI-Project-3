@@ -18,7 +18,7 @@ export default [
   },
   {
     name: 'Chelmsford Museum',
-    image: 'https://i.imgur.com/TMHCty9.png',
+    image: 'https://i.imgur.com/Md2Q7JD.png',
     address: 'Oaklands Park, Moulsham St, Chelmsford, CM2 9AQ',
     region: 'East of England',
     date_established: 1930,
@@ -27,7 +27,8 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://www.chelmsford.gov.uk/museums/'
+    website: 'https://www.chelmsford.gov.uk/museums/',
+    multiple_images: ['https://i.imgur.com/Md2Q7JD.png', 'https://i.imgur.com/VVwuBfT.jpg', 'https://i.imgur.com/nEIGCP3.jpg', 'https://i.imgur.com/NmcWpuD.jpg']
   },
   {
     name: 'Cliffe Castle Museum',
@@ -40,11 +41,12 @@ export default [
       'geology',
       'palaeontology'
     ],
-    website: 'https://www.bradfordmuseums.org/venues/cliffe-castle-museum'
+    website: 'https://www.bradfordmuseums.org/venues/cliffe-castle-museum',
+    multiple_images: ['https://i.imgur.com/q8PI2bb.png', 'https://i.imgur.com/yMwxGwJ.jpg', 'https://i.imgur.com/gfagSij.jpg', 'https://i.imgur.com/8Uz417Q.jpg', 'https://i.imgur.com/3DkjtFS.jpg']
   },
   {
     name: 'Cole Museum of Zoology',
-    image: 'https://i.imgur.com/bvxHy8b.png',
+    image: 'https://i.imgur.com/xNBG3im.jpg',
     address: 'Tower Road, Reading, RG6 6UA',
     region: 'South East',
     date_established: 1906,
@@ -53,7 +55,8 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://collections.reading.ac.uk/cole-museum/'
+    website: 'https://collections.reading.ac.uk/cole-museum/',
+    multiple_images: ['https://i.imgur.com/xNBG3im.jpg', 'https://i.imgur.com/fcpxIEL.jpg', 'https://i.imgur.com/wLWJxjm.jpg', 'https://i.imgur.com/0olIEPd.jpg']
   },
   {
     name: 'Oxford University Museum of Natural History',
@@ -68,11 +71,12 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://www.oumnh.ox.ac.uk/#/'
+    website: 'https://www.oumnh.ox.ac.uk/#/',
+    multiple_images: ['https://i.imgur.com/yDWgDux.png', 'https://i.imgur.com/TOd2xbf.jpg', 'https://i.imgur.com/5AWDBCm.png', 'https://i.imgur.com/LNbGqUt.jpg', 'https://i.imgur.com/Eo3q8n8.png']
   },
   {
     name: 'Penrith and Eden Museum',
-    image: 'https://i.imgur.com/bnf8jZc.png',
+    image: 'https://i.imgur.com/havdnJu.jpg',
     address: 'Robinson\'s School, 42 Middlegate, Penrith, CA11 7PT',
     region: 'North West',
     date_established: 1985,
@@ -81,11 +85,12 @@ export default [
       'geology',
       'palaeontology'
     ],
-    website: 'http://www.visiteden.co.uk/explore-eden/the-eden-valley/penrith/penrith-and-eden-museum/'
+    website: 'http://www.visiteden.co.uk/explore-eden/the-eden-valley/penrith/penrith-and-eden-museum/',
+    multiple_images: ['https://i.imgur.com/havdnJu.jpg', 'https://i.imgur.com/bnf8jZc.png', 'https://i.imgur.com/txjQhmd.jpg', 'https://i.imgur.com/15MFSxi.jpg']
   },
   {
     name: 'Potteries Museum & Art Gallery',
-    image: 'https://i.imgur.com/bnf8jZc.png',
+    image: 'https://i.imgur.com/ZGw4kmn.jpg',
     address: 'Bethesda St, Hanley, Stoke-on-Trent, ST1 3DW',
     region: 'West Midlands',
     date_established: 1911,
@@ -96,11 +101,12 @@ export default [
       'entomology',
       'botany'
     ],
-    website: 'https://www.stokemuseums.org.uk/pmag/'
+    website: 'https://www.stokemuseums.org.uk/pmag/',
+    multiple_images: ['https://i.imgur.com/ZGw4kmn.jpg', 'https://i.imgur.com/yiELBTK.jpg', 'https://i.imgur.com/u9twZ9O.jpg']
   },
   {
     name: 'Powell-Cotton Museum',
-    image: 'https://i.imgur.com/e7Nz2Po.png',
+    image: 'https://i.imgur.com/glFTrKZ.jpg',
     address: 'Quex Park, Birchington-on-Sea, CT7 0BH',
     region: 'South East',
     date_established: 1896,
@@ -109,7 +115,8 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://powell-cottonmuseum.org/'
+    website: 'https://powell-cottonmuseum.org/',
+    multiple_images: ['https://i.imgur.com/glFTrKZ.jpg', '', '']
   },
   {
     name: 'Warrington Museum & Art Gallery',

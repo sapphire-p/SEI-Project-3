@@ -112,18 +112,50 @@ nav {
 
 #filter-panel {
   background-color: white;
+  border-radius: 100px;
 }
 
 #filter-panel-region {
   font-family: 'Quicksand', sans-serif;
+  border-radius: 100px;
+  
+  border: 1px solid black;
+}
+
+.checkboxes {
+  transform: scale(1.2);
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+/* .searchIcon {
+  margin-top: 12px;
+  margin-right: -10px;
+} */
+
+.collectionType {
+  margin-right: -7px;
+}
+
+.findMuseumsBtn {
+  background-color: hsl(348, 100%, 61%);
+  border-radius: 100%;
+  padding: 15px;
+  
 }
 
 @media only screen and (max-width: 753px) {
   #filter-panel {
-    
+    border-radius: 5px;
   }
   .filter-panel-section {
-    width: 100%;
+  }
+  #filter-panel-region {
+    
   }
   #checkboxes-text1, #checkboxes-text2, #checkboxes-text3, #checkboxes-text4, #checkboxes-text5, #checkboxes-text6, #something-went-wrong-text {
     color: white;

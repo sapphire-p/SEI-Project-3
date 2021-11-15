@@ -6,9 +6,9 @@ const reviewSchema = new mongoose.Schema({
   rating: { type: Number, required: true, min: 1, max: 5 },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 },
-{
-  timestamps: true
-}
+  {
+    timestamps: true
+  }
 )
 
 const museumSchema = new mongoose.Schema({
@@ -21,6 +21,9 @@ const museumSchema = new mongoose.Schema({
   collection_types: [{ type: String, required: true }],
   website: { type: String, required: true },
   multiple_images: [{ type: String, required: false }],
+  location_id: [{ type: Number, required: false }],
+  latitude: [{ type: Number, required: false }],
+  longitude: [{ type: Number, required: false }],
   reviews: [reviewSchema]
 })
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ReactMapGL, { Marker } from 'react-map-gl'
+import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 // import ReactMapGL, { Marker } from 'react-map-gl'
 import locationData from '../data/locations'
 
@@ -14,7 +14,9 @@ const Map = () => {
     zoom: 7
   })
 
-  // const [popup, setPopUp] = 
+  const [popup, setPopup] = useState(null)
+
+  const [userLocationClicked, setUserLocationClicked] = useState(false)
 
 
   // Set viewPort to { latitude: 51.509240, longitude: 0.005540 } initially if need be for testing
@@ -27,8 +29,9 @@ const Map = () => {
     })
   }, [])
 
-  console.log('viewPort ->', viewPort)
-  console.log('userLocation ->', userLocation)
+  // console.log('viewPort ->', viewPort)
+  // console.log('userLocation ->', userLocation)
+  console.log('popup ->', popup)
 
 
 
@@ -48,15 +51,42 @@ const Map = () => {
         // onViewStateChange={viewport => setViewPort(viewport)}
         >
           <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
-            🔴
+            <span onClick={() => setUserLocationClicked(true)}>🔴</span>
           </Marker>
+          {userLocationClicked &&
+            <Popup
+              latitude={userLocation.latitude}
+              longitude={userLocation.longitude}
+              closeOnClick={true}
+              onClose={() => setUserLocationClicked(false)}
+            >
+              <div>
+                Your location
+              </div>
+            </Popup>
+          }
+
           {locationData.map(location => {
             return (
               <Marker key={location.id} latitude={location.latitude} longitude={location.longitude}>
-                {location.icon}
+                <span onClick={() => setPopup(location)}>
+                  {location.icon}
+                </span>
               </Marker>
             )
           })}
+          {popup &&
+            <Popup
+              latitude={popup.latitude}
+              longitude={popup.longitude}
+              closeOnClick={true}
+              onClose={() => setPopup(null)}
+            >
+              <div>
+                {popup.name}
+              </div>
+            </Popup>
+          }
         </ReactMapGL>
         :
         <h1>Loading your location...</h1>

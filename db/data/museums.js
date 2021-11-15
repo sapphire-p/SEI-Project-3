@@ -188,7 +188,10 @@ export default [
       'botany',
       'zoology'
     ],
-    website: 'https://wollatonhall.org.uk/hall-and-museum/'
+    website: 'https://wollatonhall.org.uk/hall-and-museum/',
+    location_id: 15,
+    latitude: 51.495915,
+    longitude: -0.176366
   },
   {
     name: 'World Museum',

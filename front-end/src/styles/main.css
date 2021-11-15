@@ -175,3 +175,10 @@ nav {
   color: red;
   transform: scale(1.03);
 }
+
+/* Map */
+
+.map-container {
+  height: 100vh;
+  width: 100vw;
+}

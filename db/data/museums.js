@@ -13,6 +13,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.museum.zoo.cam.ac.uk/',
     multiple_images: ['https://i.imgur.com/IglrZwg.png', 'https://i.ibb.co/KVGWMhK/camb-pic-1.jpg']
   },
@@ -27,6 +28,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.chelmsford.gov.uk/museums/',
     multiple_images: ['https://i.imgur.com/Md2Q7JD.png', 'https://i.imgur.com/VVwuBfT.jpg', 'https://i.imgur.com/nEIGCP3.jpg', 'https://i.imgur.com/NmcWpuD.jpg']
   },
@@ -41,6 +43,7 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'https://www.bradfordmuseums.org/venues/cliffe-castle-museum',
     multiple_images: ['https://i.imgur.com/q8PI2bb.png', 'https://i.imgur.com/yMwxGwJ.jpg', 'https://i.imgur.com/gfagSij.jpg', 'https://i.imgur.com/8Uz417Q.jpg', 'https://i.imgur.com/3DkjtFS.jpg']
   },
@@ -55,6 +58,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://collections.reading.ac.uk/cole-museum/',
     multiple_images: ['https://i.imgur.com/xNBG3im.jpg', 'https://i.imgur.com/fcpxIEL.jpg', 'https://i.imgur.com/wLWJxjm.jpg', 'https://i.imgur.com/0olIEPd.jpg']
   },
@@ -71,6 +75,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.oumnh.ox.ac.uk/#/',
     multiple_images: ['https://i.imgur.com/yDWgDux.png', 'https://i.imgur.com/TOd2xbf.jpg', 'https://i.imgur.com/5AWDBCm.png', 'https://i.imgur.com/LNbGqUt.jpg', 'https://i.imgur.com/Eo3q8n8.png']
   },
@@ -85,6 +90,7 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'http://www.visiteden.co.uk/explore-eden/the-eden-valley/penrith/penrith-and-eden-museum/',
     multiple_images: ['https://i.imgur.com/havdnJu.jpg', 'https://i.imgur.com/bnf8jZc.png', 'https://i.imgur.com/txjQhmd.jpg', 'https://i.imgur.com/15MFSxi.jpg']
   },
@@ -101,6 +107,7 @@ export default [
       'entomology',
       'botany'
     ],
+    exhibits: [],
     website: 'https://www.stokemuseums.org.uk/pmag/',
     multiple_images: ['https://i.imgur.com/ZGw4kmn.jpg', 'https://i.imgur.com/yiELBTK.jpg', 'https://i.imgur.com/u9twZ9O.jpg']
   },
@@ -115,6 +122,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://powell-cottonmuseum.org/',
     multiple_images: ['https://i.imgur.com/glFTrKZ.jpg', 'https://i.imgur.com/tUvYkbB.jpg', 'https://i.imgur.com/Sopoyyp.jpg', 'https://i.imgur.com/FYGzR4m.jpg']
   },
@@ -130,6 +138,7 @@ export default [
       'palaeontology',
       'botany'
     ],
+    exhibits: [],
     website: 'https://wmag.culturewarrington.org/',
     multiple_images: ['https://i.imgur.com/Ijfw3HE.png', 'https://i.imgur.com/rJG3tBQ.jpg', 'https://i.imgur.com/kDa8KXt.png', 'https://i.imgur.com/Lmt5T0y.jpg', 'https://i.imgur.com/2RDXEfU.jpg']
   },
@@ -159,6 +168,7 @@ export default [
       'palaeontology',
       'botany'
     ],
+    exhibits: [],
     website: 'https://www.museums-sheffield.org.uk/museums/weston-park/home',
     multiple_images: ['https://i.imgur.com/XZc3hfd.png', 'https://i.imgur.com/OuXGWen.jpg', 'https://i.imgur.com/38lbEdK.jpg', 'https://i.imgur.com/zSxaYmg.jpg', 'https://i.imgur.com/7MnXMtn.jpg', 'https://i.imgur.com/OlyHnCq.jpg']
   },
@@ -175,6 +185,7 @@ export default [
       'botany',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.wisbechmuseum.org.uk/',
     multiple_images: ['https://i.imgur.com/6JOjO58.png', 'https://i.imgur.com/N5qPmwT.jpg', 'https://i.imgur.com/A3rRZK7.jpg', 'https://i.imgur.com/pVTmJU1.jpg']
   },
@@ -192,6 +203,7 @@ export default [
       'botany',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://wollatonhall.org.uk/hall-and-museum/',
     location_id: 15,
     latitude: 51.495915,
@@ -212,6 +224,7 @@ export default [
       'botany',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.liverpoolmuseums.org.uk/world-museum',
     multiple_images: ['https://i.imgur.com/JWd8LnX.jpg', 'https://i.imgur.com/E5KpK4e.jpg', 'https://i.imgur.com/QUaZHbX.jpg', 'https://i.imgur.com/RnxMmkG.jpg']
   },
@@ -229,6 +242,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.nhm.ac.uk/',
     multiple_images: ['https://i.imgur.com/ECRmvzY.png', 'https://i.imgur.com/Hp5k5f5.jpg', 'https://i.imgur.com/mg8yhBX.jpg', 'https://i.imgur.com/UdJRamp.jpg', 'https://i.imgur.com/47oxIxq.jpg']
   },
@@ -245,6 +259,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.brlsi.org/',
     multiple_images: ['https://i.imgur.com/tI23VhN.png', 'https://i.imgur.com/ymuePHc.jpg', 'https://i.imgur.com/DnprZY8.png', 'https://i.imgur.com/0qbgLur.jpg']
   },
@@ -262,6 +277,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.boltonlams.co.uk/bolton-museum',
     multiple_images: ['https://i.imgur.com/N4uF8OV.jpg', 'https://i.imgur.com/9apPTD6.png', 'https://i.imgur.com/G2mJetw.jpg', 'https://i.imgur.com/HPHG7Xf.jpg', 'https://i.imgur.com/i1AwkhX.jpg']
   },
@@ -278,6 +294,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://brightonmuseums.org.uk/booth/',
     multiple_images: ['https://i.imgur.com/6jDgxFM.jpg', 'https://i.imgur.com/Wye492e.jpg', 'https://i.imgur.com/tgtcmQd.jpg', 'https://i.imgur.com/Rlqds1F.jpg']
   },
@@ -293,6 +310,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/',
     multiple_images: ['https://i.imgur.com/FFqL2kZ.jpg', 'https://i.imgur.com/Z7uV4BS.png', 'https://i.imgur.com/uG49S7T.jpg', 'https://i.imgur.com/Fn0vWE5.jpg']
   },
@@ -307,6 +325,7 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'http://www.sedgwickmuseum.org/',
     multiple_images: ['https://i.imgur.com/6uNeYmR.png', 'https://i.imgur.com/NBAWu04.jpg', 'https://i.imgur.com/0UyR8FL.jpg', 'https://i.imgur.com/RKQ59Cm.jpg', 'https://i.imgur.com/Vi0epub.jpg']
   },
@@ -321,6 +340,7 @@ export default [
       'geology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://haslemeremuseum.co.uk',
     multiple_images: ['https://i.imgur.com/hl85IiS.jpg', 'https://i.imgur.com/Dm4fjhk.jpg', 'https://i.imgur.com/zV9JioZ.jpg', 'https://i.imgur.com/dStoXRg.jpg']
   },
@@ -335,6 +355,7 @@ export default [
       'geology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://kendalmuseum.org.uk',
     multiple_images: ['', '', '', '', '']
   },
@@ -350,6 +371,7 @@ export default [
       'zoology',
       'botany'
     ],
+    exhibits: [],
     website: 'https://keswickmuseum.org.uk',
     multiple_images: ['', '', '', '', '']
   },
@@ -364,6 +386,7 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'https://Birmingham.ac.uk/facilities/lapworth-museum/index.aspx',
     multiple_images: ['', '', '', '', '']
   },
@@ -377,6 +400,7 @@ export default [
     collection_types: [
       'entomology'
     ],
+    exhibits: [],
     website: 'https://museumsandgalleries.leeds.gov.uk/leeds-city-museum',
     multiple_images: ['', '', '', '', '']
   },
@@ -392,6 +416,7 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'https://museum.manchester.ac.uk',
     multiple_images: ['', '', '', '', '']
   },
@@ -405,6 +430,7 @@ export default [
     collection_types: [
       'palaeontology'
     ],
+    exhibits: [],
     website: 'http://www.dinosaurisle.com/newhomepage.aspx',
     multiple_images: ['', '', '', '', '']
   },
@@ -418,6 +444,7 @@ export default [
     collection_types: [
       'palaeontology'
     ],
+    exhibits: [],
     website: 'https://www.dinosaurland.co.uk',
     multiple_images: ['', '', '', '', '']
   },
@@ -434,6 +461,7 @@ export default [
       'Mineralogy (geology, rocks, minerals)',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'http://www.dormanmuseum.co.uk/',
     multiple_images: ['', '', '', '', '']
   },
@@ -448,6 +476,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.ucl.ac.uk/culture/grant-museum-zoology',
     multiple_images: ['', '', '', '', '']
   },
@@ -462,6 +491,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://greatnorthmuseum.org.uk',
     multiple_images: ['', '', '', '', '']
   }

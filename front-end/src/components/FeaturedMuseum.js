@@ -47,9 +47,6 @@ const FeaturedMuseum = () => {
               {featuredMuseums.name}
             </h1>
             <p className="subtitle hero-subtitle">{featuredMuseums.description}</p>
-            {/* <p className="subtitle hero-subtitle">Location: <strong>{featuredMuseums.region}</strong></p>
-            <p className="subtitle hero-subtitle">Date established: <strong>{featuredMuseums.date_established}</strong></p>
-            <p className="subtitle hero-subtitle">Address: <strong>{featuredMuseums.address}</strong></p> */}
             <Link to={`/museums/${featuredMuseums.id}`} >
               <button  className="button is-white is-fullwidth visitWebiteBtn is-large">
                 <i className="fas fa-info-circle infoIcon">

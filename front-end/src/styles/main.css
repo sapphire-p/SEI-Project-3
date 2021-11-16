@@ -94,6 +94,18 @@ nav {
   font-family: 'Quicksand', sans-serif;
 }
 
+@media only screen and (min-width: 1225px) {
+  #filter-panel-section {
+    display: flex;
+    justify-content: center;
+    opacity: 0.95;
+  }
+  #filter-panel {
+    margin-top: 40px;
+    border-radius: 100px;
+    width: 1200px;
+  }
+}
 
 /* Hero on Home page */
 
@@ -102,8 +114,19 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
 }
 
+@media only screen and (min-width: 1225px) {
+  .mainHero {
+    margin-top: -150px;
+    margin-bottom: -130px;
+  }
+}
 
 /* Featured Museum on Home page */
 

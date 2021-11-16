@@ -346,7 +346,7 @@ export default [
   },
   {
     name: 'Kendal Museum',
-    image: 'https://i.imgur.com/cQ5hqYv.png',
+    image: 'https://i.imgur.com/MhTzPHC.jpg',
     address: 'Station Rd, Kendal LA9 6BT',
     region: 'Yorkshire and the Humber',
     date_established: 1796,
@@ -357,7 +357,7 @@ export default [
     ],
     exhibits: [],
     website: 'https://kendalmuseum.org.uk',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/MhTzPHC.jpg', 'https://i.imgur.com/fTzP1bg.jpg', 'https://i.imgur.com/gMFBiGP.jpg', 'https://i.imgur.com/pn5OI1b.jpg', 'https://i.imgur.com/peXxzdq.jpg']
   },
   {
     name: 'Keswick Museum',
@@ -373,7 +373,7 @@ export default [
     ],
     exhibits: [],
     website: 'https://keswickmuseum.org.uk',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/S2Z3NlE.jpg', 'https://i.imgur.com/yEthKQy.jpg', 'https://i.imgur.com/yqbV1UW.jpg', 'https://i.imgur.com/z6YNTAd.jpg', 'https://i.imgur.com/8Dvo50e.jpg']
   },
   {
     name: 'Lapworth Museum of Geology',
@@ -388,11 +388,11 @@ export default [
     ],
     exhibits: [],
     website: 'https://Birmingham.ac.uk/facilities/lapworth-museum/index.aspx',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/WhCMi8E.png', 'https://i.imgur.com/pnHjPXo.jpg', 'https://i.imgur.com/hzWsCAi.jpg', 'https://i.imgur.com/6gd795r.jpg', 'https://i.imgur.com/h9OClL6.jpg', 'https://i.imgur.com/b0fASl8.jpg']
   },
   {
     name: 'Leeds City Museum',
-    image: 'https://i.imgur.com/P4xVPWC.png',
+    image: 'https://i.imgur.com/XBiq08E.jpg',
     address: 'Millennium Square, Leeds LS2 8BH',
     region: 'Yorkshire and the Humber',
     date_established: 1880,
@@ -402,11 +402,11 @@ export default [
     ],
     exhibits: [],
     website: 'https://museumsandgalleries.leeds.gov.uk/leeds-city-museum',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/XBiq08E.jpg', 'https://i.imgur.com/PsWxOvN.jpg', 'https://i.imgur.com/RqWAreS.jpg', 'https://i.imgur.com/3rAAwqN.jpg', 'https://i.imgur.com/U9mIWlB.jpg']
   },
   {
     name: 'Manchester Museum',
-    image: 'https://i.imgur.com/lTVi18r.png',
+    image: 'https://i.imgur.com/QwHPqW0.jpg',
     address: 'University of, Oxford Rd, Manchester M13 9PL',
     region: 'North West',
     date_established: 1867,
@@ -418,11 +418,11 @@ export default [
     ],
     exhibits: [],
     website: 'https://museum.manchester.ac.uk',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/QwHPqW0.jpg', 'https://i.imgur.com/18hAf9p.jpg', 'https://i.imgur.com/ldx1MhL.jpg', 'https://i.imgur.com/JqtDFog.jpg', 'https://i.imgur.com/kE3YDtg.jpg']
   },
   {
     name: 'Dinosaur Isle',
-    image: 'https://i.imgur.com/j8o8YCz.jpg',
+    image: 'https://i.imgur.com/y0SPfE2.jpg',
     address: 'Culver Parade, Sandown, PO36 8QA',
     region: 'South East',
     date_established: 2001,
@@ -432,11 +432,11 @@ export default [
     ],
     exhibits: [],
     website: 'http://www.dinosaurisle.com/newhomepage.aspx',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/y0SPfE2.jpg', 'https://i.imgur.com/0evBjdb.jpg', 'https://i.imgur.com/8haqQiY.jpg', 'https://i.imgur.com/BN5aQ5V.jpg', 'https://i.imgur.com/TteYbVe.jpg']
   },
   {
     name: 'Dinosaurland Fossil Museum',
-    image: 'https://i.imgur.com/Ore4D7L.png',
+    image: 'https://i.imgur.com/RbSEX6Q.jpg',
     address: 'Coombe Street, Lyme Regis, Dorset, DT7 3PY',
     region: 'South East',
     date_established: 1755,
@@ -446,7 +446,7 @@ export default [
     ],
     exhibits: [],
     website: 'https://www.dinosaurland.co.uk',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/RbSEX6Q.jpg', 'https://i.imgur.com/XJySRq6.jpg', 'https://i.imgur.com/VsqQJ58.png', 'https://i.imgur.com/wOVoc78.jpg', 'https://i.imgur.com/Bx3rw2q.jpg']
   },
   {
     name: 'Dorman Museum',
@@ -463,11 +463,11 @@ export default [
     ],
     exhibits: [],
     website: 'http://www.dormanmuseum.co.uk/',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/flecHGa.jpg', 'https://i.imgur.com/tWVThbH.jpg', 'https://i.imgur.com/YMWdRZE.jpg', 'https://i.imgur.com/ucCeEMq.jpg']
   },
   {
     name: 'Grant Museum of Zoology and Comparative Anatomy',
-    image: 'https://i.imgur.com/Yv7Uhed.png',
+    image: 'https://i.imgur.com/MRe3iZL.jpg',
     address: '21 University Street, London, GB WC1E 6DE',
     region: 'London',
     date_established: 1828,
@@ -478,11 +478,11 @@ export default [
     ],
     exhibits: [],
     website: 'https://www.ucl.ac.uk/culture/grant-museum-zoology',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/MRe3iZL.jpg', 'https://i.imgur.com/a7wnIzg.jpg', 'https://i.imgur.com/nny4qqM.jpg', 'https://i.imgur.com/CLW59ng.jpg', 'https://i.imgur.com/LVcDB6L.jpg']
   },
   {
     name: 'Great North Museum: Hancock',
-    image: 'https://i.imgur.com/kToKLoT.png',
+    image: 'https://i.imgur.com/NZSpsor.jpg',
     address: 'Great North Museum: Hancock Barras Bridge Newcastle upon Tyne NE2 4PT',
     region: 'London',
     date_established: 1884,
@@ -493,6 +493,6 @@ export default [
     ],
     exhibits: [],
     website: 'https://greatnorthmuseum.org.uk',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/NZSpsor.jpg', 'https://i.imgur.com/1OFfSa9.jpg', 'https://i.imgur.com/B8vw9KO.jpg', 'https://i.imgur.com/V2NOukb.jpg', 'https://i.imgur.com/oCPQl8p.jpg']
   }
 ]

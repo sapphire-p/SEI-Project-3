@@ -34,7 +34,7 @@ const NavBar = () => {
         <div className="navbar-brand">
           <span role="img" aria-label="logo" className="title">
             <Link to="/" className="link">
-              <img src={Logo} alt="Museum Mapper logo" width="200px" />
+              <img className="mmlogo" src={Logo} alt="Museum Mapper logo" width="250px" />
             </Link>
           </span>
         </div>

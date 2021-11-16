@@ -12,19 +12,37 @@
 } */
 
 
-
+/* Navbar styling starts here */
 .link {
   color: #FFF;
+  transition: .2s;
 }
 .link:hover {
-  color: #00F;
+  transform: scale(1.25);
+  color: #FFF;
+  padding-bottom: 15px;
 }
 
-.a {
+.mmlogo {
+  transition: .2s;
+}
+
+.mmlogo:hover {
+  transform: scale(1.25);
+}
+
+nav {
+  border-bottom: 0.1px solid whitesmoke;
+}
+/* navbar styling ends here */
+
+/* Footer styling starts here */
+#links {
   color: #FFF;
 }
-.a:hover {
-  color: #00F;
+
+#links:hover {
+  color: #e600ff;
 }
 
 .row {
@@ -33,10 +51,10 @@
   justify-content: center;
 }
 
-.col img {
-  margin-top: 35px;
+#footer {
+  border-top: 0.1px solid whitesmoke;
 }
-
+/* footer styling ends here */
 .descAndPic {
   background-color: black;
 }
@@ -75,14 +93,6 @@
 .visitWebiteBtn:hover {
   transform: scale(1.03);
 }
-
-
-/* Nav */
-
-nav {
-  border-bottom: 0.1px solid whitesmoke;
-}
-
 
 /* Filter Panel */
 
@@ -178,8 +188,10 @@ nav {
   color: red;
   transform: scale(1.03);
 }
-
-
+/* Profile */
+#profile-section {
+  height: 100vh;
+}
 /* Map */
 
 .map-container {
@@ -192,3 +204,4 @@ nav {
 #register-section, #login-section {
   height: 100vh;
 }
+

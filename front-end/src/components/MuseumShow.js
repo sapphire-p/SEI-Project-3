@@ -94,8 +94,6 @@ const MuseumShow = () => {
                   />
                 </div>
               </div>
-              <div>
-              </div>
               <p className='subtitle has-text-right has-text-white'>
                 {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a> */}
                 <AddingDeletingToFavourites />
@@ -121,7 +119,7 @@ const MuseumShow = () => {
                     <p>{museum.description}</p>
                     <hr />
                     <div>
-                      <h3>Collections:</h3>
+                      <h3 className='has-text-weight-bold'>Collections:</h3>
                       <ul>
                         {museum.collection_types.map(type => {
                           return <li key={type}>{type}</li>
@@ -130,7 +128,7 @@ const MuseumShow = () => {
                     </div>
                     <div>
                       <hr />
-                      <h3>Address</h3>
+                      <h3 className='has-text-weight-bold'>Address</h3>
                       <p>{museum.address}</p>
                     </div>
                   </div>
@@ -140,7 +138,7 @@ const MuseumShow = () => {
                 <div className='column is-half'>
                   <div className='card'>
                     <div className='card-header p-2 is-flex is-align-items-center'>
-                      <p className='card-header-title'>Reviews</p>
+                      <p className='card-header-title'>Reviews:</p>
                     </div>
                     <div className='card-content'>
                       <ul>

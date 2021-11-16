@@ -309,7 +309,7 @@ export default [
   },
   {
     name: 'Haslemere Educational Museum',
-    image: 'https://i.imgur.com/d1eqD9C.png',
+    image: 'https://i.imgur.com/hl85IiS.jpg',
     address: '78 High St, Haslemere GU27 2LA',
     region: 'South East',
     date_established: 1888,
@@ -319,7 +319,7 @@ export default [
       'zoology'
     ],
     website: 'https://haslemeremuseum.co.uk',
-    multiple_images: ['', '', '', '', '']
+    multiple_images: ['https://i.imgur.com/hl85IiS.jpg', 'https://i.imgur.com/Dm4fjhk.jpg', 'https://i.imgur.com/zV9JioZ.jpg', 'https://i.imgur.com/dStoXRg.jpg']
   },
   {
     name: 'Kendal Museum',

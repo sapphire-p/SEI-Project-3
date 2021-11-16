@@ -12,10 +12,12 @@ const Map = () => {
   const [userLocation, setUserLocation] = useState(null)
 
   // Can set viewPort to { latitude: 51.509240, longitude: 0.005540 } initially if need be for testing
+  // Mid-point of England: Morton, North East Derbyshire (lat: 53.14346, long: -1.38804)
+  // Current lat and long coordinates are for Birmingham:
   const [viewPort, setViewPort] = useState({
-    latitude: 51.509240,
-    longitude: 0.005540,
-    zoom: 7
+    latitude: 52.48142,
+    longitude: -1.89983,
+    zoom: 6
   })
 
   const [popup, setPopup] = useState(null)
@@ -52,7 +54,19 @@ const Map = () => {
   }, [])
 
 
-  // console.log('viewPort ->', viewPort)
+
+  const handleUserLocationClick = () => {
+    setUserLocationClicked(true)
+    setPopup(null)
+  }
+
+  const handleMuseumCardClick = (museum) => {
+    setPopup(museum)
+    setUserLocationClicked(false)
+  }
+
+
+  console.log('viewPort ->', viewPort)
   console.log('userLocation ->', userLocation)
   // console.log('popup ->', popup)
   // console.log('allMuseums ->', allMuseums)
@@ -75,7 +89,7 @@ const Map = () => {
               {...viewPort}
               onViewStateChange={viewport => setViewPort(viewport)}
             >
-              <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
+              {/* <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
                 <span onClick={() => setUserLocationClicked(true)}>🔴</span>
               </Marker>
               {userLocationClicked &&
@@ -89,16 +103,21 @@ const Map = () => {
                     Your location
                   </div>
                 </Popup>
-              }
+              } */}
+              <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
+                <span onClick={handleUserLocationClick}>🔴</span>
+              </Marker>
+
               {allMuseums.map(museum => {
                 return (
                   <Marker key={museum.location_id} latitude={museum.latitude} longitude={museum.longitude}>
-                    <span onClick={() => setPopup(museum)}>
+                    <span onClick={() => handleMuseumCardClick(museum)}>
                       🏛
                     </span>
                   </Marker>
                 )
               })}
+
               {popup &&
                 <Popup
                   latitude={popup.latitude}
@@ -107,21 +126,34 @@ const Map = () => {
                   onClose={() => setPopup(null)}
                 >
                   <div id='map-card-container' className='p-1'>
-                    <div className='card'>
-                      <div className='card-header'>
-                        <div className='card-header-title cardTitle is-size-7'>{popup.name}</div>
-                      </div>
-                      <Link to={`/museums/${popup._id}`}>
+                    <Link to={`/museums/${popup._id}`}>
+                      <div className='card'>
+                        <div className='card-header'>
+                          <div className='card-header-title cardTitle is-size-7'>{popup.name}</div>
+                        </div>
                         <div className='card-image'>
                           <figure className='image is-4by3'>
                             <img src={popup.image} alt={popup.name} />
                           </figure>
                         </div>
-                      </Link>
-                      <div className='card-content p-2'>
-                        <h4 className='is-size-7 cardRegion'>{popup.region}</h4>
+                        <div className='card-content p-2'>
+                          <h4 className='is-size-7 cardRegion'>{popup.address}</h4>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
+                  </div>
+                </Popup>
+              }
+
+              {userLocationClicked &&
+                <Popup
+                  latitude={userLocation.latitude}
+                  longitude={userLocation.longitude}
+                  closeOnClick={true}
+                  onClose={() => setUserLocationClicked(false)}
+                >
+                  <div className='is-size-6 has-text-weight-bold'>
+                    Your location
                   </div>
                 </Popup>
               }
@@ -138,7 +170,7 @@ const Map = () => {
               {
                 allMuseums.map(museum => {
                   return (
-                    <div key={museum._id} className='p-1'>
+                    <div key={museum._id} className='p-1' onClick={() => setPopup(museum)}>
                       <div className='card'>
                         <div className='card-header'>
                           <div className='card-header-title cardTitle is-size-7'>{museum.name}</div>
@@ -163,7 +195,7 @@ const Map = () => {
         </div>
 
       </div>
-    </section>
+    </section >
 
   )
 
@@ -172,6 +204,25 @@ const Map = () => {
 export default Map
 
 
+
+
+
+// {allMuseums.map(museum => {
+//   return (
+//     <Marker key={museum.location_id} latitude={museum.latitude} longitude={museum.longitude}>
+//       <span onClick={() => setPopup(museum)}>
+//         🏛
+//       </span>
+//     </Marker>
+//   )
+// })}
+
+// <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
+//   <span onClick={() => setUserLocationClicked(true)}>🔴</span>
+// </Marker>
+
+
+{/* <div key={museum._id} className='p-1' onClick={() => setViewPort({ latitude: museum.latitude, longitude: museum.longitude, zoom: 9 })}> */ }
 
 {/* <Link to={`/museums/${_id}`}>
 <div className='card-image'>

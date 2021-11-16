@@ -13,7 +13,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.museum.zoo.cam.ac.uk/',
+    location_id: 1,
+    latitude: 52.121188,
+    longitude: 0.071344,
     multiple_images: ['https://i.imgur.com/IglrZwg.png', 'https://i.ibb.co/KVGWMhK/camb-pic-1.jpg']
   },
   {
@@ -27,7 +31,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.chelmsford.gov.uk/museums/',
+    location_id: 2,
+    latitude: 51.723854,
+    longitude: 0.462716,
     multiple_images: ['https://i.imgur.com/Md2Q7JD.png', 'https://i.imgur.com/VVwuBfT.jpg', 'https://i.imgur.com/nEIGCP3.jpg', 'https://i.imgur.com/NmcWpuD.jpg']
   },
   {
@@ -41,7 +49,11 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'https://www.bradfordmuseums.org/venues/cliffe-castle-museum',
+    location_id: 3,
+    latitude: 53.875034,
+    longitude: -1.913579,
     multiple_images: ['https://i.imgur.com/q8PI2bb.png', 'https://i.imgur.com/yMwxGwJ.jpg', 'https://i.imgur.com/gfagSij.jpg', 'https://i.imgur.com/8Uz417Q.jpg', 'https://i.imgur.com/3DkjtFS.jpg']
   },
   {
@@ -55,7 +67,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://collections.reading.ac.uk/cole-museum/',
+    location_id: 4,
+    latitude: 51.442005,
+    longitude: -0.945003,
     multiple_images: ['https://i.imgur.com/xNBG3im.jpg', 'https://i.imgur.com/fcpxIEL.jpg', 'https://i.imgur.com/wLWJxjm.jpg', 'https://i.imgur.com/0olIEPd.jpg']
   },
   {
@@ -71,7 +87,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.oumnh.ox.ac.uk/#/',
+    location_id: 5,
+    latitude: 51.756206,
+    longitude: -1.255102,
     multiple_images: ['https://i.imgur.com/yDWgDux.png', 'https://i.imgur.com/TOd2xbf.jpg', 'https://i.imgur.com/5AWDBCm.png', 'https://i.imgur.com/LNbGqUt.jpg', 'https://i.imgur.com/Eo3q8n8.png']
   },
   {
@@ -85,7 +105,11 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'http://www.visiteden.co.uk/explore-eden/the-eden-valley/penrith/penrith-and-eden-museum/',
+    location_id: 6,
+    latitude: 54.665778,
+    longitude: -2.754257,
     multiple_images: ['https://i.imgur.com/havdnJu.jpg', 'https://i.imgur.com/bnf8jZc.png', 'https://i.imgur.com/txjQhmd.jpg', 'https://i.imgur.com/15MFSxi.jpg']
   },
   {
@@ -101,7 +125,11 @@ export default [
       'entomology',
       'botany'
     ],
+    exhibits: [],
     website: 'https://www.stokemuseums.org.uk/pmag/',
+    location_id: 7,
+    latitude: 53.012244,
+    longitude: -2.104116,
     multiple_images: ['https://i.imgur.com/ZGw4kmn.jpg', 'https://i.imgur.com/yiELBTK.jpg', 'https://i.imgur.com/u9twZ9O.jpg']
   },
   {
@@ -115,7 +143,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://powell-cottonmuseum.org/',
+    location_id: 8,
+    latitude: 51.36757625853288,
+    longitude: 1.3152605833069322,
     multiple_images: ['https://i.imgur.com/glFTrKZ.jpg', 'https://i.imgur.com/tUvYkbB.jpg', 'https://i.imgur.com/Sopoyyp.jpg', 'https://i.imgur.com/FYGzR4m.jpg']
   },
   {
@@ -130,7 +162,11 @@ export default [
       'palaeontology',
       'botany'
     ],
+    exhibits: [],
     website: 'https://wmag.culturewarrington.org/',
+    location_id: 9,
+    latitude: 53.390766,
+    longitude: -2.595651,
     multiple_images: ['https://i.imgur.com/Ijfw3HE.png', 'https://i.imgur.com/rJG3tBQ.jpg', 'https://i.imgur.com/kDa8KXt.png', 'https://i.imgur.com/Lmt5T0y.jpg', 'https://i.imgur.com/2RDXEfU.jpg']
   },
   {
@@ -145,6 +181,9 @@ export default [
       'palaeontology'
     ],
     website: 'https://www.wellsmuseum.org.uk/',
+    location_id: 10,
+    latitude: 51.210896,
+    longitude: -2.644517,
     multiple_images: ['https://i.imgur.com/tjT0gqs.jpg', 'https://i.imgur.com/thLEvO5.png', 'https://i.imgur.com/X0996Uv.png']
   },
   {
@@ -159,7 +198,11 @@ export default [
       'palaeontology',
       'botany'
     ],
+    exhibits: [],
     website: 'https://www.museums-sheffield.org.uk/museums/weston-park/home',
+    location_id: 11,
+    latitude: 53.381748,
+    longitude: -1.492238,
     multiple_images: ['https://i.imgur.com/XZc3hfd.png', 'https://i.imgur.com/OuXGWen.jpg', 'https://i.imgur.com/38lbEdK.jpg', 'https://i.imgur.com/zSxaYmg.jpg', 'https://i.imgur.com/7MnXMtn.jpg', 'https://i.imgur.com/OlyHnCq.jpg']
   },
   {
@@ -175,7 +218,11 @@ export default [
       'botany',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.wisbechmuseum.org.uk/',
+    location_id: 12,
+    latitude: 52.394989,
+    longitude: 0.093951,
     multiple_images: ['https://i.imgur.com/6JOjO58.png', 'https://i.imgur.com/N5qPmwT.jpg', 'https://i.imgur.com/A3rRZK7.jpg', 'https://i.imgur.com/pVTmJU1.jpg']
   },
   {
@@ -192,10 +239,11 @@ export default [
       'botany',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://wollatonhall.org.uk/hall-and-museum/',
-    location_id: 15,
-    latitude: 51.495915,
-    longitude: -0.176366,
+    location_id: 13,
+    latitude: 52.947998,
+    longitude: -1.209716,
     multiple_images: ['https://i.imgur.com/SNK4btx.jpg', 'https://i.imgur.com/m7bcM01.png', 'https://i.imgur.com/XflZjg4.jpg', 'https://i.imgur.com/XbpwJLC.jpg']
   },
   {
@@ -212,7 +260,11 @@ export default [
       'botany',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.liverpoolmuseums.org.uk/world-museum',
+    location_id: 14,
+    latitude: 53.409801,
+    longitude: -2.981763,
     multiple_images: ['https://i.imgur.com/JWd8LnX.jpg', 'https://i.imgur.com/E5KpK4e.jpg', 'https://i.imgur.com/QUaZHbX.jpg', 'https://i.imgur.com/RnxMmkG.jpg']
   },
   {
@@ -229,7 +281,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.nhm.ac.uk/',
+    location_id: 15,
+    latitude: 51.495915,
+    longitude: -0.176366,
     multiple_images: ['https://i.imgur.com/ECRmvzY.png', 'https://i.imgur.com/Hp5k5f5.jpg', 'https://i.imgur.com/mg8yhBX.jpg', 'https://i.imgur.com/UdJRamp.jpg', 'https://i.imgur.com/47oxIxq.jpg']
   },
   {
@@ -245,7 +301,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.brlsi.org/',
+    location_id: 16,
+    latitude: 51.383171,
+    longitude: -2.364316,
     multiple_images: ['https://i.imgur.com/tI23VhN.png', 'https://i.imgur.com/ymuePHc.jpg', 'https://i.imgur.com/DnprZY8.png', 'https://i.imgur.com/0qbgLur.jpg']
   },
   {
@@ -262,7 +322,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.boltonlams.co.uk/bolton-museum',
+    location_id: 17,
+    latitude: 53.343864,
+    longitude: -2.255361,
     multiple_images: ['https://i.imgur.com/N4uF8OV.jpg', 'https://i.imgur.com/9apPTD6.png', 'https://i.imgur.com/G2mJetw.jpg', 'https://i.imgur.com/HPHG7Xf.jpg', 'https://i.imgur.com/i1AwkhX.jpg']
   },
   {
@@ -278,7 +342,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://brightonmuseums.org.uk/booth/',
+    location_id: 18,
+    latitude: 50.83714685717832,
+    longitude: -0.1524992884167633,
     multiple_images: ['https://i.imgur.com/6jDgxFM.jpg', 'https://i.imgur.com/Wye492e.jpg', 'https://i.imgur.com/tgtcmQd.jpg', 'https://i.imgur.com/Rlqds1F.jpg']
   },
   {
@@ -293,7 +361,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/',
+    location_id: 19,
+    latitude: 51.272196,
+    longitude: -2.361908,
     multiple_images: ['https://i.imgur.com/FFqL2kZ.jpg', 'https://i.imgur.com/Z7uV4BS.png', 'https://i.imgur.com/uG49S7T.jpg', 'https://i.imgur.com/Fn0vWE5.jpg']
   },
   {
@@ -307,7 +379,11 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'http://www.sedgwickmuseum.org/',
+    location_id: 20,
+    latitude: 52.202967,
+    longitude: 0.122147,
     multiple_images: ['https://i.imgur.com/6uNeYmR.png', 'https://i.imgur.com/NBAWu04.jpg', 'https://i.imgur.com/0UyR8FL.jpg', 'https://i.imgur.com/RKQ59Cm.jpg', 'https://i.imgur.com/Vi0epub.jpg']
   },
   {
@@ -321,12 +397,16 @@ export default [
       'geology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://haslemeremuseum.co.uk',
+    location_id: 21,
+    latitude: 51.09017,
+    longitude: -0.707474,
     multiple_images: ['https://i.imgur.com/hl85IiS.jpg', 'https://i.imgur.com/Dm4fjhk.jpg', 'https://i.imgur.com/zV9JioZ.jpg', 'https://i.imgur.com/dStoXRg.jpg']
   },
   {
     name: 'Kendal Museum',
-    image: 'https://i.imgur.com/cQ5hqYv.png',
+    image: 'https://i.imgur.com/MhTzPHC.jpg',
     address: 'Station Rd, Kendal LA9 6BT',
     region: 'Yorkshire and the Humber',
     date_established: 1796,
@@ -335,8 +415,12 @@ export default [
       'geology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://kendalmuseum.org.uk',
-    multiple_images: ['', '', '', '', '']
+    location_id: 22,
+    latitude: 54.195340,
+    longitude: -2.443120,
+    multiple_images: ['https://i.imgur.com/MhTzPHC.jpg', 'https://i.imgur.com/fTzP1bg.jpg', 'https://i.imgur.com/gMFBiGP.jpg', 'https://i.imgur.com/pn5OI1b.jpg', 'https://i.imgur.com/peXxzdq.jpg']
   },
   {
     name: 'Keswick Museum',
@@ -350,8 +434,12 @@ export default [
       'zoology',
       'botany'
     ],
+    exhibits: [],
     website: 'https://keswickmuseum.org.uk',
-    multiple_images: ['', '', '', '', '']
+    location_id: 23,
+    latitude: 54.604071,
+    longitude: -3.132273,
+    multiple_images: ['https://i.imgur.com/S2Z3NlE.jpg', 'https://i.imgur.com/yEthKQy.jpg', 'https://i.imgur.com/yqbV1UW.jpg', 'https://i.imgur.com/z6YNTAd.jpg', 'https://i.imgur.com/8Dvo50e.jpg']
   },
   {
     name: 'Lapworth Museum of Geology',
@@ -364,12 +452,16 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'https://Birmingham.ac.uk/facilities/lapworth-museum/index.aspx',
-    multiple_images: ['', '', '', '', '']
+    location_id: 24,
+    latitude: 52.263392,
+    longitude: -1.553061,
+    multiple_images: ['https://i.imgur.com/WhCMi8E.png', 'https://i.imgur.com/pnHjPXo.jpg', 'https://i.imgur.com/hzWsCAi.jpg', 'https://i.imgur.com/6gd795r.jpg', 'https://i.imgur.com/h9OClL6.jpg', 'https://i.imgur.com/b0fASl8.jpg']
   },
   {
     name: 'Leeds City Museum',
-    image: 'https://i.imgur.com/P4xVPWC.png',
+    image: 'https://i.imgur.com/XBiq08E.jpg',
     address: 'Millennium Square, Leeds LS2 8BH',
     region: 'Yorkshire and the Humber',
     date_established: 1880,
@@ -377,12 +469,16 @@ export default [
     collection_types: [
       'entomology'
     ],
+    exhibits: [],
     website: 'https://museumsandgalleries.leeds.gov.uk/leeds-city-museum',
-    multiple_images: ['', '', '', '', '']
+    location_id: 25,
+    latitude: 53.80157,
+    longitude: -1.547138,
+    multiple_images: ['https://i.imgur.com/XBiq08E.jpg', 'https://i.imgur.com/PsWxOvN.jpg', 'https://i.imgur.com/RqWAreS.jpg', 'https://i.imgur.com/3rAAwqN.jpg', 'https://i.imgur.com/U9mIWlB.jpg']
   },
   {
     name: 'Manchester Museum',
-    image: 'https://i.imgur.com/lTVi18r.png',
+    image: 'https://i.imgur.com/QwHPqW0.jpg',
     address: 'University of, Oxford Rd, Manchester M13 9PL',
     region: 'North West',
     date_established: 1867,
@@ -392,12 +488,16 @@ export default [
       'geology',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'https://museum.manchester.ac.uk',
-    multiple_images: ['', '', '', '', '']
+    location_id: 26,
+    latitude: 53.273539,
+    longitude: -2.14240,
+    multiple_images: ['https://i.imgur.com/QwHPqW0.jpg', 'https://i.imgur.com/18hAf9p.jpg', 'https://i.imgur.com/ldx1MhL.jpg', 'https://i.imgur.com/JqtDFog.jpg', 'https://i.imgur.com/kE3YDtg.jpg']
   },
   {
     name: 'Dinosaur Isle',
-    image: 'https://i.imgur.com/j8o8YCz.jpg',
+    image: 'https://i.imgur.com/y0SPfE2.jpg',
     address: 'Culver Parade, Sandown, PO36 8QA',
     region: 'South East',
     date_established: 2001,
@@ -405,12 +505,16 @@ export default [
     collection_types: [
       'palaeontology'
     ],
+    exhibits: [],
     website: 'http://www.dinosaurisle.com/newhomepage.aspx',
-    multiple_images: ['', '', '', '', '']
+    location_id: 27,
+    latitude: 50.6591901780554,
+    longitude: -1.1427804590372204,
+    multiple_images: ['https://i.imgur.com/y0SPfE2.jpg', 'https://i.imgur.com/0evBjdb.jpg', 'https://i.imgur.com/8haqQiY.jpg', 'https://i.imgur.com/BN5aQ5V.jpg', 'https://i.imgur.com/TteYbVe.jpg']
   },
   {
     name: 'Dinosaurland Fossil Museum',
-    image: 'https://i.imgur.com/Ore4D7L.png',
+    image: 'https://i.imgur.com/RbSEX6Q.jpg',
     address: 'Coombe Street, Lyme Regis, Dorset, DT7 3PY',
     region: 'South East',
     date_established: 1755,
@@ -418,8 +522,12 @@ export default [
     collection_types: [
       'palaeontology'
     ],
+    exhibits: [],
     website: 'https://www.dinosaurland.co.uk',
-    multiple_images: ['', '', '', '', '']
+    location_id: 28,
+    latitude: 50.72836094136729,
+    longitude: -2.9340149216679605,
+    multiple_images: ['https://i.imgur.com/RbSEX6Q.jpg', 'https://i.imgur.com/XJySRq6.jpg', 'https://i.imgur.com/VsqQJ58.png', 'https://i.imgur.com/wOVoc78.jpg', 'https://i.imgur.com/Bx3rw2q.jpg']
   },
   {
     name: 'Dorman Museum',
@@ -434,12 +542,16 @@ export default [
       'Mineralogy (geology, rocks, minerals)',
       'palaeontology'
     ],
+    exhibits: [],
     website: 'http://www.dormanmuseum.co.uk/',
-    multiple_images: ['', '', '', '', '']
+    location_id: 29,
+    latitude: 54.335184,
+    longitude: -1.142724,
+    multiple_images: ['https://i.imgur.com/flecHGa.jpg', 'https://i.imgur.com/tWVThbH.jpg', 'https://i.imgur.com/YMWdRZE.jpg', 'https://i.imgur.com/ucCeEMq.jpg']
   },
   {
     name: 'Grant Museum of Zoology and Comparative Anatomy',
-    image: 'https://i.imgur.com/Yv7Uhed.png',
+    image: 'https://i.imgur.com/MRe3iZL.jpg',
     address: '21 University Street, London, GB WC1E 6DE',
     region: 'London',
     date_established: 1828,
@@ -448,12 +560,16 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://www.ucl.ac.uk/culture/grant-museum-zoology',
-    multiple_images: ['', '', '', '', '']
+    location_id: 30,
+    latitude: 51.52372,
+    longitude: -0.13459,
+    multiple_images: ['https://i.imgur.com/MRe3iZL.jpg', 'https://i.imgur.com/a7wnIzg.jpg', 'https://i.imgur.com/nny4qqM.jpg', 'https://i.imgur.com/CLW59ng.jpg', 'https://i.imgur.com/LVcDB6L.jpg']
   },
   {
     name: 'Great North Museum: Hancock',
-    image: 'https://i.imgur.com/kToKLoT.png',
+    image: 'https://i.imgur.com/NZSpsor.jpg',
     address: 'Great North Museum: Hancock Barras Bridge Newcastle upon Tyne NE2 4PT',
     region: 'London',
     date_established: 1884,
@@ -462,7 +578,11 @@ export default [
       'palaeontology',
       'zoology'
     ],
+    exhibits: [],
     website: 'https://greatnorthmuseum.org.uk',
-    multiple_images: ['', '', '', '', '']
+    location_id: 31,
+    latitude: 54.584912,
+    longitude: -1.612993,
+    multiple_images: ['https://i.imgur.com/NZSpsor.jpg', 'https://i.imgur.com/1OFfSa9.jpg', 'https://i.imgur.com/B8vw9KO.jpg', 'https://i.imgur.com/V2NOukb.jpg', 'https://i.imgur.com/oCPQl8p.jpg']
   }
 ]

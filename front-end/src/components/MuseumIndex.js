@@ -16,7 +16,7 @@ const MuseumsIndex = () => {
 
   // console.log('museums ->', museums.sort())
   return (
-    <>
+    <section className='has-background-black'>
       <section className='hero is-medium' id="hero-container">
         <div className='hero-body showAllHero'>
           <p className='title has-text-white'>Museums</p>
@@ -36,7 +36,7 @@ const MuseumsIndex = () => {
           
         </div>
       </section>
-    </>
+    </section>
   )
 
 }

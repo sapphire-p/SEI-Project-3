@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { getTokenFromLocalStorage2 } from './helpers/auth'
 import axios from 'axios'
 
+
 const Profile = () => {
 
   const username = getTokenFromLocalStorage2()
   const myDate = new Date()
   const hrs = myDate.getHours()
   const [token, setToken] = useState()
+  // const [token, setToken] = useState()
 
   // const [mappedFaves, setMappedFaves] = useState([])
 
@@ -115,6 +117,28 @@ const Profile = () => {
       </section>
     </>
   )
-}
+  // {/* //     <section className='section'>
+  // //       <div className='container'>
+  // //         <div className='columns is-multiline'>
+  // //           {user.map(museum => { */}
+
+
+  // const getData = async () => {
+  //   try {
+  //     const { data } = await axios.get(`/api/museums/${museum.favouriteMuseums[0]}`)
+  //     console.log(data)
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+  // getData()
+
+  // console.log()
+  //       </div>
+  //     </div>
+  //   </section>
+  // </>
+//   )
+} 
 
 export default Profile

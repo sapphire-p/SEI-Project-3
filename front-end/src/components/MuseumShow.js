@@ -5,6 +5,7 @@ import AddReviewForm from './AddReviewForm'
 import { Carousel } from 'react-carousel-minimal'
 import ReviewsList from './ReviewsList'
 import StarRatings from 'react-star-ratings'
+import AddingDeletingToFavourites from './AddingDeletingToFavourites'
 
 const MuseumShow = () => {
 
@@ -15,6 +16,8 @@ const MuseumShow = () => {
   const [galleryData, setGalleryData] = useState([])
 
   const [avgRat, setAvgRat] = useState(0)
+
+  // -------------
 
   useEffect(() => {
     const getData = async () => {
@@ -31,12 +34,7 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-  const handleClick = event => {
-    // console.log('CLICKED')
-    event.target.classList.toggle('fas')
-    event.target.classList.toggle('animate__bounceIn')
-  }
-
+  
   // ------------------------ CAROUSEL
 
   useEffect(() => {
@@ -75,7 +73,7 @@ const MuseumShow = () => {
 
   // ---------------------------------------
 
-  console.log(avgRat)
+  
   return (
     <>
       {museum ?
@@ -99,7 +97,8 @@ const MuseumShow = () => {
               <div>
               </div>
               <p className='subtitle has-text-right has-text-white'>
-                <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a>
+                {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a> */}
+                <AddingDeletingToFavourites />
                 <hr />
                 Region: {museum.region}
                 <br />

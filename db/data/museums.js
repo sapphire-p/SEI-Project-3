@@ -116,7 +116,7 @@ export default [
       'zoology'
     ],
     website: 'https://powell-cottonmuseum.org/',
-    multiple_images: ['https://i.imgur.com/glFTrKZ.jpg', '', '']
+    multiple_images: ['https://i.imgur.com/glFTrKZ.jpg', 'https://i.imgur.com/tUvYkbB.jpg', 'https://i.imgur.com/Sopoyyp.jpg', 'https://i.imgur.com/FYGzR4m.jpg']
   },
   {
     name: 'Warrington Museum & Art Gallery',
@@ -130,11 +130,12 @@ export default [
       'palaeontology',
       'botany'
     ],
-    website: 'https://wmag.culturewarrington.org/'
+    website: 'https://wmag.culturewarrington.org/',
+    multiple_images: ['https://i.imgur.com/Ijfw3HE.png', 'https://i.imgur.com/rJG3tBQ.jpg', 'https://i.imgur.com/kDa8KXt.png', 'https://i.imgur.com/Lmt5T0y.jpg', 'https://i.imgur.com/2RDXEfU.jpg']
   },
   {
     name: 'Wells and Mendip Museum',
-    image: 'https://i.imgur.com/CDT5y2z.png',
+    image: 'https://i.imgur.com/tjT0gqs.jpg',
     address: '8 Cathedral Grn, Wells, BA5 2UE',
     region: 'South West',
     date_established: 1893,
@@ -143,7 +144,8 @@ export default [
       'geology',
       'palaeontology'
     ],
-    website: 'https://www.wellsmuseum.org.uk/'
+    website: 'https://www.wellsmuseum.org.uk/',
+    multiple_images: ['https://i.imgur.com/tjT0gqs.jpg', 'https://i.imgur.com/thLEvO5.png', 'https://i.imgur.com/X0996Uv.png']
   },
   {
     name: 'Weston Park Museum',
@@ -157,7 +159,8 @@ export default [
       'palaeontology',
       'botany'
     ],
-    website: 'https://www.museums-sheffield.org.uk/museums/weston-park/home'
+    website: 'https://www.museums-sheffield.org.uk/museums/weston-park/home',
+    multiple_images: ['https://i.imgur.com/XZc3hfd.png', 'https://i.imgur.com/OuXGWen.jpg', 'https://i.imgur.com/38lbEdK.jpg', 'https://i.imgur.com/zSxaYmg.jpg', 'https://i.imgur.com/7MnXMtn.jpg', 'https://i.imgur.com/OlyHnCq.jpg']
   },
   {
     name: 'Wisbech & Fenland Museum',
@@ -172,11 +175,12 @@ export default [
       'botany',
       'zoology'
     ],
-    website: 'https://www.wisbechmuseum.org.uk/'
+    website: 'https://www.wisbechmuseum.org.uk/',
+    multiple_images: ['https://i.imgur.com/6JOjO58.png', 'https://i.imgur.com/N5qPmwT.jpg', 'https://i.imgur.com/A3rRZK7.jpg', 'https://i.imgur.com/pVTmJU1.jpg']
   },
   {
     name: 'Wollaton Hall Natural History Museum',
-    image: 'https://i.imgur.com/m7bcM01.png',
+    image: 'https://i.imgur.com/SNK4btx.jpg',
     address: 'Wollaton Park, Wollaton, Nottingham, NG8 2AE',
     region: 'East Midlands',
     date_established: 1926,
@@ -191,11 +195,12 @@ export default [
     website: 'https://wollatonhall.org.uk/hall-and-museum/',
     location_id: 15,
     latitude: 51.495915,
-    longitude: -0.176366
+    longitude: -0.176366,
+    multiple_images: ['https://i.imgur.com/SNK4btx.jpg', 'https://i.imgur.com/m7bcM01.png', 'https://i.imgur.com/XflZjg4.jpg', 'https://i.imgur.com/XbpwJLC.jpg']
   },
   {
     name: 'World Museum',
-    image: 'https://i.imgur.com/PcYqm0Z.jpg',
+    image: 'https://i.imgur.com/JWd8LnX.jpg',
     address: 'William Brown St, Liverpool, L3 8EN',
     region: 'North West',
     date_established: 1851,
@@ -207,7 +212,8 @@ export default [
       'botany',
       'zoology'
     ],
-    website: 'https://www.liverpoolmuseums.org.uk/world-museum'
+    website: 'https://www.liverpoolmuseums.org.uk/world-museum',
+    multiple_images: ['https://i.imgur.com/JWd8LnX.jpg', 'https://i.imgur.com/E5KpK4e.jpg', 'https://i.imgur.com/QUaZHbX.jpg', 'https://i.imgur.com/RnxMmkG.jpg']
   },
   {
     name: 'Natural History Museum',
@@ -223,7 +229,8 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://www.nhm.ac.uk/'
+    website: 'https://www.nhm.ac.uk/',
+    multiple_images: ['https://i.imgur.com/ECRmvzY.png', 'https://i.imgur.com/Hp5k5f5.jpg', 'https://i.imgur.com/mg8yhBX.jpg', 'https://i.imgur.com/UdJRamp.jpg', 'https://i.imgur.com/47oxIxq.jpg']
   },
   {
     name: 'Bath Royal Literary and Scientific Institution',
@@ -238,11 +245,12 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://www.brlsi.org/'
+    website: 'https://www.brlsi.org/',
+    multiple_images: ['https://i.imgur.com/tI23VhN.png', 'https://i.imgur.com/ymuePHc.jpg', 'https://i.imgur.com/DnprZY8.png', 'https://i.imgur.com/0qbgLur.jpg']
   },
   {
     name: 'Bolton Museum',
-    image: 'https://i.imgur.com/9apPTD6.png',
+    image: 'https://i.imgur.com/N4uF8OV.jpg',
     address: 'Le Mans Cres, Bolton BL1 1SE',
     region: 'North West',
     date_established: 1852,
@@ -254,11 +262,12 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://www.boltonlams.co.uk/bolton-museum'
+    website: 'https://www.boltonlams.co.uk/bolton-museum',
+    multiple_images: ['https://i.imgur.com/N4uF8OV.jpg', 'https://i.imgur.com/9apPTD6.png', 'https://i.imgur.com/G2mJetw.jpg', 'https://i.imgur.com/HPHG7Xf.jpg', 'https://i.imgur.com/i1AwkhX.jpg']
   },
   {
     name: 'Booth Museum of Natural History',
-    image: 'https://i.imgur.com/ACwWFQJ.png',
+    image: 'https://i.imgur.com/6jDgxFM.jpg',
     address: '194 Dyke Rd, Brighton BN1 5AA',
     region: 'South East',
     date_established: 1874,
@@ -269,11 +278,12 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://brightonmuseums.org.uk/booth/'
+    website: 'https://brightonmuseums.org.uk/booth/',
+    multiple_images: ['https://i.imgur.com/6jDgxFM.jpg', 'https://i.imgur.com/Wye492e.jpg', 'https://i.imgur.com/tgtcmQd.jpg', 'https://i.imgur.com/Rlqds1F.jpg']
   },
   {
     name: 'Bristol City Museum and Art Gallery',
-    image: 'https://i.imgur.com/Z7uV4BS.png',
+    image: 'https://i.imgur.com/FFqL2kZ.jpg',
     address: 'Queens Rd, Bristol BS8 1RL',
     region: 'South West',
     date_established: 1823,
@@ -283,7 +293,8 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/'
+    website: 'https://www.bristolmuseums.org.uk/bristol-museum-and-art-gallery/',
+    multiple_images: ['https://i.imgur.com/FFqL2kZ.jpg', 'https://i.imgur.com/Z7uV4BS.png', 'https://i.imgur.com/uG49S7T.jpg', 'https://i.imgur.com/Fn0vWE5.jpg']
   },
   {
     name: 'Sedgwick Museum of Earth Sciences',
@@ -296,11 +307,12 @@ export default [
       'geology',
       'palaeontology'
     ],
-    website: 'http://www.sedgwickmuseum.org/'
+    website: 'http://www.sedgwickmuseum.org/',
+    multiple_images: ['https://i.imgur.com/6uNeYmR.png', 'https://i.imgur.com/NBAWu04.jpg', 'https://i.imgur.com/0UyR8FL.jpg', 'https://i.imgur.com/RKQ59Cm.jpg', 'https://i.imgur.com/Vi0epub.jpg']
   },
   {
     name: 'Haslemere Educational Museum',
-    image: 'https://i.imgur.com/d1eqD9C.png',
+    image: 'https://i.imgur.com/hl85IiS.jpg',
     address: '78 High St, Haslemere GU27 2LA',
     region: 'South East',
     date_established: 1888,
@@ -309,7 +321,8 @@ export default [
       'geology',
       'zoology'
     ],
-    website: 'https://haslemeremuseum.co.uk'
+    website: 'https://haslemeremuseum.co.uk',
+    multiple_images: ['https://i.imgur.com/hl85IiS.jpg', 'https://i.imgur.com/Dm4fjhk.jpg', 'https://i.imgur.com/zV9JioZ.jpg', 'https://i.imgur.com/dStoXRg.jpg']
   },
   {
     name: 'Kendal Museum',
@@ -322,7 +335,8 @@ export default [
       'geology',
       'zoology'
     ],
-    website: 'https://kendalmuseum.org.uk'
+    website: 'https://kendalmuseum.org.uk',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Keswick Museum',
@@ -336,7 +350,8 @@ export default [
       'zoology',
       'botany'
     ],
-    website: 'https://keswickmuseum.org.uk'
+    website: 'https://keswickmuseum.org.uk',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Lapworth Museum of Geology',
@@ -349,7 +364,8 @@ export default [
       'geology',
       'palaeontology'
     ],
-    website: 'https://Birmingham.ac.uk/facilities/lapworth-museum/index.aspx'
+    website: 'https://Birmingham.ac.uk/facilities/lapworth-museum/index.aspx',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Leeds City Museum',
@@ -361,7 +377,8 @@ export default [
     collection_types: [
       'entomology'
     ],
-    website: 'https://museumsandgalleries.leeds.gov.uk/leeds-city-museum'
+    website: 'https://museumsandgalleries.leeds.gov.uk/leeds-city-museum',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Manchester Museum',
@@ -375,7 +392,8 @@ export default [
       'geology',
       'palaeontology'
     ],
-    website: 'https://museum.manchester.ac.uk'
+    website: 'https://museum.manchester.ac.uk',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Dinosaur Isle',
@@ -387,7 +405,8 @@ export default [
     collection_types: [
       'palaeontology'
     ],
-    website: 'http://www.dinosaurisle.com/newhomepage.aspx'
+    website: 'http://www.dinosaurisle.com/newhomepage.aspx',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Dinosaurland Fossil Museum',
@@ -399,7 +418,8 @@ export default [
     collection_types: [
       'palaeontology'
     ],
-    website: 'https://www.dinosaurland.co.uk'
+    website: 'https://www.dinosaurland.co.uk',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Dorman Museum',
@@ -414,7 +434,8 @@ export default [
       'Mineralogy (geology, rocks, minerals)',
       'palaeontology'
     ],
-    website: 'http://www.dormanmuseum.co.uk/'
+    website: 'http://www.dormanmuseum.co.uk/',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Grant Museum of Zoology and Comparative Anatomy',
@@ -427,7 +448,8 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://www.ucl.ac.uk/culture/grant-museum-zoology'
+    website: 'https://www.ucl.ac.uk/culture/grant-museum-zoology',
+    multiple_images: ['', '', '', '', '']
   },
   {
     name: 'Great North Museum: Hancock',
@@ -440,6 +462,7 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    website: 'https://greatnorthmuseum.org.uk'
+    website: 'https://greatnorthmuseum.org.uk',
+    multiple_images: ['', '', '', '', '']
   }
 ]

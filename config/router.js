@@ -1,7 +1,7 @@
 import express from 'express'
 import { registerUser, loginUser } from '../controllers/auth.js'
 import { addReview, deleteReview, getAllMuseums, getSingleMuseum } from '../controllers/museums.js'
-import { addFavourite, getUserProfile } from '../controllers/users.js'
+import { addFavourite, deleteFavourite, getUserProfile } from '../controllers/users.js'
 import { secureRoute } from './secureRoute.js'
 
 const router = express.Router()
@@ -29,5 +29,7 @@ router.route('/profile')
 router.route('/profile/:id/favourites')
   .post(secureRoute, addFavourite)
 
+router.route('/profile/:id/favourites/:favouriteId')
+  .delete(secureRoute, deleteFavourite)
 
 export default router

@@ -41,6 +41,20 @@ const Profile = () => {
         )
         console.log(data.favourites)
         setUser(data.favourites)
+
+        const mapped = async () => {
+          try {
+            data.favourites.map(item => {
+              return axios.get(`/api/museums/${item.favouriteMuseums}`)
+            })
+          } catch (err) {
+            console.log(err)
+          }
+          
+        }
+
+        console.log(mapped)
+
       } catch (err) {
         console.log(err)
       }
@@ -61,15 +75,15 @@ const Profile = () => {
 
   // }, [user])
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const userMap = async () => {
-      const { data } = await axios.get('/api/museums/6193a602def345cd11fed92a')
-      console.log(data)
-    }
-    userMap()
+  //   const userMap = async () => {
+  //     const { data } = await axios.get('/api/museums/6193a602def345cd11fed92a')
+  //     console.log(data)
+  //   }
+  //   userMap()
 
-  }, [user])
+  // }, [user])
 
   return (
     <>
@@ -84,19 +98,7 @@ const Profile = () => {
         <div className='container'>
           <div className='columns is-multiline'>
             {user.map(museum => {
-
-
-              // const getData = async () => {
-              //   try {
-              //     const { data } = await axios.get(`/api/museums/${museum.favouriteMuseums[0]}`)
-              //     console.log(data)
-              //   } catch (err) {
-              //     console.log(err)
-              //   }
-              // }
-              // getData()
-
-              // console.log()
+              
               return (
                 <div key={museum._id} className='column is-one-quarter-desktop'>
                   <div className='card'>
@@ -106,6 +108,7 @@ const Profile = () => {
                   </div>
                 </div>
               )
+              
             })}
           </div>
         </div>

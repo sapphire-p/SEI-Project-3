@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router'
+// import { useParams } from 'react-router'
 
-const AddingDeletingToFavourites = () => {
+const AddingDeletingToFavourites = ({ id }) => {
 
-  const { id } = useParams()
   const [isSaved, setIsSaved] = useState(false)
   const [token, setToken] = useState()
   const [userId, setUserId] = useState()
 
-  // const [formData, setFormData] = useState({
-  //   favouriteMuseums: ''
-  // })
 
   useEffect(() => {
     const getTokenFromLocalStorage = () => {
@@ -55,7 +51,7 @@ const AddingDeletingToFavourites = () => {
           await axios.post(
             `/api/profile/${userId}/favourites`,
             {
-              favouriteMuseums: `${id}`
+              favourites: `${id}`
             },
             {
               headers: { Authorization: `Bearer ${token}` }

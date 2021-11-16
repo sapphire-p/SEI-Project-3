@@ -18,7 +18,7 @@ const MuseumCard = ({ _id, name, image, region }) => {
         <div className='card-header'>
           <div className='card-header-title cardTitle is-size-7'>{name}</div>
           {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={_id}></a> */}
-          <AddingDeletingToFavourites /> 
+          <AddingDeletingToFavourites id={_id}/> 
 
           {/* ^^^ doesn't work on index page yet */}
 

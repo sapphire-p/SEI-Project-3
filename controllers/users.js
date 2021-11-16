@@ -3,7 +3,8 @@ import User from '../models/user.js'
 
 export const getUserProfile = async (req, res) => {
   try {
-    const user = await User.findById(req.currentUser._id)
+    // const user = await User.findById(req.currentUser._id).populate('addedFavourites')
+    const user = await User.findById(req.currentUser._id).populate('favourites')
     if (!user) throw new Error()
     return res.status(200).json(user)
   } catch (err) {
@@ -12,31 +13,14 @@ export const getUserProfile = async (req, res) => {
   }
 }
 
-// export const addFavourite = async (req, res) => {
-//   try {
-//     const { id } = req.params
-//     const museum = await Museum.findById(id)
-//     if (!museum) throw new Error('Museum not found')
-//     const user = await User.findById(req.currentUser._id)
-//     if (!user) throw new Error('User not found')
-//     const newFavourite = { ...favouriteMuseums, favouriteMuseums: id }
-//     user.favourites.push(newFavourite)
-//     await user.save({ validateModifiedOnly: true })
-//     return res.status(200).json(user)
-//   } catch (err) {
-//     console.log(err)
-//     return res.status(404).json({ message: err.message })
-//   }
-// }
-
 export const addFavourite = async (req, res) => {
 
   try {
     const { id } = req.params
     const user = await User.findById(id)
     if (!user) throw new Error()
-    const newFave = { ...req.body, owner: req.currentUser._id }
-    user.favourites.push(newFave)
+    // const newFave = { ...req.body, owner: req.currentUser._id }
+    user.favourites.push(req.body.favourites)
     await user.save({ validateModifiedOnly: true })
     return res.status(200).json(user)
   } catch (err) {
@@ -46,14 +30,24 @@ export const addFavourite = async (req, res) => {
 
 }
 
-// export const deleteFavourite = async (req, res) => {
+export const deleteFavourite = async (req, res) => {
 
-//   try {
+  try {
+    const { id, favouriteId } = req.params
+    const user = await User.findById(id)
+    if (!user) throw new Error()
+    const faveToDelete = user.favourites.id(favouriteId)
+    if (!faveToDelete) throw new Error('Favourite not found')
+    // if (!faveToDelete.owner.equals(req.currentUser._id)) throw new Error('Unauthorized')
+    await faveToDelete.remove()
+    await user.save({ validateModifiedOnly: true })
 
-//   } catch (err) {
-//     console.log(err)
-//     return res.status(404).json({ message: err.message })
-//   }
+    return res.sendStatus(204)
 
-// }
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: err.message })
+  }
+
+}
 

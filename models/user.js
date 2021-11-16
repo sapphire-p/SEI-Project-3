@@ -2,23 +2,13 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import uniqueValidator from 'mongoose-unique-validator'
 
-const favouriteSchema = new mongoose.Schema({
-  favouriteMuseums: { type: String, required: false, unique: true }
-})
-
-// const favouriteSchema = new mongoose.Schema({
-//   name: { type: String, required: true, unique: true },
-//   image: { type: String, required: true },
-//   region: { type: String, required: true },
-//   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
-// })
-
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 30 },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  favourites: [favouriteSchema]
+  favourites: [{ type: mongoose.Schema.ObjectId, ref: 'Museum', required: false }]
 })
+
 
 // * remove password and email when returning user as json
 

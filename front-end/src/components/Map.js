@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
+import { Link } from 'react-router-dom'
 // import ReactMapGL, { Marker } from 'react-map-gl'
 // import locationData from '../data/locations'
 import axios from 'axios'
@@ -54,7 +55,7 @@ const Map = () => {
   // console.log('viewPort ->', viewPort)
   // console.log('userLocation ->', userLocation)
   // console.log('popup ->', popup)
-  console.log('allMuseums ->', allMuseums)
+  // console.log('allMuseums ->', allMuseums)
   console.log('hasError ->', hasError)
 
 
@@ -80,7 +81,7 @@ const Map = () => {
               closeOnClick={true}
               onClose={() => setUserLocationClicked(false)}
             >
-              <div>
+              <div className='is-size-6 has-text-weight-bold'>
                 Your location
               </div>
             </Popup>
@@ -102,25 +103,23 @@ const Map = () => {
               closeOnClick={true}
               onClose={() => setPopup(null)}
             >
-              <div className='p-1'>
+              <div id='map-card-container' className='p-1'>
                 <div className='card'>
                   <div className='card-header'>
                     <div className='card-header-title cardTitle is-size-7'>{popup.name}</div>
                   </div>
-                  <div className='card-image'>
-                    <figure className='image is-4by3'>
-                      <img src={popup.image} alt={popup.name} />
-                    </figure>
-                  </div>
+                  <Link to={`/museums/${popup._id}`}>
+                    <div className='card-image'>
+                      <figure className='image is-4by3'>
+                        <img src={popup.image} alt={popup.name} />
+                      </figure>
+                    </div>
+                  </Link>
                   <div className='card-content p-2'>
                     <h4 className='is-size-7 cardRegion'>{popup.region}</h4>
                   </div>
                 </div>
               </div>
-
-              {/* <div>
-                {popup.name}
-              </div> */}
             </Popup>
           }
 
@@ -135,6 +134,18 @@ const Map = () => {
 
 export default Map
 
+
+
+{/* <Link to={`/museums/${_id}`}>
+<div className='card-image'>
+  <figure className='image is-1'>
+    <img src={image} alt={`Picture of ${name}`} />
+  </figure>
+</div>
+<div className='card-content p-2'>
+  <h4 className='is-size-7 cardRegion'>{region}</h4>
+</div>
+</Link> */}
 
 
 //   < div className = 'card' >

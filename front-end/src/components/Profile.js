@@ -35,10 +35,10 @@ const Profile = () => {
   // }, [])
 
   return (
-    <>
-      <section className="hero is-black is-medium">
+    <section id='profile-section'>
+      <section className="hero is-black is-small">
         <div className="hero-body">
-          <p className="title has-text-centered">
+          <p className="title has-text-centered animate__animated animate__bounceInDown animate__delay-1s">
             {greet} { username }!
           </p>
         </div>
@@ -46,7 +46,7 @@ const Profile = () => {
       <section>
         
       </section>
-    </>
+    </section>
   )
 }
 

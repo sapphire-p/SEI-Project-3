@@ -23,15 +23,15 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <hr className="has-background-grey mt-2 mb-2"/>
+        <hr className="has-background-grey mt-2 mb-2" />
         <div className="row">
           <p className="col-sm has-text-white is-size-7 has-text-centered mb-1">
             &copy;{new Date().getFullYear()} MUSEUM MAPPERS INC | All rights reserved | Terms of Service | Privacy
-          </p> 
+          </p>
         </div>
         <div className="row">
           <p className="col-sm has-text-white is-size-7 has-text-centered">
-          Content Creaters: <a className="link is-size-7" href="https://github.com/iglfranks" rel="noreferrer" target="_blank">Isaac</a>, <a className="link is-size-7" href="https://github.com/Kumarmehta019" rel="noreferrer" target="_blank">Kumar</a>, <a className="link is-size-7" href="https://github.com/Olys6" rel="noreferrer" target="_blank">Oliver</a> and <a className="link is-size-7" href="https://github.com/sapphire-p" rel="noreferrer" target="_blank">Sapphire</a>
+            Content Creaters: <a className="link is-size-7" href="https://github.com/iglfranks" rel="noreferrer" target="_blank">Isaac</a>, <a className="link is-size-7" href="https://github.com/Kumarmehta019" rel="noreferrer" target="_blank">Kumar</a>, <a className="link is-size-7" href="https://github.com/Olys6" rel="noreferrer" target="_blank">Oliver</a> and <a className="link is-size-7" href="https://github.com/sapphire-p" rel="noreferrer" target="_blank">Sapphire</a>
           </p>
         </div>
       </div>

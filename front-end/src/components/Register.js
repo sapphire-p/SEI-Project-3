@@ -39,9 +39,9 @@ const Register = () => {
 
 
   return (
-    <section className='section'>
-      <div className='container'>
-        <div className='columns'>
+    <section id='register-section' className='section is-medium'>
+      <div id='register-container' className='container'>
+        <div id='register-div' className='columns'>
           <form className='column is-half is-offset-one-quarter box has-background-grey-lighter' onSubmit={handleSubmit}>
             <h1 className='title'>Create your account</h1>
             <p>As a registered MuseumMapper user you&apos;ll be able to review museums and save your favourites to view later!</p>

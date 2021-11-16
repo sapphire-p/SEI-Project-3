@@ -5,7 +5,7 @@
 }
 
 
-/* What does this do?: */
+/* Removed as throwing off responsive design: */
 
 /* .site-wrapper{
   min-height: calc(100vh - 206px);
@@ -163,4 +163,10 @@ nav {
 .map-container {
   height: 100vh;
   width: 100vw;
+}
+
+/* Register and Login */
+
+#register-section, #login-section {
+  height: 100vh;
 }

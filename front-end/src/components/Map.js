@@ -102,9 +102,25 @@ const Map = () => {
               closeOnClick={true}
               onClose={() => setPopup(null)}
             >
-              <div>
-                {popup.name}
+              <div className='p-1'>
+                <div className='card'>
+                  <div className='card-header'>
+                    <div className='card-header-title cardTitle is-size-7'>{popup.name}</div>
+                  </div>
+                  <div className='card-image'>
+                    <figure className='image is-4by3'>
+                      <img src={popup.image} alt={popup.name} />
+                    </figure>
+                  </div>
+                  <div className='card-content p-2'>
+                    <h4 className='is-size-7 cardRegion'>{popup.region}</h4>
+                  </div>
+                </div>
               </div>
+
+              {/* <div>
+                {popup.name}
+              </div> */}
             </Popup>
           }
 
@@ -118,6 +134,22 @@ const Map = () => {
 }
 
 export default Map
+
+
+
+//   < div className = 'card' >
+// <div className='card-header'>
+//   <div className='card-header-title cardTitle is-size-7'>{popup.name}</div>
+// </div>
+//   <div className='card-image'>
+//     <figure className='image is-1'>
+//       <img src={popup.image} alt={popup.name} />
+//     </figure>
+//   </div>
+//   <div className='card-content p-2'>
+//     <h4 className='is-size-7 cardRegion'>{popup.region}</h4>
+//   </div>
+// </div >
 
 
 

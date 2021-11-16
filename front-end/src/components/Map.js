@@ -35,7 +35,7 @@ const Map = () => {
     window.navigator.geolocation.getCurrentPosition(position => {
       console.log('Position ->', position)
       const { latitude, longitude } = position.coords
-      setUserLocation({ latitude, longitude, zoom: 14 })
+      setUserLocation({ latitude, longitude, zoom: 5 })
     })
 
     const getAllMuseumsData = async () => {

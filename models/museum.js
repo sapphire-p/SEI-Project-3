@@ -21,9 +21,9 @@ const museumSchema = new mongoose.Schema({
   collection_types: [{ type: String, required: true }],
   website: { type: String, required: true },
   multiple_images: [{ type: String, required: false }],
-  location_id: [{ type: Number, required: false }],
-  latitude: [{ type: Number, required: false }],
-  longitude: [{ type: Number, required: false }],
+  location_id: { type: Number, required: false, unique: true },
+  latitude: { type: Number, required: false },
+  longitude: { type: Number, required: false },
   reviews: [reviewSchema]
 })
 

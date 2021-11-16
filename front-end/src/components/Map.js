@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 // import ReactMapGL, { Marker } from 'react-map-gl'
-import locationData from '../data/locations'
+// import locationData from '../data/locations'
 import axios from 'axios'
 
 
@@ -53,7 +53,7 @@ const Map = () => {
 
   // console.log('viewPort ->', viewPort)
   // console.log('userLocation ->', userLocation)
-  console.log('popup ->', popup)
+  // console.log('popup ->', popup)
   console.log('allMuseums ->', allMuseums)
   console.log('hasError ->', hasError)
 
@@ -61,7 +61,7 @@ const Map = () => {
 
   return (
     <div className='map-container'>
-      {viewPort && userLocation ?
+      {viewPort && userLocation && allMuseums ?
         <ReactMapGL
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
           height='100%'
@@ -69,10 +69,6 @@ const Map = () => {
           mapStyle='mapbox://styles/mapbox/navigation-night-v1'
           {...viewPort}
           onViewStateChange={viewport => setViewPort(viewport)}
-        // zoom={viewPort.zoom}
-        // latitude={viewPort.latitude}
-        // longitude={viewPort.longitude}
-        // onViewStateChange={viewport => setViewPort(viewport)}
         >
           <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
             <span onClick={() => setUserLocationClicked(true)}>🔴</span>
@@ -90,11 +86,11 @@ const Map = () => {
             </Popup>
           }
 
-          {locationData.map(location => {
+          {allMuseums.map(museum => {
             return (
-              <Marker key={location.id} latitude={location.latitude} longitude={location.longitude}>
-                <span onClick={() => setPopup(location)}>
-                  {location.icon}
+              <Marker key={museum.location_id} latitude={museum.latitude} longitude={museum.longitude}>
+                <span onClick={() => setPopup(museum)}>
+                  🏛
                 </span>
               </Marker>
             )
@@ -111,6 +107,7 @@ const Map = () => {
               </div>
             </Popup>
           }
+
         </ReactMapGL>
         :
         <h1>Loading your location...</h1>
@@ -121,3 +118,27 @@ const Map = () => {
 }
 
 export default Map
+
+
+
+// {locationData.map(location => {
+//   return (
+//     <Marker key={location.id} latitude={location.latitude} longitude={location.longitude}>
+//       <span onClick={() => setPopup(location)}>
+//         {location.icon}
+//       </span>
+//     </Marker>
+//   )
+// })}
+// {popup &&
+//   <Popup
+//     latitude={popup.latitude}
+//     longitude={popup.longitude}
+//     closeOnClick={true}
+//     onClose={() => setPopup(null)}
+//   >
+//     <div>
+//       {popup.name}
+//     </div>
+//   </Popup>
+// }

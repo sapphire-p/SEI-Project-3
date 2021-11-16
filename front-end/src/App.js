@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import Profile from './components/Profile'
 import FilteredMuseums from './components/FilteredMuseums'
 import Map from './components/Map'
+import StandoutExihbit from './components/StandoutExhibit'
 
 const App = () => {
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route exact path='/filteredmuseums' component={FilteredMuseums} />
           <Route exact path='/profile' component={Profile} />
           <Route exact path='/map' component={Map} />
+          <Route exact path='/exhibits' component={StandoutExihbit}/>
         </Switch>
       </div>
       <Footer />

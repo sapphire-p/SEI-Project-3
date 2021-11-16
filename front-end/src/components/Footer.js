@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <img className="pr-3" src={Logo} alt="Museum Mapper logo" width="140px" />
+            <img className="pr-3 mt-5" src={Logo} alt="Museum Mapper logo" width="140px" />
           </div>
           <div className="col">
             <h4 className="has-text-white is-size-6 has-text-centered">Museum Mapper</h4>
@@ -31,8 +31,19 @@ const Footer = () => {
         </div>
         <div className="row">
           <p className="col-sm has-text-white is-size-7 has-text-centered">
-            Content Creaters: <a className="link is-size-7" href="https://github.com/iglfranks" rel="noreferrer" target="_blank">Isaac</a>, <a className="link is-size-7" href="https://github.com/Kumarmehta019" rel="noreferrer" target="_blank">Kumar</a>, <a className="link is-size-7" href="https://github.com/Olys6" rel="noreferrer" target="_blank">Oliver</a> and <a className="link is-size-7" href="https://github.com/sapphire-p" rel="noreferrer" target="_blank">Sapphire</a>
+            Content Creaters: <a className="link is-size-7" id="links" href="https://github.com/iglfranks" rel="noreferrer" target="_blank">Isaac</a>, <a className="link is-size-7" id="links" href="https://github.com/Kumarmehta019" rel="noreferrer" target="_blank">Kumar</a>, <a className="link is-size-7" id="links" href="https://github.com/Olys6" rel="noreferrer" target="_blank">Oliver</a> and <a className="link is-size-7" id="links" href="https://github.com/sapphire-p" rel="noreferrer" target="_blank">Sapphire</a>
           </p>
+        </div>
+        <div className="row mt-2">
+          <div className="col">
+            <i className="fab fa-instagram fa-3x mr-6"></i>
+          </div>
+          <div className="col">
+            <i className="fab fa-facebook fa-3x mr-6"></i>
+          </div>
+          <div className="col">
+            <i className="fab fa-twitter fa-3x mr-6"></i>
+          </div>
         </div>
       </div>
     </footer>

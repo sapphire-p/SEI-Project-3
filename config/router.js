@@ -11,6 +11,9 @@ router.route('/museums')
 router.route('/museums/:id')
   .get(getSingleMuseum)
 
+router.route('museums/:id/exhibits')
+  .get()
+
 router.route('/register')
   .post(registerUser)
 

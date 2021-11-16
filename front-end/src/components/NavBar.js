@@ -34,7 +34,7 @@ const NavBar = () => {
         <div className="navbar-brand">
           <span role="img" aria-label="logo" className="title">
             <Link to="/" className="link">
-              <img src={Logo} alt="Museum Mapper logo" width="200px" />
+              <img className="mmlogo" src={Logo} alt="Museum Mapper logo" width="250px" />
             </Link>
           </span>
         </div>
@@ -45,6 +45,11 @@ const NavBar = () => {
           <div className="navbar-item">
             {userIsAuthenticated() && <Link to="/museumsmap" className="link is-size-6 has-text-weight-light"><i className="fas fa-map-marked-alt"></i> Museums Map</Link>}
           </div>
+
+          <div className="navbar-item">
+            <Link to="/exhibits" className="link is-size-6 has-text-weight-light"><i className="fas fa-broom"></i>Exhibits</Link>
+          </div>
+
         </div>
         <div className="navbar-end">
           {!userIsAuthenticated() ?

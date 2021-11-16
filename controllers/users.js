@@ -46,3 +46,14 @@ export const addFavourite = async (req, res) => {
 
 }
 
+// export const deleteFavourite = async (req, res) => {
+
+//   try {
+
+//   } catch (err) {
+//     console.log(err)
+//     return res.status(404).json({ message: err.message })
+//   }
+
+// }
+

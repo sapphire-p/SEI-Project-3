@@ -50,7 +50,6 @@ const AddingDeletingToFavourites = () => {
   useEffect(() => {
 
     try {
-
       const addMuseumToFaves = async () => {
         try {
           await axios.post(
@@ -66,13 +65,11 @@ const AddingDeletingToFavourites = () => {
           console.log(err)
         }
       }
-
       if (isSaved === false) {
         return
       } else {
         addMuseumToFaves()
       }
-
     } catch (err) {
       console.log(err)
     }

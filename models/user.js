@@ -2,10 +2,6 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import uniqueValidator from 'mongoose-unique-validator'
 
-// const favouriteSchema = new mongoose.Schema({
-//   favouriteMuseums: [{ type: mongoose.Schema.ObjectId, ref: 'Museum' }] 
-// })
-
 const favouriteSchema = new mongoose.Schema({
   favouriteMuseums: [{ type: String, required: false, unique: true }]
 })

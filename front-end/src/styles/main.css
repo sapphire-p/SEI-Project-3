@@ -4,7 +4,9 @@
   font-family: 'Quicksand', sans-serif;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 /* Removed as throwing off responsive design: */
 
 /* .site-wrapper{
@@ -76,6 +78,7 @@ nav {
 }
 
 
+
 /* Don't think this does anything?: */
 
 /* .heroTitleSubtitleHome {
@@ -125,7 +128,6 @@ nav {
   background-position: center;
   /* Full height */
   height: 100%; 
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
 }
@@ -133,14 +135,19 @@ nav {
 @media only screen and (min-width: 1225px) {
   .mainHero {
     margin-top: -150px;
-    margin-bottom: -130px;
+    margin-bottom: -150px;
   }
 }
 
 /* Featured Museum on Home page */
 
+#featured-container {
+  scroll-behavior: smooth;
+}
+
 .featuredMuseumTitle {
   margin-top: 20px;
+  scroll-behavior: smooth;
 }
 
 .featuredMuseumSection {
@@ -158,8 +165,14 @@ nav {
   transform: scale(1.03);
 }
 
-
+.heroImageHome{
+  border-radius: 5px;
+}
 /* MuseumIndex */
+
+.museumImages {
+  filter: saturate(140%);
+}
 
 .museumCard {
   transition: transform .25s; /* Animation */
@@ -188,6 +201,15 @@ nav {
   color: red;
   transform: scale(1.03);
 }
+
+.standoutExhibitHeader {
+  font-size: 25px;
+}
+
+.exhibitImage {
+  filter: saturate(250%);
+}
+
 /* Profile */
 #profile-section {
   height: 100vh;

@@ -43,6 +43,15 @@ const Map = () => {
     const getAllMuseumsData = async () => {
       try {
         const { data } = await axios.get('/api/museums')
+        data.sort((a, b) => { // Sorts the array of museum objects alphabetically by the 'name' key
+          if (a.name < b.name) {
+            return -1
+          } else if (a.name > b.name) {
+            return 1
+          } else {
+            return 0
+          }
+        })
         setAllMuseums(data)
       } catch (err) {
         console.log(err)
@@ -145,7 +154,7 @@ const Map = () => {
               }
             </ReactMapGL>
             :
-            <h1>{hasError ? 'Oops! Something went wrong when loading the map' : 'Loading...'}</h1>
+            <h1>{hasError ? 'Oops! Something went wrong when loading the map' : 'Loading map...'}</h1>
           }
         </div>
 

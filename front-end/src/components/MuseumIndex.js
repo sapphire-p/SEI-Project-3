@@ -9,6 +9,15 @@ const MuseumsIndex = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get('/api/museums')
+      data.sort((a, b) => {
+        if (a.name < b.name) {
+          return -1
+        } else if (a.name > b.name) {
+          return 1
+        } else {
+          return 0
+        }
+      })
       setMuseums(data)
     }
     getData()
@@ -26,14 +35,14 @@ const MuseumsIndex = () => {
       <section className='section MuseumsSection'>
         <div className='container museumsCardContainer'>
           <div className='columns is-multiline'>
-            {museums.sort((a, b) => a - b).map(museum => {
+            {museums.map(museum => {
               return (
                 <MuseumCard key={museum._id} {...museum} />
               )
             })}
             <div className="MuseumsSection2"></div>
           </div>
-          
+
         </div>
       </section>
     </section>

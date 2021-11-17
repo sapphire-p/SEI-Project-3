@@ -21,11 +21,11 @@ const StandoutExhibit = () => {
             <div key={singleMuseum._id} className="card column is-one-quarter-desktop">
               <div className="">
                 <p className="card-header-title">
-                  {singleMuseum.exhibits.name}
+                  {singleMuseum.exhibits_name}
                 </p>
                 <div className="card-image">
                   <figure className="image is-1">
-                    <img src={singleMuseum.exhibits.image} alt="Placeholder image" />
+                    <img src={singleMuseum.exhibits_image} alt="Placeholder image" />
                   </figure>
                 </div>
               </div>

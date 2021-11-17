@@ -103,7 +103,9 @@ const MuseumShow = () => {
               </div>
               <p className='subtitle has-text-right has-text-white has-text-weight-semibold is-italic is-size-7-mobile'>
                 {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a> */}
-                <AddingDeletingToFavourites />
+                <div className='bookmarkStyling'>
+                  <AddingDeletingToFavourites />
+                </div>
                 <hr />
                 Region: {museum.region}
                 <br />
@@ -156,6 +158,29 @@ const MuseumShow = () => {
                 </div>
                 <div className='column'>
                   <AddReviewForm />
+                </div>
+              </section>
+              <section>
+                <div className='columns'>
+                  <div className='column is-half'>
+                    <div className='card'>
+                      <header className='card-header'>
+                        <p className='card-header-title has-text-centered is-flex is-justify-content-center standoutExhibitHeader'>
+                          {museum.exhibits_name}
+                        </p>
+                      </header>
+                      <div className='card-image'>
+                        <figure className='image is-1'>
+                          <img src={museum.exhibits_image} className='exhibitImage'/>
+                        </figure>
+                      </div>
+                      <div className='card-content'>
+                        <div className='content'>
+                          {museum.exhibits_description}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
             </div>

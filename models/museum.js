@@ -11,11 +11,11 @@ const reviewSchema = new mongoose.Schema({
 }
 )
 
-const exhibitSchema = new mongoose.Schema({
-  name: { type: String, required: true, maxlength: 200 },
-  image: { type: String, required: true },
-  description: { type: String, maxlength: 1000 }
-})
+// const exhibitSchema = new mongoose.Schema({
+//   name: { type: String, required: true, maxlength: 200 },
+//   image: { type: String, required: true },
+//   description: { type: String, maxlength: 1000 }
+// })
 
 const museumSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
@@ -25,7 +25,9 @@ const museumSchema = new mongoose.Schema({
   date_established: { type: Number, required: true },
   description: { type: String, required: true, maxlength: 5000 },
   collection_types: [{ type: String, required: true }],
-  exhibits: [exhibitSchema],
+  exhibits_name: { type: String, required: false },
+  exhibits_image: { type: String, required: false },
+  exhibits_description: { type: String, required: false },
   website: { type: String, required: true },
   multiple_images: [{ type: String, required: false }],
   location_id: { type: Number, required: false, unique: true },

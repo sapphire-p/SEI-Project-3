@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import SwiperCore, { Pagination, Navigation } from 'swiper'
+import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
 import axios from 'axios'
 
-SwiperCore.use([Pagination, Navigation])
+SwiperCore.use([Autoplay, Pagination, Navigation])
 
 const Carousel2 = () => {
 
@@ -31,14 +31,19 @@ const Carousel2 = () => {
     <section>
       <div className="swiper">
         <div className="swiper-wrapper">
-          <Swiper pagination={true} navigation={true} className="mySwiper">
+          <Swiper spaceBetween={50} centeredSlides={true} autoplay={{
+            'delay': 5500,
+            'disableOnInteraction': false
+          }} pagination={{
+            'clickable': true
+          }} navigation={true} className="mySwiper">
             {museumData.map(name => {
               return (
                 <>
-                  <SwiperSlide><img src = {name.multiple_images[0]}></img></SwiperSlide>
-                  <SwiperSlide><img src = {name.multiple_images[1]}></img></SwiperSlide>
-                  <SwiperSlide><img src = {name.multiple_images[2]}></img></SwiperSlide>
-                  <SwiperSlide><img src = {name.multiple_images[3]}></img></SwiperSlide>
+                  <SwiperSlide><img src={name.multiple_images[0]}></img></SwiperSlide>
+                  <SwiperSlide><img src={name.multiple_images[1]}></img></SwiperSlide>
+                  <SwiperSlide><img src={name.multiple_images[2]}></img></SwiperSlide>
+                  <SwiperSlide><img src={name.multiple_images[3]}></img></SwiperSlide>
                 </>
               )
             })}

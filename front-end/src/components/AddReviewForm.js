@@ -54,33 +54,33 @@ const AddReviewForm = () => {
   return (
     <form className='review-add' onSubmit={handleSubmit}>
       <div className='field'>
-        <label className='label'>Comment:</label>
+        <label className='label is-size-7-mobile has-text-white'>Comment:</label>
         <div className='control'>
           <input
-            className={`input ${errors.comment ? 'is-danger' : ''}`}
+            className={`input ${errors.comment ? 'is-danger' : ''} is-size-7-mobile`}
             placeholder='Comment'
             name='comment'
             value={formData.comment}
             onChange={handleChange}
           />
         </div>
-        {errors.comment && <p className='is-danger'>Comment is too long</p>}
+        {errors.comment && <p className='is-danger is-size-7-mobile'>Comment is too long</p>}
       </div>
       <div className='field'>
-        <label className='label'>Rating:</label>
+        <label className='label is-size-7-mobile has-text-white'>Rating:</label>
         <div className='control'>
           <input
-            className={`input ${errors.rating ? 'is-danger' : ''}`}
+            className={`input ${errors.rating ? 'is-danger' : ''} is-size-7-mobile`}
             placeholder='Rating'
             name='rating'
             value={formData.rating}
             onChange={handleChange}
           />
         </div>
-        {errors.rating && <p className='is-danger'>Rating must be between 1 and 5</p>}
+        {errors.rating && <p className='is-danger is-size-7-mobile'>Rating must be between 1 and 5</p>}
       </div>
       <div className='field'>
-        <button type='submit' className='button is-rounded has-background-danger has-text-white has-text-weight-bold'><i className="fas fa-plus-circle mr-1"></i>Add Review</button>
+        <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile '><i className="fas fa-plus-circle mr-1"></i>Add Review</button>
       </div>
     </form>
   )

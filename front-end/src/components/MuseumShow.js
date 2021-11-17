@@ -88,20 +88,20 @@ const MuseumShow = () => {
           <section className='hero is-small'>
             <div className='hero-body is-flex is-justify-content-space-between is-align-content-center singleMuseumHeroBody'>
               <div className='has-text-left'>
-                <p className='title has-text-white'>{museum.name}</p>
+                <p className='title has-text-white is-size-6-mobile'>{museum.name}</p>
                 <hr />
                 <div className='is-flex is-justify-content-space-between'>
-                  <a href={museum.website} className='has-text-white'>Official Website</a>
+                  <a href={museum.website} className='has-text-white is-size-5 has-text-weight-bold is-size-7-mobile'>Official Website</a>
                   <StarRatings
                     rating={parseFloat(avgRat)}
                     numberOfStars={5}
                     starRatedColor='gold'
-                    starDimension='25px'
+                    starDimension='18px'
                     starSpacing='3px'
                   />
                 </div>
               </div>
-              <p className='subtitle has-text-right has-text-white'>
+              <p className='subtitle has-text-right has-text-white has-text-weight-semibold is-italic is-size-7-mobile'>
                 {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a> */}
                 <AddingDeletingToFavourites />
                 <hr />
@@ -114,41 +114,37 @@ const MuseumShow = () => {
           <section className='section px-0 py-3'>
             <div className='is-marginless px-3 mainContainer'>
               <section className='columns is-flex is-align-items-center descAndPic'>
-                <div className='column is-flex is-align-items-center'>
-                  <div className='card p-3'>
-                    <figure className='image'>
-                      <img src={museum.image} alt={`Picture of ${museum.name}`} />
-                    </figure>
-                  </div>
+                <div className='column is-half-desktop is-half-tablet is-half-mobile'>
+                  <Carousel />
                 </div>
-                <div className='column'>
+                <div className='column is-half-desktop is-half-tablet is-half-mobile'>
                   <div className='card p-3'>
-                    <p>{museum.description}</p>
+                    <p className='is-italic is-size-6 is-size-7-mobile'>{museum.description}</p>
                     <hr />
                     <div>
-                      <h3 className='has-text-weight-bold'>Collections:</h3>
+                      <h3 className='has-text-weight-bold is-underlined is-size-7-mobile'>Collections:</h3>
                       <ul>
                         {museum.collection_types.map(type => {
-                          return <li key={type}>{type}</li>
+                          return <li className='is-capitalized is-italic is-size-7-mobile' key={type}>{type}</li>
                         })}
                       </ul>
                     </div>
                     <div>
                       <hr />
-                      <h3 className='has-text-weight-bold'>Address</h3>
-                      <p>{museum.address}</p>
+                      <h3 className='has-text-weight-bold is-underlined is-size-7-mobile'>Address:</h3>
+                      <p className='is-italic is-size-7-mobile'>{museum.address}</p>
                     </div>
                   </div>
                 </div>
               </section>
-              <section className='columns reviewsAndForm'>
+              <section className='columns reviewsAndForm has-background-black'>
                 <div className='column is-half'>
                   <div className='card'>
                     <div className='card-header p-2 is-flex is-align-items-center'>
-                      <p className='card-header-title'>Reviews:</p>
+                      <p className='card-header-title is-size-7-mobile'>Reviews:</p>
                     </div>
                     <div className='card-content'>
-                      <ul>
+                      <ul className='is-size-7-mobile'>
                         {museum.reviews.map(review => {
                           return (
                             <ReviewsList key={review._id} {...review} />
@@ -160,13 +156,6 @@ const MuseumShow = () => {
                 </div>
                 <div className='column'>
                   <AddReviewForm />
-                </div>
-              </section>
-              <section>
-                <div className='columns'>
-                  <div className='column is-half'>
-                    <Carousel />
-                  </div>
                 </div>
               </section>
             </div>

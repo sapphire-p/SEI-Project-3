@@ -44,7 +44,7 @@ const Register = () => {
         <div id='register-div' className='columns'>
           <form className='column is-half is-offset-one-quarter box has-background-grey-lighter' onSubmit={handleSubmit}>
             <h1 className='title'>Create your account</h1>
-            <p>As a registered MuseumMapper user you&apos;ll be able to review museums and save your favourites to view later!</p>
+            <p>As a registered Museum Mapper user you&apos;ll be able to review museums and save your favourites to view later!</p>
             <div className='field'>
               <label className='label mt-4'>Username:</label>
               <div className='control'>

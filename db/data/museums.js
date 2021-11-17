@@ -555,7 +555,7 @@ export default [
     address: '21 University Street, London, GB WC1E 6DE',
     region: 'London',
     date_established: 1828,
-    description: 'This museum is a natural history museum holding collections of zoological specimens and is the last remaining natural history museum in Lindon',
+    description: 'This museum is a natural history museum holding collections of zoological specimens and is the last remaining natural history museum in London',
     collection_types: [
       'palaeontology',
       'zoology'

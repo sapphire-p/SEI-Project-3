@@ -113,7 +113,7 @@ const Map = () => {
 
 
 
-  return (
+  return ( // is-flex-direction-row-reverse on the <div> below means that the map displays in the column on the right on desktop/tablet and on top in mobile view
 
     <section>
       <div className='columns p-3 is-flex-direction-row-reverse'>

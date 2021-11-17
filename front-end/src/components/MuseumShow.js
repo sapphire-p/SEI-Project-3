@@ -115,7 +115,6 @@ const MuseumShow = () => {
                   />
                 </div>
                 <p className='subtitle has-text-right has-text-white'>
-                  {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a> */}
                   <AddingDeletingToFavourites />
                   <hr />
                   Region: {museum.region}

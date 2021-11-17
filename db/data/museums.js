@@ -371,7 +371,7 @@ export default [
   {
     name: 'Sedgwick Museum of Earth Sciences',
     image: 'https://i.imgur.com/6uNeYmR.png',
-    address: 'Sedgwick Museum of Earth Sciences, University of Cambridge, Downing Street, Cambridge, CB2 3EQ',
+    address: 'University of Cambridge, Downing Street, Cambridge, CB2 3EQ',
     region: 'East of England',
     date_established: 1728,
     description: 'The Sedgwick Museum of Earth Sciences is a mineralogy museum and the oldest of the University of Cambridge museums, having originally been established in 1728 as the Woodwardian Museum. The collection of the naturalist John Woodward was then expanded upon by the British geologist Adam Sedgwick, hence the museum\'s name today. The collection holds at least 2 million fossils, minerals and rocks, and spans a 4.5 billion-year time period.',

@@ -22,7 +22,7 @@ const Map = () => {
 
   const [popup, setPopup] = useState(null)
 
-  const [userLocationClicked, setUserLocationClicked] = useState(false)
+  const [userLocationHasMouseOver, setUserLocationHasMouseOver] = useState(false)
 
   // all museums returned from axios GET request
   const [allMuseums, setAllMuseums] = useState(null)
@@ -64,19 +64,21 @@ const Map = () => {
 
 
 
-  const handleUserLocationClick = () => {
-    setUserLocationClicked(true)
+  const handleUserLocationMouseOver = () => {
+    setUserLocationHasMouseOver(true)
     setPopup(null)
   }
 
-  const handleMuseumCardClick = (museum) => {
+  const handleMuseumCardMouseOver = (museum) => {
     setPopup(museum)
-    setUserLocationClicked(false)
+    setUserLocationHasMouseOver(false)
   }
 
 
-  console.log('viewPort ->', viewPort)
-  console.log('userLocation ->', userLocation)
+  //* console.logs for testing *//
+
+  // console.log('viewPort ->', viewPort)
+  // console.log('userLocation ->', userLocation)
   // console.log('popup ->', popup)
   // console.log('allMuseums ->', allMuseums)
   // console.log('hasError ->', hasError)
@@ -100,13 +102,13 @@ const Map = () => {
             >
 
               <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
-                <span className='map-icon' onClick={handleUserLocationClick}>🔴</span>
+                <span className='map-icon' onMouseOver={handleUserLocationMouseOver}>🔴</span>
               </Marker>
 
               {allMuseums.map(museum => {
                 return (
                   <Marker key={museum.location_id} latitude={museum.latitude} longitude={museum.longitude}>
-                    <span className='map-icon' onClick={() => handleMuseumCardClick(museum)}>
+                    <span className='map-icon' onMouseOver={() => handleMuseumCardMouseOver(museum)}>
                       🏛
                     </span>
                   </Marker>
@@ -140,12 +142,12 @@ const Map = () => {
                 </Popup>
               }
 
-              {userLocationClicked &&
+              {userLocationHasMouseOver &&
                 <Popup
                   latitude={userLocation.latitude}
                   longitude={userLocation.longitude}
                   closeOnClick={true}
-                  onClose={() => setUserLocationClicked(false)}
+                  onClose={() => setUserLocationHasMouseOver(false)}
                 >
                   <div className='is-size-6 has-text-weight-bold'>
                     Your location
@@ -159,12 +161,18 @@ const Map = () => {
         </div>
 
         <div id='map-list-column' className='column map-list-container has-background-grey-light'>
+
+          <div>
+            <h1>List of Museums</h1>
+          </div>
+
           {allMuseums ?
             <div>
               {
                 allMuseums.map(museum => {
                   return (
-                    <div key={museum._id} className='py-1 pl-4 pr-3' onClick={() => setPopup(museum)}>
+                    <div key={museum._id} className='py-1 pl-4 pr-3' onClick={() => handleMuseumCardMouseOver(museum)}>
+                      {/* <Link to={`/museums/${museum._id}`}> */}
                       <div className='museum-list-card card'>
                         <div className='card-header'>
                           <div className='card-header-title cardTitle is-size-7'>{museum.name}</div>
@@ -178,6 +186,7 @@ const Map = () => {
                           <h4 className='is-size-7 cardRegion'>{museum.region}</h4>
                         </div>
                       </div>
+                      {/* </Link> */}
                     </div>
                   )
                 })

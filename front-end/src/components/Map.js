@@ -30,6 +30,12 @@ const Map = () => {
   // error handling for axios GET request
   const [hasError, setHasError] = useState(false)
 
+  // value of Region dropdown
+  const [selectedRegion, setSelectedRegion] = useState(null)
+
+  // array of museum objects, filtered by region
+  const [filteredMuseumsArr, setFilteredMuseumsArr] = useState([])
+
 
 
   useEffect(() => {
@@ -53,6 +59,7 @@ const Map = () => {
           }
         })
         setAllMuseums(data)
+        setFilteredMuseumsArr(data)
       } catch (err) {
         console.log(err)
         setHasError(true)
@@ -74,6 +81,26 @@ const Map = () => {
     setUserLocationHasMouseOver(false)
   }
 
+  const handleDropdownChange = (event) => {
+    console.log(event.target.value)
+    setSelectedRegion(event.target.value)
+  }
+
+  useEffect(() => {
+
+    if (!selectedRegion) {
+      return //* Return if no region selected
+    } else if (selectedRegion === 'All Regions') { //* if 'All regions' or 'Filter list by region' selected (both these options have a value of 'All Regions'):
+      setFilteredMuseumsArr(allMuseums)
+    } else {
+      const regionFilteredMuseums = allMuseums.filter(museum => {
+        return museum.region === selectedRegion
+      })
+      setFilteredMuseumsArr(regionFilteredMuseums)
+    }
+
+  }, [selectedRegion])
+
 
   //* console.logs for testing *//
 
@@ -82,6 +109,7 @@ const Map = () => {
   // console.log('popup ->', popup)
   // console.log('allMuseums ->', allMuseums)
   // console.log('hasError ->', hasError)
+  console.log('selectedRegion ->', selectedRegion)
 
 
 
@@ -90,7 +118,7 @@ const Map = () => {
     <section>
       <div className='columns p-3 is-flex-direction-row-reverse'>
 
-        <div id='map-column' className='column is-three-quarters-desktop is-three-quarters-tablet is-full-mobile has-background-grey-light map-container'>
+        <div id='map-column' className='column is-three-quarters-desktop is-half-tablet is-full-mobile has-background-grey-light map-container'>
           {viewPort && userLocation && allMuseums ?
             <ReactMapGL
               mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
@@ -105,7 +133,7 @@ const Map = () => {
                 <span className='map-icon' onMouseOver={handleUserLocationMouseOver}>🔴</span>
               </Marker>
 
-              {allMuseums.map(museum => {
+              {filteredMuseumsArr.map(museum => {
                 return (
                   <Marker key={museum.location_id} latitude={museum.latitude} longitude={museum.longitude}>
                     <span className='map-icon' onMouseOver={() => handleMuseumCardMouseOver(museum)}>
@@ -160,37 +188,60 @@ const Map = () => {
           }
         </div>
 
+
         <div id='map-list-column' className='column map-list-container has-background-grey-light'>
 
-          <div>
-            <h1>List of Museums</h1>
-          </div>
-
           {allMuseums ?
+
             <div>
-              {
-                allMuseums.map(museum => {
-                  return (
-                    <div key={museum._id} className='py-1 pl-4 pr-3' onClick={() => handleMuseumCardMouseOver(museum)}>
-                      {/* <Link to={`/museums/${museum._id}`}> */}
-                      <div className='museum-list-card card'>
-                        <div className='card-header'>
-                          <div className='card-header-title cardTitle is-size-7'>{museum.name}</div>
-                        </div>
-                        <div className='card-image'>
-                          <figure className='image is-4by3'>
-                            <img src={museum.image} alt={museum.name} />
-                          </figure>
-                        </div>
-                        <div className='card-content p-2'>
-                          <h4 className='is-size-7 cardRegion'>{museum.region}</h4>
-                        </div>
-                      </div>
-                      {/* </Link> */}
+              <div>
+                {/* <h1 className='has-text-centered p-6'>List of Museums</h1> */}
+                <div className='field has-text-centered py-4 px-3'>
+                  <div className='control'>
+                    <div className='select is-info is-rounded is-size-6 is-fullwidth'>
+                      <select className='has-background-info-light has-text-weight-bold has-text-black' id='filter-panel-region' name='regions' onChange={handleDropdownChange}>
+                        <option value='All Regions'>Filter list by region</option>
+                        <option value='All Regions'>All regions</option>
+                        <option value='East of England'>East of England</option>
+                        <option value='East Midlands'>East Midlands</option>
+                        <option value='London'>London</option>
+                        <option value='North East'>North East</option>
+                        <option value='North West'>North West</option>
+                        <option value='South East'>South East</option>
+                        <option value='South West'>South West</option>
+                        <option value='West Midlands'>West Midlands</option>
+                        <option value='Yorkshire and the Humber'>Yorkshire & the Humber</option>
+                      </select>
                     </div>
-                  )
-                })
-              }
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                {
+                  filteredMuseumsArr.map(museum => {
+                    return (
+                      <div key={museum._id} className='py-1 pl-4 pr-3' onClick={() => handleMuseumCardMouseOver(museum)}>
+                        {/* <Link to={`/museums/${museum._id}`}> */}
+                        <div className='museum-list-card card'>
+                          <div className='card-header'>
+                            <div className='card-header-title cardTitle is-size-7'>{museum.name}</div>
+                          </div>
+                          <div className='card-image'>
+                            <figure className='image is-4by3'>
+                              <img src={museum.image} alt={museum.name} />
+                            </figure>
+                          </div>
+                          <div className='card-content p-2'>
+                            <h4 className='is-size-7 cardRegion'>{museum.region}</h4>
+                          </div>
+                        </div>
+                        {/* </Link> */}
+                      </div>
+                    )
+                  })
+                }
+              </div>
             </div>
             :
             <h1>{hasError ? 'Oops! Something went wrong when loading the list of museums' : 'Loading...'}</h1>
@@ -205,6 +256,36 @@ const Map = () => {
 }
 
 export default Map
+
+
+
+
+
+// DROPDOWN FIELD FROM FILTERPANEL:
+
+{/* <div className='field'>
+<div className='control'>
+  <div className='select is-danger is-rounded'>
+    <select className='has-background-white has-text-weight-bold has-text-black' id='filter-panel-region' name='regions' onChange={handleChange}>
+      <option value='Region'>Region</option>
+      <option value='East of England'>East of England</option>
+      <option value='East Midlands'>East Midlands</option>
+      <option value='London'>London</option>
+      <option value='North East'>North East</option>
+      <option value='North West'>North West</option>
+      <option value='South East'>South East</option>
+      <option value='South West'>South West</option>
+      <option value='West Midlands'>West Midlands</option>
+      <option value='Yorkshire and the Humber'>Yorkshire and the Humber</option>
+    </select>
+  </div>
+</div>
+</div> */}
+
+
+
+
+
 
 
 

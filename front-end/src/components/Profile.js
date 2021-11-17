@@ -31,6 +31,7 @@ const Profile = () => {
   }, [])
 
   const [user, setUser] = useState([])
+  const [userId, setUserId] = useState()
 
   useEffect(() => {
     const getData = async () => {
@@ -41,21 +42,10 @@ const Profile = () => {
             headers: { Authorization: `Bearer ${token}` }
           }
         )
-        console.log(data.favourites)
+        // console.log(data.favourites)
         setUser(data.favourites)
+        setUserId(data._id)
 
-        const mapped = async () => {
-          try {
-            data.favourites.map(item => {
-              return axios.get(`/api/museums/${item.favouriteMuseums}`)
-            })
-          } catch (err) {
-            console.log(err)
-          }
-
-        }
-
-        console.log(mapped)
 
       } catch (err) {
         console.log(err)
@@ -64,10 +54,21 @@ const Profile = () => {
     getData()
   }, [token])
 
-  const handleDelete = async () => {
-    return console.log('delete clicked')
+  const handleDelete = async (event) => {
+    try {
+      axios.delete(
+        `/api/profile/${userId}/favourites/${event.target.id}`,
+        {
+          headers: { Authorization: `Bearer ${token}` }
+        }
+      )
+      window.location.reload()
+    } catch (err) {
+      console.log(err)
+    }
   }
 
+  console.log(user.length)
   return (
     <>
       <section className="hero is-black is-small">
@@ -84,12 +85,16 @@ const Profile = () => {
           </div>
           <div className='columns is-multiline'>
             {user.map(museum => {
-
+              // if (user.length) {
+              //   return (
+              //     <div className='column'>test</div>
+              //   )
+              // }
               return (
                 <div key={museum._id} className='column is-one-quarter-desktop animate__animated animate__faster  museumCard'>
                   <MuseumCard key={museum._id} {...museum} />
-                  <button className='button m-2 p-2 is-rounded has-background-danger has-text-white has-text-weight-bold' onClick={handleDelete}>
-                    <span className='is-size-7'>Remove from Favourites</span>
+                  <button id={museum._id} className='button m-2 p-2 is-rounded has-background-danger has-text-white has-text-weight-bold' onClick={handleDelete}>
+                    <span id={museum._id} className='is-size-7'>Remove from Favourites</span>
                   </button>
                 </div>
               )
@@ -100,7 +105,7 @@ const Profile = () => {
       </section>
     </>
   )
-  
+
 }
 
 export default Profile

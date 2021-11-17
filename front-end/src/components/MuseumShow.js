@@ -20,7 +20,9 @@ const MuseumShow = () => {
   const [avgRat, setAvgRat] = useState(0)
 
   const style = {
-    // background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    // background: 'linear-gradient(45deg, #FF6B8B 100%, #FF8E53 0%)',
+    background: 'none',
+    // background: ,
     borderRadius: 3,
     border: 0,
     color: 'white',
@@ -104,14 +106,23 @@ const MuseumShow = () => {
                   />
                 </div>
               </div>
-              <p className='subtitle has-text-right has-text-white'>
-                {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a> */}
-                <AddingDeletingToFavourites />
-                <hr />
-                Region: {museum.region}
-                <br />
-                Date Established: {museum.date_established}
-              </p>
+              <div className='is-flex'>
+                <div>
+                  <ShareSocial
+                    style={style}
+                    url="http://localhost:3000/museums/"
+                    socialTypes={['facebook', 'twitter', 'reddit', 'linkedin']}
+                  />
+                </div>
+                <p className='subtitle has-text-right has-text-white'>
+                  {/* <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark" id={id}></a> */}
+                  <AddingDeletingToFavourites />
+                  <hr />
+                  Region: {museum.region}
+                  <br />
+                  Date Established: {museum.date_established}
+                </p>
+              </div>
             </div>
           </section>
           <section className='section px-0 py-3'>
@@ -164,13 +175,7 @@ const MuseumShow = () => {
                 <div className='column'>
                   <AddReviewForm />
                 </div>
-                <div className='column'>
-                  <ShareSocial
-                    style={style}
-                    url=""
-                    socialTypes={['facebook', 'twitter', 'reddit', 'linkedin']}
-                  />
-                </div>
+
               </section>
               <section>
                 <div className='columns'>

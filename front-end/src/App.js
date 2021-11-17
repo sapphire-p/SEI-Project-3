@@ -31,6 +31,7 @@ const App = () => {
           <Route exact path='/profile' component={Profile} />
           <Route exact path='/map' component={Map} />
           <Route exact path='/exhibits' component={StandoutExihbit}/>
+          
         </Switch>
       </div>
       <Footer />

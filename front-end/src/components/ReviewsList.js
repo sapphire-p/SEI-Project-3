@@ -44,6 +44,7 @@ const ReviewsList = (props) => {
           headers: { Authorization: `Bearer ${token}` }
         }
       )
+      window.location.reload()
     } catch (err) {
       console.log(err)
     }
@@ -63,10 +64,10 @@ const ReviewsList = (props) => {
         </div>
         <div className='is-flex is-flex-direction-row-reverse is-justify-content-space-between reviewOwner'>
           <div>
-            {(props.owner._id === userId) ? <button className='button' id={props._id} onClick={handleDelete}>X</button> : <div></div>}
+            {(props.owner._id === userId) ? <button className='button is-rounded has-background-danger has-text-white has-text-weight-bold' id={props._id} onClick={handleDelete}>X</button> : <div></div>}
           </div>
           <div>
-            <p>- {props.owner.username}</p>
+            <p className='is-size-7'>- {props.owner.username}</p>
           </div> 
         </div>
       </div>

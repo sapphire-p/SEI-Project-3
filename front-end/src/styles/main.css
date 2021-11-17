@@ -4,6 +4,28 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Swiper styling starts here */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
 
 /* Navbar styling starts here */
 .link {
@@ -104,7 +126,6 @@ nav {
   background-position: center;
   /* Full height */
   height: 100%; 
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
 }
@@ -112,15 +133,20 @@ nav {
 @media only screen and (min-width: 1225px) {
   .mainHero {
     margin-top: -150px;
-    margin-bottom: -130px;
+    margin-bottom: -150px;
   }
 }
 
 
 /* Featured Museum on Home page */
 
+#featured-container {
+  scroll-behavior: smooth;
+}
+
 .featuredMuseumTitle {
   margin-top: 20px;
+  scroll-behavior: smooth;
 }
 
 .featuredMuseumSection {
@@ -149,7 +175,16 @@ nav {
 }
 
 
+.heroImageHome{
+  border-radius: 5px;
+}
+
+
 /* MuseumIndex */
+
+.museumImages {
+  filter: saturate(140%);
+}
 
 .museumCard {
   transition: transform .25s; /* Animation */
@@ -179,6 +214,13 @@ nav {
   transform: scale(1.03);
 }
 
+.standoutExhibitHeader {
+  font-size: 25px;
+}
+
+.exhibitImage {
+  filter: saturate(250%);
+}
 
 /* Profile */
 #profile-section {

@@ -35,11 +35,19 @@ export const deleteFavourite = async (req, res) => {
   try {
     const { id, favouriteId } = req.params
     const user = await User.findById(id)
+    // console.log('user ->>>>', user)
+    // console.log('favouriteId->>>', favouriteId)
     if (!user) throw new Error()
-    const faveToDelete = user.favourites.id(favouriteId)
+    
+    const faveIndex = user.favourites.indexOf(favouriteId)
+    // console.log('fave index->>>', faveIndex)
+
+    const faveToDelete = user.favourites[faveIndex]
+    // console.log('favetoDelete ->>>', faveToDelete)
+
     if (!faveToDelete) throw new Error('Favourite not found')
     // if (!faveToDelete.owner.equals(req.currentUser._id)) throw new Error('Unauthorized')
-    await faveToDelete.remove()
+    await user.favourites.splice(faveIndex, 1)
     await user.save({ validateModifiedOnly: true })
 
     return res.sendStatus(204)

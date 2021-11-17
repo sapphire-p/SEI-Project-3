@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 
 
+
 const FeaturedMuseum = () => {
 
   const [featuredMuseums, setFeaturedMuseums] = useState([])
@@ -17,6 +18,7 @@ const FeaturedMuseum = () => {
   //     </ScrollAnimation>
   //   )
   // }
+
 
   useEffect(() => {
 
@@ -38,8 +40,8 @@ const FeaturedMuseum = () => {
 
   return (
     <section className="hero is-black is-fullheight" id="featured-container">
-      <h2 className="title has-text-centered is-size-1 featuredMuseumTitle">Featured Museum</h2>
-      <p className="has-text-centered arrowBelowTitle animate__animated animate__infinite animate__slower animate__bounce"><i className="fas fa-angle-down"></i></p>
+      <a href='#featured-container' className="title has-text-centered is-size-1 featuredMuseumTitle">Featured Museum</a>
+      <a href='#featured-container' className="has-text-centered arrowBelowTitle animate__animated animate__infinite animate__slower animate__bounce"><i className="fas fa-angle-down"></i></a>
       <div className="hero-body">
         <div className="columns container is-full">
           <div className="column is-half custom-flex ">
@@ -49,8 +51,9 @@ const FeaturedMuseum = () => {
             <p className="subtitle hero-subtitle">{featuredMuseums.description}</p>
             <Link to={`/museums/${featuredMuseums.id}`} >
               <button className="button is-white is-fullwidth visitWebiteBtn is-large">
-                <i className="fas fa-info-circle infoIcon">
-                </i> More Info
+                {/* <i className="fas fa-info-circle infoIcon">
+                </i>  */}
+                More Info
               </button>
             </Link>
           </div>

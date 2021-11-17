@@ -18,7 +18,7 @@ export default [
     location_id: 1,
     latitude: 52.121188,
     longitude: 0.071344,
-    multiple_images: ['https://i.imgur.com/IglrZwg.png', 'https://i.ibb.co/KVGWMhK/camb-pic-1.jpg']
+    multiple_images: ['https://i.imgur.com/IglrZwg.png', 'https://i.imgur.com/NftVjyp.jpg', 'https://i.imgur.com/5Srm9JM.jpg', 'https://i.imgur.com/goZGCSA.jpg']
   },
   {
     name: 'Chelmsford Museum',
@@ -130,7 +130,7 @@ export default [
     location_id: 7,
     latitude: 53.012244,
     longitude: -2.104116,
-    multiple_images: ['https://i.imgur.com/ZGw4kmn.jpg', 'https://i.imgur.com/yiELBTK.jpg', 'https://i.imgur.com/u9twZ9O.jpg']
+    multiple_images: ['https://i.imgur.com/ZGw4kmn.jpg', 'https://i.imgur.com/yiELBTK.jpg', 'https://i.imgur.com/u9twZ9O.jpg', 'https://i.imgur.com/19Zss0Y.jpg']
   },
   {
     name: 'Powell-Cotton Museum',
@@ -184,7 +184,7 @@ export default [
     location_id: 10,
     latitude: 51.210896,
     longitude: -2.644517,
-    multiple_images: ['https://i.imgur.com/tjT0gqs.jpg', 'https://i.imgur.com/thLEvO5.png', 'https://i.imgur.com/X0996Uv.png']
+    multiple_images: ['https://i.imgur.com/tjT0gqs.jpg', 'https://i.imgur.com/thLEvO5.png', 'https://i.imgur.com/X0996Uv.png', 'https://i.imgur.com/qkXbofN.jpg']
   },
   {
     name: 'Weston Park Museum',

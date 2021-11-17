@@ -32,16 +32,15 @@ const Register = () => {
       await axios.post('/api/register', formData) // Uses '/api' prefix from our proxy (see setupProxy.js)
       history.push('/login') // Uses '/api' prefix from our proxy (see setupProxy.js) to navigate to Homepage
     } catch (err) {
-      // console.log(err)
       setErrors(err.response.data.errors)
     }
   }
 
 
   return (
-    <section id='register-section' className='section is-medium'>
-      <div id='register-container' className='container'>
-        <div id='register-div' className='columns'>
+    <section id='register-section' className='section is-flex is-align-items-center'>
+      <div className='container'>
+        <div className='columns'>
           <form className='column is-half is-offset-one-quarter box has-background-grey-lighter' onSubmit={handleSubmit}>
             <h1 className='title'>Create your account</h1>
             <p>As a registered Museum Mapper user you&apos;ll be able to review museums and save your favourites to view later!</p>

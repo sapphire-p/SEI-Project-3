@@ -42,7 +42,7 @@ const Login = () => {
 
 
   return (
-    <section id='login-section' className='section is-medium'>
+    <section id='login-section' className='section is-flex is-align-items-center'>
       <div className='container'>
         <div className='columns'>
           <form className='column is-half is-offset-one-quarter box has-background-grey-lighter' onSubmit={handleSubmit}>

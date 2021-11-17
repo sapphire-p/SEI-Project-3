@@ -288,7 +288,12 @@ nav {
 
 /* Register and Login */
 
-#register-section, #login-section {
-  height: 100vh;
+#register-section {
+  height: 75vh;
+  min-height: 700px;
 }
 
+#login-section {
+  height: 75vh;
+  min-height: 500px;
+}

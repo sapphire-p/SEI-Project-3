@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import AddReviewForm from './AddReviewForm'
-import { Carousel } from 'react-carousel-minimal'
+// import { Carousel } from 'react-carousel-minimal'
 import ReviewsList from './ReviewsList'
 import StarRatings from 'react-star-ratings'
 import AddingDeletingToFavourites from './AddingDeletingToFavourites'
+import Carousel2 from './Carousel2'
 
 const MuseumShow = () => {
 
@@ -13,7 +14,7 @@ const MuseumShow = () => {
   const { id } = useParams()
   const [hasError, setHasError] = useState(false)
 
-  const [galleryData, setGalleryData] = useState([])
+  // const [galleryData, setGalleryData] = useState([])
 
   const [avgRat, setAvgRat] = useState(0)
 
@@ -43,24 +44,24 @@ const MuseumShow = () => {
   
   // ------------------------ CAROUSEL
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const { data } = await axios.get(`/api/museums/${id}`)
-        const multiImages = data.multiple_images
-        const imagesJoined = multiImages.map(image => {
-          return {
-            image
-          }
-        })
-        setGalleryData(imagesJoined)
-      } catch (err) {
-        setHasError(true)
-        console.log(hasError)
-      }
-    }
-    getData()
-  }, [id])
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const { data } = await axios.get(`/api/museums/${id}`)
+  //       const multiImages = data.multiple_images
+  //       const imagesJoined = multiImages.map(image => {
+  //         return {
+  //           image
+  //         }
+  //       })
+  //       setGalleryData(imagesJoined)
+  //     } catch (err) {
+  //       setHasError(true)
+  //       console.log(hasError)
+  //     }
+  //   }
+  //   getData()
+  // }, [id])
 
   // ------ STAR FIX <- if museum isn't rated the return in the back-end is 'not yet rated', 
   // ------------------ so this function says if a non-number is being returned, then return 0
@@ -164,11 +165,7 @@ const MuseumShow = () => {
               <section>
                 <div className='columns'>
                   <div className='column is-half'>
-                    <Carousel
-                      data={galleryData}
-                      dots={true}
-                      slideImageFit='cover'
-                    />
+                    <Carousel2 />
                   </div>
                 </div>
               </section>

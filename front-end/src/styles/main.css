@@ -192,6 +192,14 @@ nav {
   padding: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  #map-list-column {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 5vw;
+  }
+}
+
 .map-container {
   height: 90vh;
 }

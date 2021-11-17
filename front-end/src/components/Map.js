@@ -200,7 +200,7 @@ const Map = () => {
                   <div className='control'>
                     <div className='select is-info is-rounded is-size-6 is-fullwidth'>
                       <select className='has-background-info-light has-text-weight-bold has-text-black' id='filter-panel-region' name='regions' onChange={handleDropdownChange}>
-                        <option value='All Regions'>Filter list by region</option>
+                        <option value='All Regions'>Filter by region</option>
                         <option value='All Regions'>All regions</option>
                         <option value='East of England'>East of England</option>
                         <option value='East Midlands'>East Midlands</option>

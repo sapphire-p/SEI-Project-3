@@ -48,7 +48,7 @@ const FeaturedMuseum = () => {
             </h1>
             <p className="subtitle hero-subtitle">{featuredMuseums.description}</p>
             <Link to={`/museums/${featuredMuseums.id}`} >
-              <button  className="button is-white is-fullwidth visitWebiteBtn is-large">
+              <button className="button is-white is-fullwidth visitWebiteBtn is-large">
                 <i className="fas fa-info-circle infoIcon">
                 </i> More Info
               </button>

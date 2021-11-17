@@ -13,7 +13,7 @@ const Map = () => {
 
   // Can set viewPort to { latitude: 51.509240, longitude: 0.005540 } initially if need be for testing
   // Mid-point of England: Morton, North East Derbyshire (lat: 53.14346, long: -1.38804)
-  // Current lat and long coordinates are for Birmingham:
+  // Current lat and long coordinates are for Birmingham (centre England nicely so all museums can be seen):
   const [viewPort, setViewPort] = useState({
     latitude: 52.48142,
     longitude: -1.89983,
@@ -77,9 +77,9 @@ const Map = () => {
   return (
 
     <section>
-      <div className='columns map-columns p-3'>
+      <div className='columns p-3 is-flex-direction-row-reverse'>
 
-        <div className='column is-four-fifths-desktop is-three-quarters-tablet is-full-mobile has-background-grey-lighter map-container'>
+        <div id='map-column' className='column is-three-quarters-desktop is-three-quarters-tablet is-full-mobile has-background-grey-light map-container'>
           {viewPort && userLocation && allMuseums ?
             <ReactMapGL
               mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
@@ -89,29 +89,15 @@ const Map = () => {
               {...viewPort}
               onViewStateChange={viewport => setViewPort(viewport)}
             >
-              {/* <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
-                <span onClick={() => setUserLocationClicked(true)}>🔴</span>
-              </Marker>
-              {userLocationClicked &&
-                <Popup
-                  latitude={userLocation.latitude}
-                  longitude={userLocation.longitude}
-                  closeOnClick={true}
-                  onClose={() => setUserLocationClicked(false)}
-                >
-                  <div className='is-size-6 has-text-weight-bold'>
-                    Your location
-                  </div>
-                </Popup>
-              } */}
+
               <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
-                <span onClick={handleUserLocationClick}>🔴</span>
+                <span className='map-icon' onClick={handleUserLocationClick}>🔴</span>
               </Marker>
 
               {allMuseums.map(museum => {
                 return (
                   <Marker key={museum.location_id} latitude={museum.latitude} longitude={museum.longitude}>
-                    <span onClick={() => handleMuseumCardClick(museum)}>
+                    <span className='map-icon' onClick={() => handleMuseumCardClick(museum)}>
                       🏛
                     </span>
                   </Marker>
@@ -163,15 +149,14 @@ const Map = () => {
           }
         </div>
 
-        <div className='column map-list-container has-background-grey-light'>
+        <div id='map-list-column' className='column map-list-container has-background-grey-light'>
           {allMuseums ?
-            // <div>List of Museums</div>
             <div>
               {
                 allMuseums.map(museum => {
                   return (
-                    <div key={museum._id} className='p-1' onClick={() => setPopup(museum)}>
-                      <div className='card'>
+                    <div key={museum._id} className='py-1 pl-4 pr-3' onClick={() => setPopup(museum)}>
+                      <div className='museum-list-card card'>
                         <div className='card-header'>
                           <div className='card-header-title cardTitle is-size-7'>{museum.name}</div>
                         </div>
@@ -206,73 +191,123 @@ export default Map
 
 
 
-
-// {allMuseums.map(museum => {
-//   return (
-//     <Marker key={museum.location_id} latitude={museum.latitude} longitude={museum.longitude}>
-//       <span onClick={() => setPopup(museum)}>
-//         🏛
-//       </span>
-//     </Marker>
-//   )
-// })}
-
-// <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
-//   <span onClick={() => setUserLocationClicked(true)}>🔴</span>
-// </Marker>
+// WORKING CONTENTS OF THE 'RETURN' BEFORE CHANGING THE ORDER OF COLUMNS (trying to achieve map on right in desktop and on top in mobile view):
 
 
-{/* <div key={museum._id} className='p-1' onClick={() => setViewPort({ latitude: museum.latitude, longitude: museum.longitude, zoom: 9 })}> */ }
+{/* <section>
+<div className='columns map-columns p-3'>
 
-{/* <Link to={`/museums/${_id}`}>
-<div className='card-image'>
-  <figure className='image is-1'>
-    <img src={image} alt={`Picture of ${name}`} />
-  </figure>
+  <div className='column is-four-fifths-desktop is-three-quarters-tablet is-full-mobile has-background-grey-lighter map-container'>
+    {viewPort && userLocation && allMuseums ?
+      <ReactMapGL
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+        height='100%'
+        width='100%'
+        mapStyle='mapbox://styles/mapbox/navigation-night-v1'
+        {...viewPort}
+        onViewStateChange={viewport => setViewPort(viewport)}
+      >
+
+        <Marker latitude={userLocation.latitude} longitude={userLocation.longitude}>
+          <span onClick={handleUserLocationClick}>🔴</span>
+        </Marker>
+
+        {allMuseums.map(museum => {
+          return (
+            <Marker key={museum.location_id} latitude={museum.latitude} longitude={museum.longitude}>
+              <span onClick={() => handleMuseumCardClick(museum)}>
+                🏛
+              </span>
+            </Marker>
+          )
+        })}
+
+        {popup &&
+          <Popup
+            latitude={popup.latitude}
+            longitude={popup.longitude}
+            closeOnClick={true}
+            onClose={() => setPopup(null)}
+          >
+            <div id='map-card-container' className='p-1'>
+              <Link to={`/museums/${popup._id}`}>
+                <div className='card'>
+                  <div className='card-header'>
+                    <div className='card-header-title cardTitle is-size-7'>{popup.name}</div>
+                  </div>
+                  <div className='card-image'>
+                    <figure className='image is-4by3'>
+                      <img src={popup.image} alt={popup.name} />
+                    </figure>
+                  </div>
+                  <div className='card-content p-2'>
+                    <h4 className='is-size-7 cardRegion'>{popup.address}</h4>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </Popup>
+        }
+
+        {userLocationClicked &&
+          <Popup
+            latitude={userLocation.latitude}
+            longitude={userLocation.longitude}
+            closeOnClick={true}
+            onClose={() => setUserLocationClicked(false)}
+          >
+            <div className='is-size-6 has-text-weight-bold'>
+              Your location
+            </div>
+          </Popup>
+        }
+      </ReactMapGL>
+      :
+      <h1>{hasError ? 'Oops! Something went wrong when loading the map' : 'Loading...'}</h1>
+    }
+  </div>
+
+  <div className='column map-list-container has-background-grey-light'>
+    {allMuseums ?
+      <div>
+        {
+          allMuseums.map(museum => {
+            return (
+              <div key={museum._id} className='p-1' onClick={() => setPopup(museum)}>
+                <div className='card'>
+                  <div className='card-header'>
+                    <div className='card-header-title cardTitle is-size-7'>{museum.name}</div>
+                  </div>
+                  <div className='card-image'>
+                    <figure className='image is-4by3'>
+                      <img src={museum.image} alt={museum.name} />
+                    </figure>
+                  </div>
+                  <div className='card-content p-2'>
+                    <h4 className='is-size-7 cardRegion'>{museum.region}</h4>
+                  </div>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+      :
+      <h1>{hasError ? 'Oops! Something went wrong when loading the list of museums' : 'Loading...'}</h1>
+    }
+  </div>
+
 </div>
-<div className='card-content p-2'>
-  <h4 className='is-size-7 cardRegion'>{region}</h4>
-</div>
-</Link> */}
-
-
-//   < div className = 'card' >
-// <div className='card-header'>
-//   <div className='card-header-title cardTitle is-size-7'>{popup.name}</div>
-// </div>
-//   <div className='card-image'>
-//     <figure className='image is-1'>
-//       <img src={popup.image} alt={popup.name} />
-//     </figure>
-//   </div>
-//   <div className='card-content p-2'>
-//     <h4 className='is-size-7 cardRegion'>{popup.region}</h4>
-//   </div>
-// </div >
+</section > */}
 
 
 
-// {locationData.map(location => {
-//   return (
-//     <Marker key={location.id} latitude={location.latitude} longitude={location.longitude}>
-//       <span onClick={() => setPopup(location)}>
-//         {location.icon}
-//       </span>
-//     </Marker>
-//   )
-// })}
-// {popup &&
-//   <Popup
-//     latitude={popup.latitude}
-//     longitude={popup.longitude}
-//     closeOnClick={true}
-//     onClose={() => setPopup(null)}
-//   >
-//     <div>
-//       {popup.name}
-//     </div>
-//   </Popup>
-// }
+
+
+
+
+
+
 
 
 // THIS WORKS WELL - RETURN CONTENTS FROM BEFORE I ADDED 2 COLUMNS

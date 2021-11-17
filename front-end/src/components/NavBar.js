@@ -43,7 +43,7 @@ const NavBar = () => {
             <Link to="/museums" className="link is-size-6 has-text-weight-light"><i className="far fa-eye"></i> All Museums</Link>
           </div>
           <div className="navbar-item">
-            {userIsAuthenticated() && <Link to="/museumsmap" className="link is-size-6 has-text-weight-light"><i className="fas fa-map-marked-alt"></i> Museums Map</Link>}
+            <Link to="/map" className="link is-size-6 has-text-weight-light"><i className="fas fa-map-marked-alt"></i> Museums Map</Link>
           </div>
 
           <div className="navbar-item">
@@ -59,7 +59,7 @@ const NavBar = () => {
             </>
             :
             <>
-              <div className="navbar-item"><Link to="/profile" className="link is-size-6 has-text-weight-light"><i className="fas fa-user"></i> { username }</Link></div>
+              <div className="navbar-item"><Link to="/profile" className="link is-size-6 has-text-weight-light"><i className="fas fa-user"></i> {username}</Link></div>
               <div className="navbar-item"><a className="link is-size-6 has-text-weight-light" onClick={handleLogout}><i className="fas fa-sign-out-alt"></i> Logout</a></div>
             </>
           }

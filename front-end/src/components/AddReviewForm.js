@@ -32,8 +32,8 @@ const AddReviewForm = () => {
     setFormData(newFormData)
   }
 
-  const handleSubmit = async () => {
-    // event.preventDefault()
+  const handleSubmit = async (event) => {
+    event.preventDefault()
     try {
       await axios.post(
         `/api/museums/${id}/reviews`, 
@@ -44,9 +44,10 @@ const AddReviewForm = () => {
       )
       // history.push(`/museums/${id}`)
     } catch (err) {
-      console.log('ERROR ->>>', err)
-      // setErrors(err.response.data.errors)
-      setErrors(true)
+      
+      // console.log('ERROR ->>>', err.response.data.message)
+      setErrors(err.response.data.message)
+      // setErrors(true)
     }
   }
 

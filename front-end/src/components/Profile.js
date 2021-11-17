@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getTokenFromLocalStorage2 } from './helpers/auth'
 import axios from 'axios'
-
+import MuseumCard from './MuseumCard'
 
 const Profile = () => {
 
@@ -52,7 +52,7 @@ const Profile = () => {
           } catch (err) {
             console.log(err)
           }
-          
+
         }
 
         console.log(mapped)
@@ -64,28 +64,9 @@ const Profile = () => {
     getData()
   }, [token])
 
-  // useEffect(() => {
-
-  //   const userMap = async () => {
-  //     try {
-  //       const { data } = await axios.get(`/api/museums/${item.favouriteMuseums}`)
-  //       console.log(data)
-  //     } catch (err) {
-  //       console.log(err)
-  //     }
-  //   })
-
-  // }, [user])
-
-  // useEffect(() => {
-
-  //   const userMap = async () => {
-  //     const { data } = await axios.get('/api/museums/6193a602def345cd11fed92a')
-  //     console.log(data)
-  //   }
-  //   userMap()
-
-  // }, [user])
+  const handleDelete = async () => {
+    return console.log('delete clicked')
+  }
 
   return (
     <>
@@ -98,47 +79,28 @@ const Profile = () => {
       </section>
       <section className='section'>
         <div className='container'>
+          <div>
+            <p className='title m-5'>Your Favourite Museums</p>
+          </div>
           <div className='columns is-multiline'>
             {user.map(museum => {
-              
+
               return (
-                <div key={museum._id} className='column is-one-quarter-desktop'>
-                  <div className='card'>
-                    <div className='card-header'>
-                      <div className='card-header-title'></div>
-                    </div>
-                  </div>
+                <div key={museum._id} className='column is-one-quarter-desktop animate__animated animate__faster  museumCard'>
+                  <MuseumCard key={museum._id} {...museum} />
+                  <button className='button m-2 p-2 is-rounded has-background-danger has-text-white has-text-weight-bold' onClick={handleDelete}>
+                    <span className='is-size-7'>Remove from Favourites</span>
+                  </button>
                 </div>
               )
-              
+
             })}
           </div>
         </div>
       </section>
     </>
   )
-  // {/* //     <section className='section'>
-  // //       <div className='container'>
-  // //         <div className='columns is-multiline'>
-  // //           {user.map(museum => { */}
-
-
-  // const getData = async () => {
-  //   try {
-  //     const { data } = await axios.get(`/api/museums/${museum.favouriteMuseums[0]}`)
-  //     console.log(data)
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // }
-  // getData()
-
-  // console.log()
-  //       </div>
-  //     </div>
-  //   </section>
-  // </>
-//   )
-} 
+  
+}
 
 export default Profile

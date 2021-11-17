@@ -7,6 +7,8 @@ import ReviewsList from './ReviewsList'
 import StarRatings from 'react-star-ratings'
 import AddingDeletingToFavourites from './AddingDeletingToFavourites'
 
+import { ShareSocial } from 'react-share-social'
+
 const MuseumShow = () => {
 
   const [museum, setMuseum] = useState()
@@ -16,6 +18,15 @@ const MuseumShow = () => {
   const [galleryData, setGalleryData] = useState([])
 
   const [avgRat, setAvgRat] = useState(0)
+
+  const style = {
+    // background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    padding: '0 30px'
+    // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)'
+  }
 
   // -------------
 
@@ -34,13 +45,6 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-
-  // -------------------- ADDING TO FAV
-
-  
-
-  // --------------------------
-  
   // ------------------------ CAROUSEL
 
   useEffect(() => {
@@ -79,7 +83,7 @@ const MuseumShow = () => {
 
   // ---------------------------------------
 
-  
+
   return (
     <>
       {museum ?
@@ -144,7 +148,7 @@ const MuseumShow = () => {
                 <div className='column is-half'>
                   <div className='card'>
                     <div className='card-header p-2 is-flex is-align-items-center'>
-                      <p className='card-header-title'>Reviews:</p>
+                      <p className='card-header-title'>Reviews</p>
                     </div>
                     <div className='card-content'>
                       <ul>
@@ -159,6 +163,13 @@ const MuseumShow = () => {
                 </div>
                 <div className='column'>
                   <AddReviewForm />
+                </div>
+                <div className='column'>
+                  <ShareSocial
+                    style={style}
+                    url=""
+                    socialTypes={['facebook', 'twitter', 'reddit', 'linkedin']}
+                  />
                 </div>
               </section>
               <section>

@@ -38,9 +38,11 @@ export const deleteReview = async (req, res) => {
     // find museum where comment is
     const museum = await Museum.findById(id)
     // if none, throw error
+    console.log('museum->>>', museum)
     if (!museum) throw new Error('Museum not found')
     // find correct comment
     const reviewToDelete = museum.reviews.id(reviewsId)
+    console.log('review to delete ->>>', reviewToDelete)
     // if none, throw error
     if (!reviewToDelete) throw new Error('Review not found')
     // if owner of review isnt current user, throw error

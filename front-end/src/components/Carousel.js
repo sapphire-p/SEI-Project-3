@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
-import 'swiper/components/scrollbar/scrollbar.scss'
 import axios from 'axios'
 
 SwiperCore.use([Pagination, Navigation])
@@ -30,17 +29,9 @@ const Carousel2 = () => {
   console.log('show me->', museumData)
   return (
     <section>
-      {/* <-- Slider main container --> */}
-
       <div className="swiper">
-
-        {/* <!-- Additional required wrapper --> */}
-
         <div className="swiper-wrapper">
-          <Swiper pagination={{
-            'type': 'fraction'
-            
-          }} navigation={true} className="mySwiper">
+          <Swiper pagination={true} navigation={true} className="mySwiper">
             {museumData.map(name => {
               return (
                 <>

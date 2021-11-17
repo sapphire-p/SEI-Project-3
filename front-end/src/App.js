@@ -12,7 +12,6 @@ import Profile from './components/Profile'
 import FilteredMuseums from './components/FilteredMuseums'
 import Map from './components/Map'
 import StandoutExihbit from './components/StandoutExhibit'
-import Carousel2 from './components/Carousel2'
 
 const App = () => {
 
@@ -32,7 +31,6 @@ const App = () => {
           <Route exact path='/profile' component={Profile} />
           <Route exact path='/map' component={Map} />
           <Route exact path='/exhibits' component={StandoutExihbit}/>
-          <Route exact path='/carousel2' component={Carousel2}/>
           
         </Switch>
       </div>

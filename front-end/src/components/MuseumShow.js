@@ -6,7 +6,7 @@ import AddReviewForm from './AddReviewForm'
 import ReviewsList from './ReviewsList'
 import StarRatings from 'react-star-ratings'
 import AddingDeletingToFavourites from './AddingDeletingToFavourites'
-import Carousel2 from './Carousel2'
+import Carousel from './Carousel'
 
 const MuseumShow = () => {
 
@@ -165,7 +165,7 @@ const MuseumShow = () => {
               <section>
                 <div className='columns'>
                   <div className='column is-half'>
-                    <Carousel2 />
+                    <Carousel />
                   </div>
                 </div>
               </section>

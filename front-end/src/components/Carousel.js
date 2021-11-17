@@ -9,7 +9,7 @@ import axios from 'axios'
 
 SwiperCore.use([Autoplay, Pagination, Navigation])
 
-const Carousel2 = () => {
+const Carousel = () => {
 
   const [museumData, setMuseumData] = useState([])
   const { id } = useParams()
@@ -54,4 +54,4 @@ const Carousel2 = () => {
   )
 }
 
-export default Carousel2
+export default Carousel

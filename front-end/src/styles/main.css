@@ -315,12 +315,6 @@ div.navbar-end:hover > div:hover {
 
 /* Standout exhibit page */
 
-
-
-.card {
-  width: 300px;
-}
-
 .standoutPage {
   background-image: url("https://i.imgur.com/y3VOFf6.png");
   background-attachment: fixed;
@@ -414,11 +408,4 @@ div.navbar-end:hover > div:hover {
   }
 }
 
-#desc-card, #reviews-card  {
-  width: 100%;
-}
-
-#single-review-card {
-  width: 100%;
-}
 

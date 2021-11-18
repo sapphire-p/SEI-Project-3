@@ -113,7 +113,7 @@ const MuseumShow = () => {
                   <Carousel />
                 </div>
                 <div className='column'>
-                  <div id='desc-card' className='card p-3'>
+                  <div className='card p-3'>
                     <p className='is-italic is-size-6 is-size-7-mobile'>{museum.description}</p>
                     <hr />
                     <div>
@@ -134,7 +134,7 @@ const MuseumShow = () => {
               </section>
               <section className='columns reviewsAndForm has-background-black'>
                 <div className='column is-half'>
-                  <div id='reviews-card' className='card'>
+                  <div className='card'>
                     <div className='card-header p-2 is-flex is-align-items-center'>
                       <p className='card-header-title is-size-7-mobile'>Reviews</p>
                     </div>

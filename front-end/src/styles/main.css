@@ -100,13 +100,13 @@ div.navbar-end:hover > div:hover {
 }
 
 .showAllHero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../AssetsTest/dinoskeleton2.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/Pg8xJiP.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .singleMuseumHeroBody {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../AssetsTest/dinoskeleton2.jpeg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/Pg8xJiP.jpg');
   background-position: center;
   background-size: cover;
 }

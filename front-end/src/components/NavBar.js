@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
 import { getPayload, getTokenFromLocalStorage2 } from './helpers/auth'
-import Logo from '../AssetsTest/logo3.png'
-// import Sounds from './Sounds'
+
+
 
 
 
@@ -35,7 +35,7 @@ const NavBar = () => {
         <div className="navbar-brand">
           <span role="img" aria-label="logo" className="title">
             <Link to="/" className="link">
-              <img className="mmlogo" src={Logo} alt="Museum Mapper logo" width="250px" />
+              <img className="mmlogo" src="https://i.imgur.com/7WFWHW1.png" alt="Museum Mapper logo" width="250px" />
             </Link>
           </span>
         </div>

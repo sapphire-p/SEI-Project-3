@@ -71,8 +71,8 @@ const Profile = () => {
 
   console.log(user.length)
   return (
-    <>
-      <section className="hero is-black is-small">
+    <div id= "profile-section">
+      <section className="hero is-black is-small" >
         <div className="hero-body">
           <p className="title has-text-centered">
             {greet} {username}!
@@ -105,7 +105,7 @@ const Profile = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   )
 
 }

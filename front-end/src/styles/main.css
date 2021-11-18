@@ -344,7 +344,7 @@ div.navbar-end:hover > div:hover {
   border-radius: 5px;
 }
 
-#index-filter-panel-region {
+#index-filter-panel-region, #index-filter-panel-collection-types {
   font-family: 'Quicksand', sans-serif;
 }
 

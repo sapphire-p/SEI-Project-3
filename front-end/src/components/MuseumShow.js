@@ -131,9 +131,9 @@ const MuseumShow = () => {
                 <div className='column is-half-desktop is-half-tablet is-half-mobile'>
                   <Carousel />
                 </div>
-                <div className='column is-half-desktop is-half-tablet is-half-mobile'>
-                  <div className='card p-3'>
-                    <p className='is-italic is-size-6 is-size-7-mobile'>{museum.description}</p>
+                <div className='column is-half-desktop is-half-tablet'>
+                  <div className='card p-3 '>
+                    <p className='is-italic is-size-6 is-size-7-mobile '>{museum.description}</p>
                     <hr />
                     <div>
                       <h3 className='has-text-weight-bold is-underlined is-size-7-mobile'>Collections:</h3>

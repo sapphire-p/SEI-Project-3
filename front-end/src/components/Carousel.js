@@ -43,10 +43,10 @@ const Carousel = () => {
             {museumData.map(image => {
               // console.log(image)
               return (
-                
-                <SwiperSlide key={image}><img key={image} src={image}/></SwiperSlide>
-                
-                
+
+                <SwiperSlide key={image}><img key={image} src={image} /></SwiperSlide>
+
+
               )
             })}
           </Swiper>

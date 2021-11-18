@@ -14,6 +14,7 @@ html {
   width: 100%;
   height: 100%;
 }
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -313,6 +314,7 @@ div.navbar-end:hover > div:hover {
   cursor: pointer;
 }
 
+
 /* Standout exhibit page */
 
 .standoutCards {
@@ -347,15 +349,3 @@ div.navbar-end:hover > div:hover {
 #index-filter-panel-region, #index-filter-panel-collection-types {
   font-family: 'Quicksand', sans-serif;
 }
-
-/* @media only screen and (min-width: 1225px) {
-  #filter-panel-section {
-    display: flex;
-    justify-content: center;
-  }
-  #filter-panel {
-    margin-top: 40px;
-    border-radius: 100px;
-    width: 1200px;
-  }
-} */

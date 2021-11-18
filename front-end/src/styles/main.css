@@ -405,6 +405,12 @@ div.navbar-end:hover > div:hover {
   font-family: 'Quicksand', sans-serif;
 }
 
+/* MuseumShow */
+
+#museumshow-standout-exhibit-card {
+  max-width: 50vh;
+}
+
 /* // --------------- */
 
 @media only screen and (max-width: 700px) {

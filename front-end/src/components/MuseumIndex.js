@@ -75,12 +75,6 @@ const MuseumsIndex = () => {
   }, [selectedRegion, selectedCollection, searchText])
 
 
-  // console.log('museums ->', museums)
-  // console.log('selectedRegion ->', selectedRegion)
-  // console.log('selectedCollection ->', selectedCollection)
-  // console.log('searchText ->', searchText)
-
-
   return (
     <>
       {filteredMuseums ?

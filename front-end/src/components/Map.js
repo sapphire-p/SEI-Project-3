@@ -105,7 +105,7 @@ const Map = () => {
   // console.log('popup ->', popup)
   // console.log('allMuseums ->', allMuseums)
   // console.log('hasError ->', hasError)
-  console.log('selectedRegion ->', selectedRegion)
+  // console.log('selectedRegion ->', selectedRegion)
 
 
 

@@ -32,8 +32,8 @@ const MuseumsIndex = () => {
           <p className='subtitle has-text-white'>Check out these fascinating natural history collections across England</p>
         </div>
       </section>
-      <section className='section MuseumsSection'>
-        <div className='container museumsCardContainer'>
+      <section className='section MuseumsSection '>
+        <div className='container museumsCardContainer '>
           <div className='columns is-multiline'>
             {museums.map(museum => {
               return (

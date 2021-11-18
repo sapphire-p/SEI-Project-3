@@ -125,7 +125,7 @@ const MuseumShow = () => {
               </div>
             </div>
           </section>
-          <section className='section px-0 py-3'>
+          <section className='section px-0 py-3 has-background-black'>
             <div className='is-marginless px-3 mainContainer'>
               <section className='columns is-flex is-align-items-center descAndPic'>
                 <div className='column is-half-desktop is-half-tablet is-half-mobile'>
@@ -171,7 +171,6 @@ const MuseumShow = () => {
                 <div className='column'>
                   <AddReviewForm />
                 </div>
-
               </section>
               <section>
                 <div className='columns'>

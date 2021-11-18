@@ -12,21 +12,24 @@ SwiperCore.use([Autoplay, Pagination, Navigation])
 const Carousel = () => {
 
   const [museumData, setMuseumData] = useState([])
+
   const { id } = useParams()
 
   useEffect(() => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/museums/${id}`)
-        console.log('data-->', data)
-        setMuseumData([data])
+        // console.log('data-->', data)
+        setMuseumData(data.multiple_images)
       } catch (err) {
         console.log(err)
       }
     }
     getData()
   }, [id])
-  console.log('show me->', museumData)
+
+  // console.log('museum data', museumData)
+
   return (
     <section>
       <div className="swiper">
@@ -37,14 +40,13 @@ const Carousel = () => {
           }} pagination={{
             'clickable': true
           }} navigation={true} className="mySwiper">
-            {museumData.map(name => {
+            {museumData.map(image => {
+              // console.log(image)
               return (
-                <>
-                  <SwiperSlide><img src={name.multiple_images[0]}></img></SwiperSlide>
-                  <SwiperSlide><img src={name.multiple_images[1]}></img></SwiperSlide>
-                  <SwiperSlide><img src={name.multiple_images[2]}></img></SwiperSlide>
-                  <SwiperSlide><img src={name.multiple_images[3]}></img></SwiperSlide>
-                </>
+                
+                <SwiperSlide key={image}><img key={image} src={image}/></SwiperSlide>
+                
+                
               )
             })}
           </Swiper>

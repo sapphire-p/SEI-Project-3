@@ -30,12 +30,13 @@ html {
 /* Navbar styling starts here */
 .link {
   color: #FFF;
-  transition: .2s;
+  transition: .05s;
 }
 .link:hover {
-  transform: scale(1.25);
+  /* transform: scale(1.25); */
+  padding-bottom: 5px;
   color: #FFF;
-  padding-bottom: 15px;
+  
 }
 
 .mmlogo {
@@ -49,6 +50,25 @@ html {
 nav {
   border-bottom: 0.1px solid whitesmoke;
 }
+
+div.navbar-start:hover > div {
+  opacity: 0.5;
+}
+
+div.navbar-start:hover > div:hover {
+  opacity: 1;
+}
+
+
+
+div.navbar-end:hover > div {
+  opacity: 0.5;
+}
+
+div.navbar-end:hover > div:hover {
+  opacity: 1;
+}
+
 /* navbar styling ends here */
 
 /* Footer styling starts here */
@@ -219,7 +239,7 @@ nav {
 }
 
 .exhibitImage {
-  filter: saturate(250%);
+  filter: saturate(200%);
 }
 
 /* Profile */
@@ -278,6 +298,17 @@ nav {
 
 .museum-list-card, .map-icon {
   cursor: pointer;
+}
+
+/* Standout exhibit page */
+
+.standoutCards {
+  transition: .2s;
+}
+
+.standoutCards:hover {
+  transform: scale(1.1);
+  z-index: 1;
 }
 
 /* Register and Login */

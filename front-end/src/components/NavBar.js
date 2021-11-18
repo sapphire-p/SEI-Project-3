@@ -30,7 +30,7 @@ const NavBar = () => {
   return (
     // Removed className 'is-fixed-top' from nav to ensure visibility of Home page Hero and FilterPanel
     <nav className="navbar is-black">
-      <div className="container">
+      <div className="container navbar-items">
         <div className="navbar-brand">
           <span role="img" aria-label="logo" className="title">
             <Link to="/" className="link">

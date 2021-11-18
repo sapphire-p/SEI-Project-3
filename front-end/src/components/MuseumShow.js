@@ -16,7 +16,6 @@ const MuseumShow = () => {
   const { id } = useParams()
   const [hasError, setHasError] = useState(false)
 
-  // const [galleryData, setGalleryData] = useState([])
 
   const [avgRat, setAvgRat] = useState(0)
 
@@ -48,27 +47,6 @@ const MuseumShow = () => {
     getData()
   }, [id])
 
-  // ------------------------ CAROUSEL
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     try {
-  //       const { data } = await axios.get(`/api/museums/${id}`)
-  //       const multiImages = data.multiple_images
-  //       const imagesJoined = multiImages.map(image => {
-  //         return {
-  //           image
-  //         }
-  //       })
-  //       setGalleryData(imagesJoined)
-  //     } catch (err) {
-  //       setHasError(true)
-  //       console.log(hasError)
-  //     }
-  //   }
-  //   getData()
-  // }, [id])
-
   // ------ STAR FIX <- if museum isn't rated the return in the back-end is 'not yet rated', 
   // ------------------ so this function says if a non-number is being returned, then return 0
 
@@ -98,13 +76,16 @@ const MuseumShow = () => {
                 <hr />
                 <div className='is-flex is-justify-content-space-between'>
                   <a href={museum.website} className='has-text-white is-size-5 has-text-weight-bold is-size-7-mobile'>Official Website</a>
-                  <StarRatings
-                    rating={parseFloat(avgRat)}
-                    numberOfStars={5}
-                    starRatedColor='gold'
-                    starDimension='18px'
-                    starSpacing='3px'
-                  />
+                  <div className='is-flex'>
+                    <p className='mx-5 has-text-white'>{museum.reviews.length} Reviews</p>
+                    <StarRatings
+                      rating={parseFloat(avgRat)}
+                      numberOfStars={5}
+                      starRatedColor='gold'
+                      starDimension='18px'
+                      starSpacing='3px'
+                    />
+                  </div>
                 </div>
               </div>
               <div className='is-flex'>
@@ -128,10 +109,10 @@ const MuseumShow = () => {
           <section className='section px-0 py-3'>
             <div className='is-marginless px-3 mainContainer'>
               <section className='columns is-flex is-align-items-center descAndPic'>
-                <div className='column is-half-desktop is-half-tablet is-half-mobile'>
+                <div className='column is-half-desktop is-half-tablet is-full-mobile'>
                   <Carousel />
                 </div>
-                <div className='column is-half-desktop is-half-tablet is-half-mobile'>
+                <div className='column'>
                   <div className='card p-3'>
                     <p className='is-italic is-size-6 is-size-7-mobile'>{museum.description}</p>
                     <hr />
@@ -184,7 +165,7 @@ const MuseumShow = () => {
                       </header>
                       <div className='card-image'>
                         <figure className='image is-1'>
-                          <img src={museum.exhibits_image} className='exhibitImage'/>
+                          <img src={museum.exhibits_image} className='exhibitImage' />
                         </figure>
                       </div>
                       <div className='card-content'>

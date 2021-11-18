@@ -37,7 +37,7 @@ const MuseumsIndex = () => {
           <div className='columns is-multiline'>
             {museums.map(museum => {
               return (
-                <div key={museum._id} className='column is-one-quarter-desktop animate__animated animate__faster  museumCard'>
+                <div key={museum._id} className='column is-one-quarter-desktop is-half-tablet animate__animated animate__faster  museumCard'>
                   <MuseumCard key={museum._id} {...museum} />
                 </div>
               )

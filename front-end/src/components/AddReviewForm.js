@@ -9,16 +9,14 @@ const AddReviewForm = () => {
 
   const [formData, setFormData] = useState({
     comment: '',
-    rating: 0
+    rating: '',
+    owner: ''
   })
 
-  const [errors, setErrors] = useState({
-    comment: '',
-    rating: ''
-  })
+  const [ratingError, setRatingError] = useState(false)
+  const [commentError, setCommentError] = useState(false)
 
   const [token, setToken] = useState()
-
 
   useEffect(() => {
     const getTokenFromLocalStorage = () => {
@@ -42,43 +40,48 @@ const AddReviewForm = () => {
           headers: { Authorization: `Bearer ${token}` }
         }
       )
-      // history.push(`/museums/${id}`)
+      window.location.reload()
     } catch (err) {
+      console.log(err)
       
-      // console.log('ERROR ->>>', err.response.data.message)
-      setErrors(err.response.data.message)
-      // setErrors(true)
+      if (formData.rating > 5) {
+        setRatingError(true)
+      }
+
+      if (formData.comment.length > 500) {
+        setCommentError(true)
+      }
+
     }
   }
 
-  // console.log(errors)
   return (
     <form className='review-add' onSubmit={handleSubmit}>
       <div className='field'>
         <label className='label is-size-7-mobile has-text-white'>Comment:</label>
         <div className='control'>
           <input
-            className={`input ${errors.comment ? 'is-danger' : ''} is-size-7-mobile`}
+            className={`input ${commentError ? 'is-danger' : ''} is-size-7-mobile`}
             placeholder='Comment'
             name='comment'
             value={formData.comment}
             onChange={handleChange}
           />
         </div>
-        {errors.comment && <p className='is-danger is-size-7-mobile'>Comment is too long</p>}
+        {commentError && <p className='is-danger is-size-7-mobile'>Comment is too long</p>}
       </div>
       <div className='field'>
         <label className='label is-size-7-mobile has-text-white'>Rating:</label>
         <div className='control'>
           <input
-            className={`input ${errors.rating ? 'is-danger' : ''} is-size-7-mobile`}
-            placeholder='Rating'
+            className={`input ${ratingError ? 'is-danger' : ''} is-size-7-mobile`}
+            placeholder='Rating out of 5'
             name='rating'
             value={formData.rating}
             onChange={handleChange}
           />
         </div>
-        {errors.rating && <p className='is-danger is-size-7-mobile'>Rating must be between 1 and 5</p>}
+        {ratingError && <p className='is-danger is-size-7-mobile'>Rating must be between 1 and 5</p>}
       </div>
       <div className='field'>
         <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile '><i className="fas fa-plus-circle mr-1"></i>Add Review</button>

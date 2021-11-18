@@ -32,6 +32,7 @@ const Register = () => {
       await axios.post('/api/register', formData) // Uses '/api' prefix from our proxy (see setupProxy.js)
       history.push('/login') // Uses '/api' prefix from our proxy (see setupProxy.js) to navigate to Homepage
     } catch (err) {
+      console.log(err.response.data.errors)
       setErrors(err.response.data.errors)
     }
   }

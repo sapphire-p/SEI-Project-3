@@ -11,7 +11,6 @@ import Profile from './components/Profile'
 import FilteredMuseums from './components/FilteredMuseums'
 import Map from './components/Map'
 import StandoutExhibit from './components/StandoutExhibit'
-import MuseumIndexFilter from './components/MuseumIndexFilter'
 
 const App = () => {
 
@@ -30,8 +29,6 @@ const App = () => {
           <Route exact path='/profile' component={Profile} />
           <Route exact path='/map' component={Map} />
           <Route exact path='/exhibits' component={StandoutExhibit} />
-
-          <Route exact path='/indexfilter' component={MuseumIndexFilter} />
         </Switch>
       </div>
       <Footer />

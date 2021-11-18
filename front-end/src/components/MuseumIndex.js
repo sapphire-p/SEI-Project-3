@@ -44,7 +44,6 @@ const MuseumsIndex = () => {
             })}
             <div className="MuseumsSection2"></div>
           </div>
-
         </div>
       </section>
     </section>

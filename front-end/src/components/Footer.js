@@ -26,7 +26,7 @@ const Footer = () => {
         <hr className="has-background-grey mt-2 mb-2" />
         <div className="row">
           <p className="col-sm has-text-white is-size-7 has-text-centered mb-1">
-            &copy;{new Date().getFullYear()} MUSEUM MAPPERS INC | All rights reserved | Terms of Service | Privacy
+            &copy;{new Date().getFullYear()} MUSEUM MAPPER INC | All rights reserved | Terms of Service | Privacy
           </p>
         </div>
         <div className="row">
@@ -36,13 +36,14 @@ const Footer = () => {
         </div>
         <div className="row mt-2">
           <div className="col">
-            <i className="fab fa-instagram fa-3x mr-6"></i>
+            <i className="fab fa-facebook fa-2x mr-5 has-text-link-dark"></i>
+            
           </div>
           <div className="col">
-            <i className="fab fa-facebook fa-3x mr-6"></i>
+            <i className="fab fa-instagram fa-2x mr-5 has-text-danger"></i>
           </div>
           <div className="col">
-            <i className="fab fa-twitter fa-3x mr-6"></i>
+            <i className="fab fa-twitter fa-2x mr-5 has-text-info"></i>
           </div>
         </div>
       </div>

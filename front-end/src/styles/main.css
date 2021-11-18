@@ -191,8 +191,7 @@ div.navbar-end:hover > div:hover {
 }
 
 .visitWebiteBtn {
-  padding-top: 20px;
-  padding-bottom: 20x;
+
   transition: .2s;
 }
 
@@ -204,7 +203,6 @@ div.navbar-end:hover > div:hover {
 .heroImageHome{
   border-radius: 5px;
 }
-
 
 /* MuseumIndex */
 
@@ -238,14 +236,6 @@ div.navbar-end:hover > div:hover {
 .bookmark:hover {
   color: red;
   transform: scale(1.03);
-}
-
-.standoutExhibitHeader {
-  font-size: 25px;
-}
-
-.exhibitImage {
-  filter: saturate(200%);
 }
 
 /* Profile */
@@ -308,14 +298,72 @@ div.navbar-end:hover > div:hover {
 
 /* Standout exhibit page */
 
+
+
+.card {
+  width: 300px;
+}
+
+.standoutPage {
+  background-image: url("https://i.imgur.com/y3VOFf6.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.standoutCard {
+  width: 300px;
+}
+
 .standoutCards {
   transition: .2s;
+  width: 200px;
 }
 
 .standoutCards:hover {
   transform: scale(1.1);
   z-index: 1;
 }
+
+.exhibitImage {
+  filter: saturate(150%);
+  size: cover;
+}
+
+.standoutExhibitsHero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/xJj5kZg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  border-bottom: 3px solid white;
+}
+
+.standoutSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/Ei1lah2.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.standoutExhibit2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/5FtE7RZ.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  /* fix for responsive */
+  padding-top: 600px;
+  margin-top: -880px;
+}
+
+@media only screen and (max-width: 740px) {
+  .standoutExhibit2 {
+    padding-top: -400px;
+    padding-bottom: 200px;
+  }
+}
+
+/* .standoutExhibitHeader {
+  font-size: 25px;
+} */
 
 /* Register and Login */
 

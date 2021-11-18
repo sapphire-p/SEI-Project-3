@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import { Link } from 'react-router-dom'
-// import ReactMapGL, { Marker } from 'react-map-gl'
-// import locationData from '../data/locations'
 import axios from 'axios'
 
 
@@ -11,9 +9,7 @@ const Map = () => {
 
   const [userLocation, setUserLocation] = useState(null)
 
-  // Can set viewPort to { latitude: 51.509240, longitude: 0.005540 } initially if need be for testing
-  // Mid-point of England: Morton, North East Derbyshire (lat: 53.14346, long: -1.38804)
-  // Current lat and long coordinates are for Birmingham (centre England nicely so all museums can be seen):
+  // Default latitude and longitude coordinates on first map render are for Birmingham (this centres England nicely so all museums can be seen):
   const [viewPort, setViewPort] = useState({
     latitude: 52.48142,
     longitude: -1.89983,
@@ -91,7 +87,7 @@ const Map = () => {
     if (!selectedRegion) {
       return //* Return if no region selected
     } else if (selectedRegion === 'All Regions') { //* if 'All regions' or 'Filter list by region' selected (both these options have a value of 'All Regions'):
-      setFilteredMuseumsArr(allMuseums)
+      setFilteredMuseumsArr(allMuseums) //* set filteredMuseumsArr to value of allMuseums
     } else {
       const regionFilteredMuseums = allMuseums.filter(museum => {
         return museum.region === selectedRegion
@@ -195,7 +191,6 @@ const Map = () => {
 
             <div>
               <div>
-                {/* <h1 className='has-text-centered p-6'>List of Museums</h1> */}
                 <div className='field has-text-centered py-4 px-3'>
                   <div className='control'>
                     <div className='select is-info is-rounded is-size-6 is-fullwidth'>

@@ -109,11 +109,11 @@ const MuseumShow = () => {
           <section className='section px-0 py-3'>
             <div className='is-marginless px-3 mainContainer'>
               <section className='columns is-flex is-align-items-center descAndPic'>
-                <div className='column is-half-desktop is-half-tablet is-full-mobile'>
+                <div className='column is-half-desktop '>
                   <Carousel />
                 </div>
                 <div className='column'>
-                  <div className='card p-3'>
+                  <div id='desc-card' className='card p-3'>
                     <p className='is-italic is-size-6 is-size-7-mobile'>{museum.description}</p>
                     <hr />
                     <div>
@@ -134,7 +134,7 @@ const MuseumShow = () => {
               </section>
               <section className='columns reviewsAndForm has-background-black'>
                 <div className='column is-half'>
-                  <div className='card'>
+                  <div id='reviews-card' className='card'>
                     <div className='card-header p-2 is-flex is-align-items-center'>
                       <p className='card-header-title is-size-7-mobile'>Reviews</p>
                     </div>

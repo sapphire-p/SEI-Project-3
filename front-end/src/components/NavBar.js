@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
 import { getPayload, getTokenFromLocalStorage2 } from './helpers/auth'
 import Logo from '../AssetsTest/logo3.png'
+// import Sounds from './Sounds'
 
 
 
@@ -39,6 +40,9 @@ const NavBar = () => {
           </span>
         </div>
         <div className="navbar-start">
+          {/* <div className="navbar-item">
+            <Sounds />
+          </div> */}
           <div className="navbar-item">
             <Link to="/museums" className="link is-size-6 has-text-weight-light"><i className="far fa-eye has-text-primary"></i> All Museums</Link>
           </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router'
+import { handleButtonClickSound } from './helpers/auth'
 
 const AddReviewForm = () => {
 
@@ -84,7 +85,7 @@ const AddReviewForm = () => {
         {ratingError && <p className='is-danger is-size-7-mobile'>Rating must be between 1 and 5</p>}
       </div>
       <div className='field'>
-        <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile '><i className="fas fa-plus-circle mr-1"></i>Add Review</button>
+        <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile' onClick={handleButtonClickSound}><i className="fas fa-plus-circle mr-1"></i>Add Review</button>
       </div>
     </form>
   )

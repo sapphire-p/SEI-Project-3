@@ -14,6 +14,7 @@ html {
   width: 100%;
   height: 100%;
 }
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -139,7 +140,7 @@ div.navbar-end:hover > div:hover {
 
 /* FilteredMuseums page */
 
-#errorMessageHero {
+#errorMessageHero-FilteredMuseums {
   height: 75vh;
 }
 
@@ -187,12 +188,10 @@ div.navbar-end:hover > div:hover {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
-  transform: scale(1.03);
 }
 
 .visitWebiteBtn {
-  padding-top: 20px;
-  padding-bottom: 20x;
+
   transition: .2s;
 }
 
@@ -204,7 +203,6 @@ div.navbar-end:hover > div:hover {
 .heroImageHome{
   border-radius: 5px;
 }
-
 
 /* MuseumIndex */
 
@@ -218,7 +216,7 @@ div.navbar-end:hover > div:hover {
 
 .museumCard:hover {
   padding: -50px;
-  transform: scale(1.2);
+  transform: scale(1.1);
   z-index: 1;
 }
 
@@ -240,6 +238,13 @@ div.navbar-end:hover > div:hover {
   transform: scale(1.03);
 }
 
+#errorMessageHero-MuseumIndex {
+  height: 75vh;
+}
+
+
+/* Standout Exhibit */
+
 .standoutExhibitHeader {
   font-size: 25px;
 }
@@ -247,6 +252,7 @@ div.navbar-end:hover > div:hover {
 .exhibitImage {
   filter: saturate(200%);
 }
+
 
 /* Profile */
 #profile-section {
@@ -269,11 +275,11 @@ div.navbar-end:hover > div:hover {
 }
 
 .map-container {
-  height: 90vh;
+  height: 86vh;
 }
 
 .map-list-container {
-  max-height: 90vh;
+  max-height: 86vh;
   overflow-y: auto;
 }
 
@@ -306,16 +312,75 @@ div.navbar-end:hover > div:hover {
   cursor: pointer;
 }
 
+
 /* Standout exhibit page */
+
+
+
+.card {
+  width: 300px;
+}
+
+.standoutPage {
+  background-image: url("https://i.imgur.com/y3VOFf6.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.standoutCard {
+  width: 300px;
+}
 
 .standoutCards {
   transition: .2s;
+  width: 200px;
 }
 
 .standoutCards:hover {
   transform: scale(1.1);
   z-index: 1;
 }
+
+.exhibitImage {
+  filter: saturate(150%);
+  size: cover;
+}
+
+.standoutExhibitsHero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/xJj5kZg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  border-bottom: 3px solid white;
+}
+
+.standoutSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/Ei1lah2.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.standoutExhibit2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/5FtE7RZ.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  /* fix for responsive */
+  padding-top: 600px;
+  margin-top: -880px;
+}
+
+@media only screen and (max-width: 740px) {
+  .standoutExhibit2 {
+    padding-top: -400px;
+    padding-bottom: 200px;
+  }
+}
+
+/* .standoutExhibitHeader {
+  font-size: 25px;
+} */
 
 /* Register and Login */
 
@@ -329,13 +394,31 @@ div.navbar-end:hover > div:hover {
   min-height: 500px;
 }
 
+/* MuseumIndex Filter */
+
+#index-filter-panel {
+  background-color: #D0D3D4;
+  border-radius: 5px;
+}
+
+#index-filter-panel-region, #index-filter-panel-collection-types {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* // --------------- */
+
 @media only screen and (max-width: 700px) {
   .descAndPic {
     display: flex;
     flex-direction: column;
   }
-
-  /* #carousel {
-    display: none;
-  } */
 }
+
+#desc-card, #reviews-card  {
+  width: 100%;
+}
+
+#single-review-card {
+  width: 100%;
+}
+

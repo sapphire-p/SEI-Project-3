@@ -79,7 +79,7 @@ const Register = () => {
                   placeholder='Password'
                   name='password'
                   value={formData.password}
-                  type="password"
+                  type='password'
                   onChange={handleChange}
                 />
               </div>
@@ -94,7 +94,7 @@ const Register = () => {
                   name='passwordConfirmation'
                   value={formData.passwordConfirmation}
                   onChange={handleChange}
-                  type="password"
+                  type='password'
                 />
               </div>
               {errors.passwordConfirmation && <p className='help is-danger'>Password does not match</p>}

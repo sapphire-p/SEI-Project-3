@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import { handleButtonClickSound } from './helpers/auth'
 
 const FilterPanel = () => {
 
@@ -28,6 +28,15 @@ const FilterPanel = () => {
     const getAllMuseumsData = async () => {
       try {
         const { data } = await axios.get('/api/museums')
+        data.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1
+          } else if (a.name > b.name) {
+            return 1
+          } else {
+            return 0
+          }
+        })
         setAllMuseums(data)
       } catch (err) {
         console.log(err)
@@ -130,7 +139,6 @@ const FilterPanel = () => {
 
 
   return (
-    // className='has-background-warning' removed from section in favour of id to allow colour change on decreased screen width
     <div id='filter-panel-section'>
       <section id='filter-panel'>
         {!hasError ?
@@ -201,7 +209,7 @@ const FilterPanel = () => {
               </div>
               <div>
                 <div className='control'>
-                  <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-rounded has-background-danger has-text-white has-text-weight-bold is-fullwidth'><i className="fas fa-search mr-1"></i>Find Museums</Link>
+                  <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-rounded has-background-danger has-text-white has-text-weight-bold is-fullwidth' onClick={handleButtonClickSound}><i className="fas fa-search mr-1"></i>Find Museums</Link>
                 </div>
               </div>
             </div>

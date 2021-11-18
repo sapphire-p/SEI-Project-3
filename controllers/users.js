@@ -20,6 +20,8 @@ export const addFavourite = async (req, res) => {
     const user = await User.findById(id)
     if (!user) throw new Error()
     // const newFave = { ...req.body, owner: req.currentUser._id }
+    
+
     user.favourites.push(req.body.favourites)
     await user.save({ validateModifiedOnly: true })
     return res.status(200).json(user)

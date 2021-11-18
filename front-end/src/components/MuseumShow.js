@@ -125,82 +125,102 @@ const MuseumShow = () => {
               </div>
             </div>
           </section>
-          <section className='section px-0 py-3'>
-            {/* <div className='is-marginless px-3 mainContainer'> */}
-            <section className='columns is-flex is-align-items-center descAndPic'>
-              <div className='column is-half-desktop is-half-tablet is-full-mobile'>
-                <Carousel />
+          <section className='section px-0 py-3 has-background-black'>
+            <div className='is-marginless px-3 mainContainer'>
+              <section className='columns is-flex is-align-items-center descAndPic'>
+              <div className='column is-half-desktop is-half-tablet is-half-mobile'>
+              <Carousel />
               </div>
-              <div className='column is-half-desktop is-half-tablet is-full-mobile'>
-                <div className='card p-3'>
-                  <p className='is-italic is-size-6 is-size-7-mobile'>{museum.description}</p>
-                  <hr />
-                  <div>
-                    <h3 className='has-text-weight-bold is-underlined is-size-7-mobile'>Collections:</h3>
-                    <ul>
-                      {museum.collection_types.map(type => {
-                        return <li className='is-capitalized is-italic is-size-7-mobile' key={type}>{type}</li>
-                      })}
-                    </ul>
-                  </div>
-                  <div>
-                    <hr />
-                    <h3 className='has-text-weight-bold is-underlined is-size-7-mobile'>Address:</h3>
-                    <p className='is-italic is-size-7-mobile'>{museum.address}</p>
-                  </div>
+              <div className='column is-half-desktop is-half-tablet'>
+              <div className='card p-3 '>
+              <p className='is-italic is-size-6 is-size-7-mobile '>{museum.description}</p>
+              <hr />
+              <h3 className='has-text-weight-bold is-underlined is-size-7-mobile'>Address: </h3>
+              <p className='is-italic is-size-7-mobile'>{museum.address}</p>
+              </div>
+              </div>
+            </div>
+          </section>
+          <section className='columns reviewsAndForm has-background-black'>
+            <div className='column is-half'>
+              <div className='card'>
+                <div className='card-header p-2 is-flex is-align-items-center'>
+                  <p className='card-header-title is-size-7-mobile'>Reviews</p>
+                </div>
+                <div className='card-content'>
+                  <ul className='is-size-7-mobile'>
+                    {museum.reviews.map(review => {
+                      return (
+                        <ReviewsList key={review._id} {...review} />
+                      )
+                    })}
+                  </ul>
                 </div>
               </div>
-            </section>
-            <section className='columns reviewsAndForm has-background-black'>
+            </div>
+            <div className='column'>
+              <AddReviewForm />
+            </div>
+
+          </section>
+          <section>
+            <div className='columns'>
+            <div className='column is-half'>
+            <div className='card'>
+            <header className='card-header'>
+            <p className='card-header-title has-text-centered is-flex is-justify-content-center standoutExhibitHeader'>
+          {museum.exhibits_name}
+            </p>
+            </header>
+            <div className='card-image'>
+            <figure className='image is-1'>
+            <img src={museum.exhibits_image} className='exhibitImage' />
+            </figure>
+            </div>
+            <div className='card-content'>
+            <ul className='is-size-7-mobile'>
+          {museum.reviews.map(review => {
+            return (
+            <ReviewsList key={review._id} {...review} />
+          )
+          })}
+            </ul>
+            </div>
+            </div>
+            </div>
+            <div className='column'>
+            <AddReviewForm />
+            </div>
+          </section>
+          <section>
+            <div className='columns'>
               <div className='column is-half'>
                 <div className='card'>
-                  <div className='card-header p-2 is-flex is-align-items-center'>
-                    <p className='card-header-title is-size-7-mobile'>Reviews</p>
+                  <header className='card-header'>
+                    <p className='card-header-title has-text-centered is-flex is-justify-content-center standoutExhibitHeader'>
+                      {museum.exhibits_name}
+                    </p>
+                  </header>
+                  <div className='card-image'>
+                    <figure className='image is-1'>
+                      <img src={museum.exhibits_image} className='exhibitImage' />
+                    </figure>
                   </div>
                   <div className='card-content'>
-                    <ul className='is-size-7-mobile'>
-                      {museum.reviews.map(review => {
-                        return (
-                          <ReviewsList key={review._id} {...review} />
-                        )
-                      })}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className='column'>
-                <AddReviewForm />
-              </div>
-
-            </section>
-            <section>
-              <div className='columns'>
-                <div className='column is-half'>
-                  <div className='card'>
-                    <header className='card-header'>
-                      <p className='card-header-title has-text-centered is-flex is-justify-content-center standoutExhibitHeader'>
-                        {museum.exhibits_name}
-                      </p>
-                    </header>
-                    <div className='card-image'>
-                      <figure className='image is-1'>
-                        <img src={museum.exhibits_image} className='exhibitImage' />
-                      </figure>
-                    </div>
-                    <div className='card-content'>
-                      <div className='content'>
-                        {museum.exhibits_description}
-                      </div>
+                    <div className='content'>
+                      {museum.exhibits_description}
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
+          </div>
+        </section>
             {/* </div> */}
-          </section>
+    </section>
         </>
         :
-        <h2>{hasError ? 'Something went wrong' : 'Page Loading...'}</h2>
+<h2>{hasError ? 'Something went wrong' : 'Page Loading...'}</h2>
       }
     </>
   )

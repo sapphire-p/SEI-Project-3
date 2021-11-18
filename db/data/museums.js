@@ -73,9 +73,9 @@ export default [
       'palaeontology',
       'zoology'
     ],
-    exhibits_name: 'Skeleton of circus elephant',
-    exhibits_image: 'https://i.imgur.com/fjNjcuK.png',
-    exhibits_description: 'The skeleton of the circus elephant that dominates the main floor of the museum',
+    exhibits_name: 'Thylacine',
+    exhibits_image: 'https://i.imgur.com/FP66HlW.png',
+    exhibits_description: 'The thylacine, or Tasmanian wolf, is one of the most recent animal extinctions – the last wild thylacine was killed in 1931.',
     website: 'https://collections.reading.ac.uk/cole-museum/',
     location_id: 4,
     latitude: 51.442005,

@@ -11,8 +11,8 @@ SwiperCore.use([Autoplay, Pagination, Navigation])
 
 const Carousel = () => {
 
-  const [museumData, setMuseumData] = useState([])
-
+  const [museumData, setMuseumData] = useState(null)
+  const [hasError, setHasError] = useState(false)
   const { id } = useParams()
 
   useEffect(() => {
@@ -22,7 +22,8 @@ const Carousel = () => {
         // console.log('data-->', data)
         setMuseumData(data.multiple_images)
       } catch (err) {
-        console.log(err)
+        setHasError(true)
+        // console.log(hasError)
       }
     }
     getData()
@@ -32,26 +33,27 @@ const Carousel = () => {
 
   return (
     <section>
-      <div className="swiper">
-        <div className="swiper-wrapper">
-          <Swiper spaceBetween={50} centeredSlides={true} autoplay={{
-            'delay': 5500,
-            'disableOnInteraction': false
-          }} pagination={{
-            'clickable': true
-          }} navigation={true} className="mySwiper">
-            {museumData.map(image => {
-              // console.log(image)
-              return (
-
-                <SwiperSlide key={image}><img key={image} src={image} /></SwiperSlide>
-
-
-              )
-            })}
-          </Swiper>
+      {museumData ?
+        <div className="swiper">
+          <div className="swiper-wrapper">
+            <Swiper spaceBetween={20} slidesPerView={1} centeredSlides={true} autoplay={{
+              'delay': 5500,
+              'disableOnInteraction': false
+            }} pagination={{
+              'clickable': true
+            }} navigation={true} className="mySwiper">
+              {museumData.map(image => {
+                // console.log(image)
+                return (
+                  <SwiperSlide key={image}><img src={image} /></SwiperSlide>
+                )
+              })}
+            </Swiper>
+          </div>
         </div>
-      </div>
+        :
+        <h2 className="has-text-white is-size-5">{hasError ? 'Something went wrong' : 'Page Loading...'}</h2>
+      }
     </section>
   )
 }

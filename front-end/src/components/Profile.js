@@ -3,6 +3,7 @@ import { getTokenFromLocalStorage2 } from './helpers/auth'
 import axios from 'axios'
 import MuseumCard from './MuseumCard'
 
+
 const Profile = () => {
 
   const username = getTokenFromLocalStorage2()
@@ -91,6 +92,7 @@ const Profile = () => {
               //   )
               // }
               return (
+
                 <div key={museum._id} className='column is-one-quarter-desktop animate__animated animate__faster  museumCard'>
                   <MuseumCard key={museum._id} {...museum} />
                   <button id={museum._id} className='button m-2 p-2 is-rounded has-background-danger has-text-white has-text-weight-bold' onClick={handleDelete}>

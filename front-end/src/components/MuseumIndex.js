@@ -91,7 +91,7 @@ const MuseumsIndex = () => {
               <p className='subtitle has-text-white'>Check out these fascinating natural history collections across England</p>
             </div>
           </section>
-          <section className='section'>
+          <section id='museum-index-section' className='section'>
             <div className='container museumsCardContainer'>
 
               <section id='index-filter-panel' className='mb-5'>

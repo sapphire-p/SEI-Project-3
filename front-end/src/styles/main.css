@@ -188,6 +188,7 @@ div.navbar-end:hover > div:hover {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
+  min-height: 40vh;
 }
 
 .visitWebiteBtn {
@@ -240,6 +241,10 @@ div.navbar-end:hover > div:hover {
 
 #errorMessageHero-MuseumIndex {
   height: 75vh;
+}
+
+#museum-index-section {
+  min-height: 52vh;
 }
 
 
@@ -315,11 +320,6 @@ div.navbar-end:hover > div:hover {
 
 /* Standout exhibit page */
 
-
-
-.card {
-  width: 300px;
-}
 
 .standoutPage {
   background-image: url("https://i.imgur.com/y3VOFf6.png");
@@ -413,12 +413,3 @@ div.navbar-end:hover > div:hover {
     flex-direction: column;
   }
 }
-
-#desc-card, #reviews-card  {
-  width: 100%;
-}
-
-#single-review-card {
-  width: 100%;
-}
-

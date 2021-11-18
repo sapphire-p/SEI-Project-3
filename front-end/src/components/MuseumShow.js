@@ -98,7 +98,7 @@ const MuseumShow = () => {
                 </div>
                 <p className='subtitle has-text-right has-text-white'>
                   <AddingDeletingToFavourites />
-                  <hr />
+                  {/* <hr /> */}
                   Region: {museum.region}
                   <br />
                   Date Established: {museum.date_established}
@@ -160,7 +160,7 @@ const MuseumShow = () => {
                     <div className='card'>
                       <header className='card-header'>
                         <p className='card-header-title has-text-centered is-flex is-justify-content-center standoutExhibitHeader'>
-                          {museum.exhibits_name}
+                          Standout exhibit: {museum.exhibits_name}
                         </p>
                       </header>
                       <div className='card-image'>

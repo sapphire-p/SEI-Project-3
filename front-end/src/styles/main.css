@@ -239,7 +239,7 @@ div.navbar-end:hover > div:hover {
 }
 
 .exhibitImage {
-  filter: saturate(250%);
+  filter: saturate(200%);
 }
 
 /* Profile */

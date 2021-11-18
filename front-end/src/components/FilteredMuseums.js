@@ -7,6 +7,8 @@ const FilteredMuseums = () => {
 
   const location = useLocation()
 
+  // filteredMuseums array taken from the state key of the location object (location.state)
+  // location.state is passed in via the 'Find museums!' Link/button on FilterPanel
   const [filteredMuseums, setFilteredMuseums] = useState([])
 
   // all museums returned from axios GET request
@@ -26,9 +28,17 @@ const FilteredMuseums = () => {
     const getAllMuseumsData = async () => {
       try {
         const { data } = await axios.get('/api/museums')
+        data.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1
+          } else if (a.name > b.name) {
+            return 1
+          } else {
+            return 0
+          }
+        })
         setAllMuseums(data)
       } catch (err) {
-        console.log(err)
         setHasError(true)
       }
     }
@@ -89,7 +99,7 @@ const FilteredMuseums = () => {
           :
           <>
             {hasError ?
-              <section id='errorMessageHero' className='hero'>
+              <section id='errorMessageHero-FilteredMuseums' className='hero'>
                 <div className='hero-body showAllHero'>
                   <p className='title has-text-white'>Oops! Something went wrong...</p>
                   <p className='subtitle has-text-white'>Refresh the page or try another link</p>

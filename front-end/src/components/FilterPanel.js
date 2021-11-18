@@ -28,6 +28,15 @@ const FilterPanel = () => {
     const getAllMuseumsData = async () => {
       try {
         const { data } = await axios.get('/api/museums')
+        data.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1
+          } else if (a.name > b.name) {
+            return 1
+          } else {
+            return 0
+          }
+        })
         setAllMuseums(data)
       } catch (err) {
         console.log(err)
@@ -130,7 +139,6 @@ const FilterPanel = () => {
 
 
   return (
-    // className='has-background-warning' removed from section in favour of id to allow colour change on decreased screen width
     <div id='filter-panel-section'>
       <section id='filter-panel'>
         {!hasError ?

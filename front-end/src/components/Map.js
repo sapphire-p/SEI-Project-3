@@ -195,7 +195,6 @@ const Map = () => {
 
             <div>
               <div>
-                {/* <h1 className='has-text-centered p-6'>List of Museums</h1> */}
                 <div className='field has-text-centered py-4 px-3'>
                   <div className='control'>
                     <div className='select is-info is-rounded is-size-6 is-fullwidth'>

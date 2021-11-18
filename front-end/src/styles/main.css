@@ -139,7 +139,7 @@ div.navbar-end:hover > div:hover {
 
 /* FilteredMuseums page */
 
-#errorMessageHero {
+#errorMessageHero-FilteredMuseums {
   height: 75vh;
 }
 
@@ -187,7 +187,6 @@ div.navbar-end:hover > div:hover {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
-  transform: scale(1.03);
 }
 
 .visitWebiteBtn {
@@ -240,6 +239,13 @@ div.navbar-end:hover > div:hover {
   transform: scale(1.03);
 }
 
+#errorMessageHero-MuseumIndex {
+  height: 75vh;
+}
+
+
+/* Standout Exhibit */
+
 .standoutExhibitHeader {
   font-size: 25px;
 }
@@ -247,6 +253,7 @@ div.navbar-end:hover > div:hover {
 .exhibitImage {
   filter: saturate(200%);
 }
+
 
 /* Profile */
 #profile-section {
@@ -269,11 +276,11 @@ div.navbar-end:hover > div:hover {
 }
 
 .map-container {
-  height: 90vh;
+  height: 86vh;
 }
 
 .map-list-container {
-  max-height: 90vh;
+  max-height: 86vh;
   overflow-y: auto;
 }
 
@@ -328,3 +335,27 @@ div.navbar-end:hover > div:hover {
   height: 75vh;
   min-height: 500px;
 }
+
+
+/* MuseumIndex Filter */
+
+#index-filter-panel {
+  background-color: #D0D3D4;
+  border-radius: 5px;
+}
+
+#index-filter-panel-region {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* @media only screen and (min-width: 1225px) {
+  #filter-panel-section {
+    display: flex;
+    justify-content: center;
+  }
+  #filter-panel {
+    margin-top: 40px;
+    border-radius: 100px;
+    width: 1200px;
+  }
+} */

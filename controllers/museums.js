@@ -12,8 +12,7 @@ export const getSingleMuseum = async (req, res) => {
     if (!singleMuseum) throw new Error('museum not found in db')
     return res.status(200).json(singleMuseum)
   } catch (err) {
-    console.log(err)
-    return res.status(404).json( { message: err.message })
+    return res.status(404).json({ message: err.message })
   }
 }
 
@@ -27,7 +26,6 @@ export const addReview = async (req, res) => {
     await museum.save({ validateModifiedOnly: true })
     return res.status(200).json(museum)
   } catch (err) {
-    console.log(err)
     return res.status(404).json({ message: err.message })
   }
 }
@@ -38,11 +36,9 @@ export const deleteReview = async (req, res) => {
     // find museum where comment is
     const museum = await Museum.findById(id)
     // if none, throw error
-    console.log('museum->>>', museum)
     if (!museum) throw new Error('Museum not found')
     // find correct comment
     const reviewToDelete = museum.reviews.id(reviewsId)
-    console.log('review to delete ->>>', reviewToDelete)
     // if none, throw error
     if (!reviewToDelete) throw new Error('Review not found')
     // if owner of review isnt current user, throw error
@@ -54,7 +50,6 @@ export const deleteReview = async (req, res) => {
     // return positive response
     return res.sendStatus(204)
   } catch (err) {
-    console.log(err)
     return res.status(404).json({ message: err.message })
   }
 }

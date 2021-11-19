@@ -1,13 +1,9 @@
 # SEI-Project-3
 
-Team members
+Team members:
 
-Oliver s
-Isaac
-Kumar
-Sapphire
-
-
-Cool Feature
-
+Isaac Franks
+Kumar Mehta
+Oliver Skjevesland
+Sapphire Paston
 

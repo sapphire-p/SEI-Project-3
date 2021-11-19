@@ -1,8 +1,8 @@
 export default [
   {
-    username: 'admin',
-    email: 'admin@admin.com',
-    password: 'admin',
-    passwordConfirmation: 'admin'
+    username: 'admin59',
+    email: 'admin59@admin59.com',
+    password: 'admin59',
+    passwordConfirmation: 'admin59'
   }
 ]

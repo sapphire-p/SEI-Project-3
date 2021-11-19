@@ -29,10 +29,11 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     try {
-      await axios.post('/api/register', formData) // Uses '/api' prefix from our proxy (see setupProxy.js)
-      history.push('/login') // Uses '/api' prefix from our proxy (see setupProxy.js) to navigate to Homepage
+      // Uses '/api' prefix from our proxy (see setupProxy.js):
+      await axios.post('/api/register', formData)
+      // Uses '/api' prefix from our proxy (see setupProxy.js) to navigate to Homepage:
+      history.push('/login')
     } catch (err) {
-      console.log(err.response.data.errors)
       setErrors(err.response.data.errors)
     }
   }

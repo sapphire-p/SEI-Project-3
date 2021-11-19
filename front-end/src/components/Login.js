@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 
+
 const Login = () => {
 
   const history = useHistory()
@@ -27,7 +28,6 @@ const Login = () => {
       setItemToLocalStorage2(formData.username)
       history.push('/')
     } catch (err) {
-      console.log(err)
       setError(true)
     }
   }

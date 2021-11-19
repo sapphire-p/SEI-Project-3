@@ -3,12 +3,10 @@ import jwt from 'jsonwebtoken'
 import { secret } from '../config/environment.js'
 
 export const registerUser = async (req, res) => {
-  // console.log('Test')
   try {
     const newUser = await User.create(req.body)
     return res.status(201).json({ message: `Welcome ${newUser.username}` })
   } catch (err) {
-    console.log(err)
     return res.status(422).json(err)
   }
 }
@@ -24,10 +22,9 @@ export const loginUser = async (req, res) => {
     }
     // generate a token for the user
     const token = jwt.sign({ sub: userToLogin._id }, secret, { expiresIn: '21 days' })
-    //return the token in the response
+    // return the token in the response
     return res.status(200).json({ message: `Welcome back ${userToLogin.username}`, token })
   } catch (err) {
-    console.log(err)
     return res.status(422).json({ message: 'Unauthorized' })
   }
 }

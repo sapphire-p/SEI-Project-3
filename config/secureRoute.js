@@ -12,7 +12,6 @@ export const secureRoute = async (req, res, next) => {
     const payload = jwt.verify(token, secret)
     //find the user in the db to check they exist
     const userToVerify = await User.findById(payload.sub)
-    console.log('USER TO VERIFY ->', userToVerify)
     // otherwise unauthorized
     if (!userToVerify) throw new Error()
 
@@ -21,7 +20,6 @@ export const secureRoute = async (req, res, next) => {
 
     next()
   } catch (err) {
-    console.log(err)
     return res.status(401).json({ message: 'Unauthorized' })
   }
 }

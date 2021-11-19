@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { handleButtonClickSound } from './helpers/auth'
 
+
 const FilterPanel = () => {
 
   // all museums returned from axios GET request
@@ -21,7 +22,7 @@ const FilterPanel = () => {
   const [hasError, setHasError] = useState(false)
 
 
-  //* axios API request to GET ALL MUSEUMS, runs once on first render *//
+  //* axios API request to GET ALL MUSEUMS, runs once on first render: *//
 
   useEffect(() => {
 
@@ -39,7 +40,6 @@ const FilterPanel = () => {
         })
         setAllMuseums(data)
       } catch (err) {
-        console.log(err)
         setHasError(true)
       }
     }
@@ -76,7 +76,6 @@ const FilterPanel = () => {
       return //* Return if no collections selected AND no region selected
 
     } else if (selectedCollections.length === 0 && selectedRegion) { //* if no collections selected but a region selected
-      console.log(`selectedCollections is empty array, selectedRegion is ${selectedRegion}`)
 
       const regionFilteredMuseums = allMuseums.filter(museum => {
         return museum.region === selectedRegion
@@ -84,7 +83,6 @@ const FilterPanel = () => {
       setFilteredMuseumsArr(regionFilteredMuseums)
 
     } else if (selectedCollections.length !== 0 && (!selectedRegion || selectedRegion === 'Region')) { //* if one or more collections selected but no region selected (selectedRegion has no value OR its value is 'Region')
-      console.log(`selectedCollections array contains ${selectedCollections.length} collections, NO selectedRegion`)
 
       let filteredByCollections = []
 
@@ -101,7 +99,6 @@ const FilterPanel = () => {
       setFilteredMuseumsArr(filteredByCollectionsDeduplicated) //* set the value of the filteredMuseumsArr piece of state to the value of the de-duplicated array
 
     } else if (selectedCollections.length !== 0 && selectedRegion) { //* if one or more collections selected AND a region selected
-      console.log(`selectedCollections array contains ${selectedCollections.length} collections, selectedRegion is ${selectedRegion}`)
 
       let filteredByCollections = []
       let filteredByBoth = []
@@ -126,15 +123,6 @@ const FilterPanel = () => {
     }
 
   }, [selectedCollections, selectedRegion])
-
-
-
-  //* console.logs for testing *//
-
-  // console.log('All Museums from GET request ->', allMuseums)
-  // console.log('selectedRegion ->', selectedRegion)
-  // console.log('selectedCollections ->', selectedCollections)
-  console.log('FILTEREDMUSEUMSARR ->', filteredMuseumsArr)
 
 
 

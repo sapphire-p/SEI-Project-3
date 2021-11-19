@@ -385,12 +385,12 @@ div.navbar-end:hover > div:hover {
 /* Register and Login */
 
 #register-section {
-  height: 75vh;
+  height: 80vh;
   min-height: 700px;
 }
 
 #login-section {
-  height: 75vh;
+  height: 80vh;
   min-height: 500px;
 }
 

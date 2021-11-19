@@ -43,7 +43,8 @@ const Map = () => {
     const getAllMuseumsData = async () => {
       try {
         const { data } = await axios.get('/api/museums')
-        data.sort((a, b) => { // Sorts the array of museum objects alphabetically by the 'name' key
+        // Sorts the array of museum objects alphabetically by the 'name' key:
+        data.sort((a, b) => {
           if (a.name < b.name) {
             return -1
           } else if (a.name > b.name) {
@@ -55,7 +56,6 @@ const Map = () => {
         setAllMuseums(data)
         setFilteredMuseumsArr(data)
       } catch (err) {
-        console.log(err)
         setHasError(true)
       }
     }
@@ -97,8 +97,9 @@ const Map = () => {
 
 
 
-  return ( // is-flex-direction-row-reverse on the <div> below means that the map displays in the column on the right on desktop/tablet and on top in mobile view
+  return (
 
+    // is-flex-direction-row-reverse on the <div> below means that the map displays in the column on the right on desktop/tablet and on top in mobile view:
     <section>
       <div className='columns p-3 is-flex-direction-row-reverse'>
 

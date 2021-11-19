@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import MuseumCard from './MuseumCard'
 
+
 const MuseumsIndex = () => {
 
   const [museums, setMuseums] = useState(null)
@@ -62,7 +63,8 @@ const MuseumsIndex = () => {
     if (!museums) {
       return
     } else {
-      const regexSearch = new RegExp(`\\b${searchText}`, 'i') // 'new RegExp()' class constructor is used to create a new regex or Regular Expression (a sequence of characters that forms a search pattern)
+      // 'new RegExp()' class constructor is used to create a new regex or Regular Expression (a sequence of characters that forms a search pattern):
+      const regexSearch = new RegExp(`\\b${searchText}`, 'i')
       // In the regex expression in the line above, the \b metacharacter is used to find a match at the beginning of a word - so it will search for any words that begin with the searchText string value
       // The second item passed into the RegExp() class constructor is 'i', which ensures the search is case insensitive
 

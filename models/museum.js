@@ -6,16 +6,10 @@ const reviewSchema = new mongoose.Schema({
   rating: { type: Number, required: true, min: 1, max: 5 },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 },
-{
-  timestamps: true
-}
+  {
+    timestamps: true
+  }
 )
-
-// const exhibitSchema = new mongoose.Schema({
-//   name: { type: String, required: true, maxlength: 200 },
-//   image: { type: String, required: true },
-//   description: { type: String, maxlength: 1000 }
-// })
 
 const museumSchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
@@ -36,7 +30,7 @@ const museumSchema = new mongoose.Schema({
   reviews: [reviewSchema]
 })
 
-// Virtual Getter: virtual field added to object before it is json
+// Virtual Getter: virtual field added to object before it is set to json
 museumSchema.virtual('averageRating')
   .get(function () {
     // if there are no comments return a string

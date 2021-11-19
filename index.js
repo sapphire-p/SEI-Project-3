@@ -31,18 +31,3 @@ const startServer = async () => {
   }
 }
 startServer()
-
-
-// app.use((req, res, next) => {
-//   if (req.url === '/') {
-//     res.end('Welcome to the home page')
-//   }
-//   next()
-// })
-
-// app.use((_req, res) => {
-//   return res.status(404).json({ message: '⛔️ not found' })
-// })
-
-
-

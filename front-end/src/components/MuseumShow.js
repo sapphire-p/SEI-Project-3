@@ -2,33 +2,19 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import AddReviewForm from './AddReviewForm'
-// import { Carousel } from 'react-carousel-minimal'
 import ReviewsList from './ReviewsList'
 import StarRatings from 'react-star-ratings'
 import AddingDeletingToFavourites from './AddingDeletingToFavourites'
 import Carousel from './Carousel'
 
-import { ShareSocial } from 'react-share-social'
 
 const MuseumShow = () => {
 
-  const [museum, setMuseum] = useState()
+  const [museum, setMuseum] = useState(null)
   const { id } = useParams()
   const [hasError, setHasError] = useState(false)
 
-
   const [avgRat, setAvgRat] = useState(0)
-
-  const style = {
-    // background: 'linear-gradient(45deg, #FF6B8B 100%, #FF8E53 0%)',
-    background: 'none',
-    // background: ,
-    borderRadius: 3,
-    border: 0,
-    color: 'white',
-    padding: '0 30px'
-    // boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)'
-  }
 
   // -------------
 
@@ -36,12 +22,9 @@ const MuseumShow = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/museums/${id}`)
-        // console.log('data ->', data)
         setMuseum(data)
-        // setGalleryData(data)
       } catch (err) {
         setHasError(true)
-        // console.log(hasError)
       }
     }
     getData()
@@ -51,20 +34,18 @@ const MuseumShow = () => {
   // ------------------ so this function says if a non-number is being returned, then return 0
 
   useEffect(() => {
-    const getRating = async () => {
-      try {
-        if (isNaN(museum.averageRating)) setAvgRat(0)
-        else setAvgRat(museum.averageRating)
-      } catch (err) {
-        console.log(err)
-      }
+    const getRating = () => {
+      if (!museum) return
+      if (isNaN(museum.averageRating)) setAvgRat(0)
+      else setAvgRat(museum.averageRating)
     }
     getRating()
+
   }, [museum])
 
   // ---------------------------------------
 
-
+  // console.log(museum.reviews.length === 0)
   return (
     <>
       {museum ?
@@ -88,21 +69,18 @@ const MuseumShow = () => {
                   </div>
                 </div>
               </div>
-              <div className='is-flex'>
-                <div>
-                  <ShareSocial
-                    style={style}
-                    url="http://localhost:3000/museums/"
-                    socialTypes={['facebook', 'twitter', 'reddit', 'linkedin']}
-                  />
+              <div className='is-flex is-flex-direction-column'>
+                <div className='is-flex is-flex-direction-row-reverse'>
+                  <AddingDeletingToFavourites id={id} />
                 </div>
-                <p className='subtitle has-text-right has-text-white'>
-                  <AddingDeletingToFavourites />
+                <div>
                   <hr />
-                  Region: {museum.region}
-                  <br />
-                  Date Established: {museum.date_established}
-                </p>
+                  <p className='subtitle has-text-right has-text-white'>
+                    Region: {museum.region}
+                    <br />
+                    Date Established: {museum.date_established}
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -113,7 +91,7 @@ const MuseumShow = () => {
                   <Carousel />
                 </div>
                 <div className='column'>
-                  <div id='desc-card' className='card p-3'>
+                  <div className='card p-3'>
                     <p className='is-italic is-size-6 is-size-7-mobile'>{museum.description}</p>
                     <hr />
                     <div>
@@ -134,13 +112,16 @@ const MuseumShow = () => {
               </section>
               <section className='columns reviewsAndForm has-background-black'>
                 <div className='column is-half'>
-                  <div id='reviews-card' className='card'>
+                  <div className='card'>
                     <div className='card-header p-2 is-flex is-align-items-center'>
                       <p className='card-header-title is-size-7-mobile'>Reviews</p>
                     </div>
                     <div className='card-content'>
                       <ul className='is-size-7-mobile'>
+                        
                         {museum.reviews.map(review => {
+                          
+                          // if (museum.reviews.length === 0) return <li>test</li>
                           return (
                             <ReviewsList key={review._id} {...review} />
                           )
@@ -152,36 +133,50 @@ const MuseumShow = () => {
                 <div className='column'>
                   <AddReviewForm />
                 </div>
-
               </section>
-              <section>
-                <div className='columns'>
-                  <div className='column is-half'>
-                    <div className='card'>
-                      <header className='card-header'>
-                        <p className='card-header-title has-text-centered is-flex is-justify-content-center standoutExhibitHeader'>
-                          {museum.exhibits_name}
-                        </p>
-                      </header>
-                      <div className='card-image'>
-                        <figure className='image is-1'>
-                          <img src={museum.exhibits_image} className='exhibitImage' />
-                        </figure>
-                      </div>
-                      <div className='card-content'>
-                        <div className='content'>
-                          {museum.exhibits_description}
-                        </div>
+
+              <section className='section'>
+                <div className='is-flex is-justify-content-center'>
+                  <div id='museumshow-standout-exhibit-card' className='card'>
+                    <header className='card-header'>
+                      <p className='card-header-title has-text-centered is-flex is-justify-content-center standoutExhibitHeader'>
+                        Standout exhibit: {museum.exhibits_name}
+                      </p>
+                    </header>
+                    <div className='card-image'>
+                      <figure className='image is-1'>
+                        <img src={museum.exhibits_image} className='exhibitImage' />
+                      </figure>
+                    </div>
+                    <div className='card-content'>
+                      <div className='content'>
+                        {museum.exhibits_description}
                       </div>
                     </div>
                   </div>
                 </div>
               </section>
+
             </div>
           </section>
         </>
         :
-        <h2>{hasError ? 'Something went wrong' : 'Page Loading...'}</h2>
+        <>
+          {hasError ?
+            <section id='errorMessageHero-MuseumIndex' className='hero'>
+              <div className='hero-body showAllHero'>
+                <p className='title has-text-white'>Oops! Something went wrong...</p>
+                <p className='subtitle has-text-white'>Refresh the page or try another link</p>
+              </div>
+            </section>
+            :
+            <section className='hero is-medium'>
+              <div className='hero-body showAllHero'>
+                <p className='title has-text-white'>Loading...</p>
+              </div>
+            </section>
+          }
+        </>
       }
     </>
   )

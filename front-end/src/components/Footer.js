@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../AssetsTest/logo.gif'
+
 
 const Footer = () => {
 
@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <img className="pr-3 mt-5" src={Logo} alt="Museum Mapper logo" width="140px" />
+            <img className="pr-3 mt-5" src="https://i.imgur.com/alLlepW.gif" alt="Museum Mapper logo" width="140px" />
           </div>
           <div className="col">
             <h4 className="has-text-white is-size-6 has-text-centered">Museum Mapper</h4>

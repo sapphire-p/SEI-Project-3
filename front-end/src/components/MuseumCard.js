@@ -4,14 +4,6 @@ import AddingDeletingToFavourites from './AddingDeletingToFavourites'
 
 const MuseumCard = ({ _id, name, image, region }) => {
 
-  // const handleCardMouseEnter = event => {
-  //   event.target.classList.add('grow')
-  // }
-
-  // const handleCardMouseLeave = event => {
-  //   event.target.classList.remove('grow')
-  // }
-
   return (
 
     <div className='card'>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-// import { getPayload } from './helpers/auth'
-// import { useParams } from 'react-router'
+
 
 const AddingDeletingToFavourites = ({ id }) => {
 
@@ -9,12 +8,6 @@ const AddingDeletingToFavourites = ({ id }) => {
   const [token, setToken] = useState()
   const [userId, setUserId] = useState()
 
-  // const userIsAuthenticated = () => {
-  //   const payload = getPayload()
-  //   if (!payload) return false
-  //   const now = Math.round(Date.now() / 1000)
-  //   return now < payload.exp
-  // }
 
   useEffect(() => {
     const getTokenFromLocalStorage = () => {
@@ -44,7 +37,6 @@ const AddingDeletingToFavourites = ({ id }) => {
   }, [token])
 
   const handleClick = event => {
-    // console.log('CLICKED')
     event.target.classList.toggle('fas')
     event.target.classList.toggle('animate__bounceIn')
     setIsSaved(!isSaved)

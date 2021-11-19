@@ -391,7 +391,7 @@ div.navbar-end:hover > div:hover {
 /* Profile */
 
 #profile-section {
-  height: 100vh;
+  min-height: 85vh;
 }
 
 

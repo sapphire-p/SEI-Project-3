@@ -54,10 +54,6 @@ const StandoutExhibit = () => {
               </div>
             </div>
           </section>
-          <div className="standoutExhibit2 hero is-medium">
-            <div className="hero-body">
-            </div>
-          </div>
         </section>
         :
         <>

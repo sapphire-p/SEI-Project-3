@@ -3,16 +3,13 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 // import ScrollAnimation from 'react-animate-on-scroll'
-import { handleButtonClickSound } from './helpers/auth'
-
-
 
 
 const FeaturedMuseum = () => {
 
-  const [featuredMuseums, setFeaturedMuseums] = useState([])
+  const [featuredMuseums, setFeaturedMuseums] = useState(null)
 
-  const [hasError, setHasError] = useState(true)
+  const [hasError, setHasError] = useState(false)
   // const Animation = () => {
   //   return (
   //     <ScrollAnimation animateIn="fadeIn">
@@ -27,13 +24,9 @@ const FeaturedMuseum = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get('/api/museums')
-        // console.log(data)
-        // setFeaturedMuseums(data[2])
         setFeaturedMuseums(data[Math.floor(Math.random() * data.length)])
-        // console.log('ONE OF THE MUSEUMS ->', featuredMuseums)
       } catch (err) {
-        // console.log(err)
-        setHasError(false)
+        setHasError(true)
       }
     }
     getData()
@@ -53,7 +46,7 @@ const FeaturedMuseum = () => {
                 </h1>
                 <p className="subtitle hero-subtitle">{featuredMuseums.description}</p>
                 <Link to={`/museums/${featuredMuseums.id}`} >
-                  <button onClick={handleButtonClickSound} className="button is-white is-fullwidth visitWebiteBtn is-large">
+                  <button className="button is-white is-fullwidth visitWebiteBtn is-large">
                     {/* <i className="fas fa-info-circle infoIcon">
                     </i>  */}
                     More Info
@@ -77,16 +70,7 @@ const FeaturedMuseum = () => {
             </section>
             :
             <section className="hero is-black is-fullheight hero" id="featured-container">
-              <a href='#featured-container' className="title has-text-centered is-size-1 featuredMuseumTitle">Featured Museum</a>
-              <div className="hero-body">
-                <div className="columns container is-full">
-                  <div className="column is-half custom-flex ">
-                    <h1 className="title hero-title mb-6 has-text-centered is-size-2">
-                      Loading...
-                    </h1>
-                  </div>
-                </div>
-              </div>
+              <a href='#featured-container' className="title has-text-centered is-size-1 featuredMuseumTitle">Loading...</a>
             </section>
           }
         </>

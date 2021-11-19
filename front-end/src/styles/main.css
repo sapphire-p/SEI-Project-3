@@ -60,8 +60,6 @@ div.navbar-start:hover > div:hover {
   opacity: 1;
 }
 
-
-
 div.navbar-end:hover > div {
   opacity: 0.5;
 }
@@ -315,16 +313,11 @@ div.navbar-end:hover > div:hover {
 
 /* Standout exhibit page */
 
-
-
-.card {
-  width: 300px;
-}
-
 .standoutPage {
-  background-image: url("https://i.imgur.com/y3VOFf6.png");
+  background-color: black;
+  /* background-image: url("https://i.imgur.com/y3VOFf6.png");
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; */
 }
 
 .standoutCard {
@@ -354,29 +347,34 @@ div.navbar-end:hover > div:hover {
   border-bottom: 3px solid white;
 }
 
-.standoutSection {
+.standoutContainer {
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* .standoutSection {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/Ei1lah2.png");
   background-attachment: fixed;
   background-size: cover;
-}
+} */
 
-.standoutExhibit2 {
+/* .standoutExhibit2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://i.imgur.com/5FtE7RZ.png');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   z-index: -1;
-  /* fix for responsive */
+
   padding-top: 600px;
   margin-top: -880px;
-}
+} */
 
-@media only screen and (max-width: 740px) {
+/* @media only screen and (max-width: 740px) {
   .standoutExhibit2 {
     padding-top: -400px;
     padding-bottom: 200px;
   }
-}
+} */
 
 /* .standoutExhibitHeader {
   font-size: 25px;
@@ -412,13 +410,5 @@ div.navbar-end:hover > div:hover {
     display: flex;
     flex-direction: column;
   }
-}
-
-#desc-card, #reviews-card  {
-  width: 100%;
-}
-
-#single-review-card {
-  width: 100%;
 }
 

@@ -16,9 +16,4 @@ export const getPayload = () => {
   return JSON.parse(atob(payloadString)) // decode the payload string, using json.parse to convert from JSON to JS object
 }
 
-const audioClick = new Audio('https://www.fesliyanstudios.com/play-mp3/7')
-
-export const handleButtonClickSound = () => {
-  audioClick.play()
-} 
 

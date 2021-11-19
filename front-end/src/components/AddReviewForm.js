@@ -94,7 +94,7 @@ const AddReviewForm = () => {
         </div>
         :
         <div className='field'>
-          <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile' onClick={handleMake}>To submit your own review you must be registered. Click here to make an account!</button>
+          <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-6 is-fullwidth' onClick={handleMake}>Login to your account to make a review</button>
         </div>
       }
 

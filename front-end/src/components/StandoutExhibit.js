@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const StandoutExhibit = () => {
 
-  const [ museum, setMuseum ] = useState(null)
+  const [museum, setMuseum] = useState(null)
   const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
@@ -26,16 +26,16 @@ const StandoutExhibit = () => {
         <section className='has-background-black standoutPage'>
           <section className='hero is-medium' id="hero-container">
             <div className='hero-body standoutExhibitsHero pt-8'>
-              <p className='title has-text-white'>Museums</p>
-              <p className='subtitle has-text-white'>Check out these fascinating natural history collections across England</p>
+              <p className='title has-text-white'>Standout Exhibits</p>
+              <p className='subtitle has-text-white'>Highlights from natural history collections across England <br></br> Click each card to find out which museum its from and learn more</p>
             </div>
           </section>
-          <section className='section standoutSection'>
+          <section className='section'>
             <div className=''>
-              <div className='columns is-multiline is-flex is-justify-content-center container standoutContainer'>
+              <div className='columns is-multiline is-flex is-justify-content-center container'>
                 {museum.map(Smuseum => {
                   return (
-                    <div key={Smuseum._id} className='column is-narrow is-one-quarter-desktop animate__animated animate__faster  standoutCards'>
+                    <div key={Smuseum._id} className='column is-narrow is-one-quarter-desktop animate__animated animate__faster standoutCards'>
                       <div className='card is-narrow standoutCard'>
                         <div className='card-header is-flex is-align-items-center'>
                           <div className='card-header-title cardTitle is-size-7'>{Smuseum.exhibits_name}</div>

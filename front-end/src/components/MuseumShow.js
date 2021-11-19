@@ -45,7 +45,6 @@ const MuseumShow = () => {
 
   // ---------------------------------------
 
-  // console.log(museum.reviews.length === 0)
   return (
     <>
       {museum ?
@@ -120,8 +119,6 @@ const MuseumShow = () => {
                       <ul className='is-size-7-mobile'>
 
                         {museum.reviews.map(review => {
-
-                          // if (museum.reviews.length === 0) return <li>test</li>
                           return (
                             <ReviewsList key={review._id} {...review} />
                           )

@@ -8,6 +8,8 @@ const ReviewsList = (props) => {
   const [token, setToken] = useState()
   const [userId, setUserId] = useState()
 
+  const [hasError, setHasError] = useState(false)
+
   useEffect(() => {
     const getTokenFromLocalStorage = () => {
       setToken(window.localStorage.getItem('token'))
@@ -29,7 +31,7 @@ const ReviewsList = (props) => {
         )
         setUserId(data.id)
       } catch (err) {
-        console.log(err)
+        setHasError(true)
       }
     }
     getUserId()
@@ -50,6 +52,7 @@ const ReviewsList = (props) => {
     }
   }
 
+  console.log(hasError)
   return (
     <li key={props._id}>
       <div id='single-review-card' className='card p-3 m-1'>

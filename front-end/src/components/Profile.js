@@ -34,15 +34,18 @@ const Profile = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+
+        if (!token) return
+
         const { data } = await axios.get(
           '/api/profile',
           {
             headers: { Authorization: `Bearer ${token}` }
           }
         )
+        
         setUser(data.favourites)
         setUserId(data._id)
-
 
       } catch (err) {
         console.log(err)

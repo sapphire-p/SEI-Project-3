@@ -75,14 +75,13 @@ const AddingDeletingToFavourites = ({ id }) => {
       } else {
         addMuseumToFaves()
       }
-      
+
     } catch (err) {
       console.log(err)
     }
 
   }, [isSaved])
 
-  // console.log(userId)
   return (
     // <>
     //   {userId === '' ?

@@ -60,8 +60,6 @@ div.navbar-start:hover > div:hover {
   opacity: 1;
 }
 
-
-
 div.navbar-end:hover > div {
   opacity: 0.5;
 }

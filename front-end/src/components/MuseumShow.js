@@ -14,7 +14,6 @@ const MuseumShow = () => {
   const { id } = useParams()
   const [hasError, setHasError] = useState(false)
 
-
   const [avgRat, setAvgRat] = useState(0)
 
   // -------------
@@ -23,12 +22,9 @@ const MuseumShow = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/museums/${id}`)
-        // console.log('data ->', data)
         setMuseum(data)
-        // setGalleryData(data)
       } catch (err) {
         setHasError(true)
-        // console.log(hasError)
       }
     }
     getData()
@@ -40,13 +36,8 @@ const MuseumShow = () => {
   useEffect(() => {
     const getRating = () => {
       if (!museum) return
-
-      try {
-        if (isNaN(museum.averageRating)) setAvgRat(0)
-        else setAvgRat(museum.averageRating)
-      } catch (err) {
-        console.log(err)
-      }
+      if (isNaN(museum.averageRating)) setAvgRat(0)
+      else setAvgRat(museum.averageRating)
     }
     getRating()
 

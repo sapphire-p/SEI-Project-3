@@ -34,7 +34,7 @@ const AddReviewForm = () => {
     event.preventDefault()
     try {
       await axios.post(
-        `/api/museums/${id}/reviews`, 
+        `/api/museums/${id}/reviews`,
         formData,
         {
           headers: { Authorization: `Bearer ${token}` }
@@ -43,7 +43,7 @@ const AddReviewForm = () => {
       window.location.reload()
     } catch (err) {
       console.log(err)
-      
+
       if (formData.rating > 5) {
         setRatingError(true)
       }
@@ -88,16 +88,16 @@ const AddReviewForm = () => {
         </div>
         {ratingError && <p className='is-danger is-size-7-mobile'>Rating must be between 1 and 5</p>}
       </div>
-      {token ? 
+      {token ?
         <div className='field'>
-          <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile' onClick={handleButtonClickSound}><i className="fas fa-plus-circle mr-1"></i>Add Review</button>
+          <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile'><i className="fas fa-plus-circle mr-1"></i>Add Review</button>
         </div>
         :
         <div className='field'>
           <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile' onClick={handleMake}>To submit your own review you must be registered. Click here to make an account!</button>
         </div>
       }
-      
+
     </form>
   )
 

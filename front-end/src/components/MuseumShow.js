@@ -127,7 +127,7 @@ const MuseumShow = () => {
                     </div>
                   </div>
                 </div>
-                <div className='column'>
+                <div className='column is-half'>
                   <AddReviewForm />
                 </div>
               </section>

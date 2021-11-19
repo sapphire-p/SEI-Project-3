@@ -29,7 +29,6 @@ const NavBar = () => {
   const username = getTokenFromLocalStorage2()
 
   return (
-    // Removed className 'is-fixed-top' from nav to ensure visibility of Home page Hero and FilterPanel
     <nav className="navbar is-black">
       <div className="container navbar-items">
         <div className="navbar-brand">
@@ -40,9 +39,6 @@ const NavBar = () => {
           </span>
         </div>
         <div className="navbar-start">
-          {/* <div className="navbar-item">
-            <Sounds />
-          </div> */}
           <div className="navbar-item">
             <Link to="/museums" className="link is-size-6 has-text-weight-light"><i className="far fa-eye has-text-primary"></i> All Museums</Link>
           </div>

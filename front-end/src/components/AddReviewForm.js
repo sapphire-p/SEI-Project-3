@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router'
-import { handleButtonClickSound } from './helpers/auth'
+import { useHistory, useParams } from 'react-router'
 
 const AddReviewForm = () => {
 
   const { id } = useParams()
-  // const history = useHistory()
+  const history = useHistory()
 
   const [formData, setFormData] = useState({
     comment: '',
@@ -56,6 +55,11 @@ const AddReviewForm = () => {
     }
   }
 
+  const handleMake = (event) => {
+    event.preventDefault()
+    history.push('/register')
+  }
+
   return (
     <form className='review-add' onSubmit={handleSubmit}>
       <div className='field'>
@@ -84,9 +88,16 @@ const AddReviewForm = () => {
         </div>
         {ratingError && <p className='is-danger is-size-7-mobile'>Rating must be between 1 and 5</p>}
       </div>
-      <div className='field'>
-        <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile' onClick={handleButtonClickSound}><i className="fas fa-plus-circle mr-1"></i>Add Review</button>
-      </div>
+      {token ? 
+        <div className='field'>
+          <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile' onClick={handleButtonClickSound}><i className="fas fa-plus-circle mr-1"></i>Add Review</button>
+        </div>
+        :
+        <div className='field'>
+          <button type='submit' className='button is-rounded is-danger has-text-white has-text-weight-bold is-size-7-mobile' onClick={handleMake}>To submit your own review you must be registered. Click here to make an account!</button>
+        </div>
+      }
+      
     </form>
   )
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import { handleButtonClickSound } from './helpers/auth'
 
 
 const FilterPanel = () => {
@@ -197,7 +196,7 @@ const FilterPanel = () => {
               </div>
               <div>
                 <div className='control'>
-                  <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-rounded has-background-danger has-text-white has-text-weight-bold is-fullwidth' onClick={handleButtonClickSound}><i className="fas fa-search mr-1"></i>Find Museums</Link>
+                  <Link to={{ pathname: '/filteredmuseums', state: filteredMuseumsArr }} className='button is-rounded has-background-danger has-text-white has-text-weight-bold is-fullwidth'><i className="fas fa-search mr-1"></i>Find Museums</Link>
                 </div>
               </div>
             </div>

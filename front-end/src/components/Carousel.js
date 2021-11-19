@@ -19,17 +19,16 @@ const Carousel = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/museums/${id}`)
-        // console.log('data-->', data)
         setMuseumData(data.multiple_images)
       } catch (err) {
         setHasError(true)
-        // console.log(hasError)
+
       }
     }
     getData()
   }, [id])
 
-  // console.log('museum data', museumData)
+
 
   return (
     <section>
@@ -43,7 +42,6 @@ const Carousel = () => {
               'clickable': true
             }} navigation={true} className="mySwiper">
               {museumData.map(image => {
-                // console.log(image)
                 return (
                   <SwiperSlide key={image}><img src={image} /></SwiperSlide>
                 )

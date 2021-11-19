@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
 import { getPayload, getTokenFromLocalStorage2 } from './helpers/auth'
-import Logo from '../AssetsTest/logo3.png'
-// import Sounds from './Sounds'
+
+
 
 
 
@@ -29,20 +29,16 @@ const NavBar = () => {
   const username = getTokenFromLocalStorage2()
 
   return (
-    // Removed className 'is-fixed-top' from nav to ensure visibility of Home page Hero and FilterPanel
     <nav className="navbar is-black">
       <div className="container navbar-items">
         <div className="navbar-brand">
           <span role="img" aria-label="logo" className="title">
             <Link to="/" className="link">
-              <img className="mmlogo" src={Logo} alt="Museum Mapper logo" width="250px" />
+              <img className="mmlogo" src="https://i.imgur.com/7WFWHW1.png" alt="Museum Mapper logo" width="250px" />
             </Link>
           </span>
         </div>
         <div className="navbar-start">
-          {/* <div className="navbar-item">
-            <Sounds />
-          </div> */}
           <div className="navbar-item">
             <Link to="/museums" className="link is-size-6 has-text-weight-light"><i className="far fa-eye has-text-primary"></i> All Museums</Link>
           </div>

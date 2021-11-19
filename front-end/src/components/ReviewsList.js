@@ -50,7 +50,6 @@ const ReviewsList = (props) => {
     }
   }
 
-  // console.log(userId)
   return (
     <li key={props._id}>
       <div id='single-review-card' className='card p-3 m-1'>

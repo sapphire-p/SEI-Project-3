@@ -10,9 +10,6 @@ const Profile = () => {
   const myDate = new Date()
   const hrs = myDate.getHours()
   const [token, setToken] = useState()
-  // const [token, setToken] = useState()
-
-  // const [mappedFaves, setMappedFaves] = useState([])
 
   let greet = null
 
@@ -37,16 +34,18 @@ const Profile = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+
+        if (!token) return
+
         const { data } = await axios.get(
           '/api/profile',
           {
             headers: { Authorization: `Bearer ${token}` }
           }
         )
-        // console.log(data.favourites)
+        
         setUser(data.favourites)
         setUserId(data._id)
-
 
       } catch (err) {
         console.log(err)
@@ -69,7 +68,7 @@ const Profile = () => {
     }
   }
 
-  console.log(user.length)
+  // console.log(user.length)
   return (
     <div id= "profile-section">
       <section className="hero is-black is-small" >
@@ -86,13 +85,9 @@ const Profile = () => {
           </div>
           <div className='columns is-multiline'>
             {user.map(museum => {
-              // if (user.length) {
-              //   return (
-              //     <div className='column'>test</div>
-              //   )
-              // }
+              
               return (
-
+                
                 <div key={museum._id} className='column is-one-quarter-desktop animate__animated animate__faster  museumCard'>
                   <MuseumCard key={museum._id} {...museum} />
                   <button id={museum._id} className='button m-2 p-2 is-rounded has-background-danger has-text-white has-text-weight-bold' onClick={handleDelete}>

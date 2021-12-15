@@ -75,13 +75,6 @@ const AddingDeletingToFavourites = ({ id }) => {
   }, [isSaved])
 
   return (
-    // <>
-    //   {userId === '' ?
-    //     <div>test</div>
-    //     :
-    //     <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark"></a>
-    //   }
-    // </>
     <a onClick={handleClick} className="bookmark far animate__animated animate__faster fa-bookmark"></a>
   )
 

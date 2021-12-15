@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-// import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-// import ScrollAnimation from 'react-animate-on-scroll'
 
 
 const FeaturedMuseum = () => {
@@ -10,13 +8,6 @@ const FeaturedMuseum = () => {
   const [featuredMuseums, setFeaturedMuseums] = useState(null)
 
   const [hasError, setHasError] = useState(false)
-  // const Animation = () => {
-  //   return (
-  //     <ScrollAnimation animateIn="fadeIn">
-  //       <h1>TESTING SCROLL</h1>
-  //     </ScrollAnimation>
-  //   )
-  // }
 
 
   useEffect(() => {
@@ -47,8 +38,6 @@ const FeaturedMuseum = () => {
                 <p className="subtitle hero-subtitle">{featuredMuseums.description}</p>
                 <Link to={`/museums/${featuredMuseums.id}`} >
                   <button className="button is-white is-fullwidth visitWebiteBtn is-large">
-                    {/* <i className="fas fa-info-circle infoIcon">
-                    </i>  */}
                     More Info
                   </button>
                 </Link>
@@ -81,7 +70,3 @@ const FeaturedMuseum = () => {
 }
 
 export default FeaturedMuseum
-
-// {
-//   params: { id: '' }
-// })

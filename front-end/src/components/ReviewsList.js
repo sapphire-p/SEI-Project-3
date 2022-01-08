@@ -32,6 +32,7 @@ const ReviewsList = (props) => {
         setUserId(data.id)
       } catch (err) {
         setHasError(true)
+        console.log(hasError)
       }
     }
     getUserId()
@@ -52,7 +53,7 @@ const ReviewsList = (props) => {
     }
   }
 
-  console.log(hasError)
+
   return (
     <li key={props._id}>
       <div id='single-review-card' className='card p-3 m-1'>
@@ -70,7 +71,7 @@ const ReviewsList = (props) => {
           </div>
           <div>
             <p className='is-size-7'>- {props.owner.username}</p>
-          </div> 
+          </div>
         </div>
       </div>
     </li>

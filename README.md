@@ -21,6 +21,8 @@ I worked on this project as part of a team of four developers, with [Isaac Frank
 
 **This project has been deployed online and can be viewed [HERE](https://museummapper.herokuapp.com/).**
 
+(Please allow a few seconds for it to load!)
+
 To access all features you can create an account by clicking Register, or feel free to use the test login, which is ‘admin59’ for both username and password.
 
 ## The Brief

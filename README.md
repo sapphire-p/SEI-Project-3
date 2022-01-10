@@ -1,17 +1,17 @@
 # SEI Project 3: Museum Mapper
 
 ## Contents
-* [Deployed Project Link](https://github.com/sapphire-p/SEI-Project-4#deployed-project-link)
-* [The Brief](https://github.com/sapphire-p/SEI-Project-4#the-brief)
-* [Overview and Concept](https://github.com/sapphire-p/SEI-Project-4#overview-and-concept)
-* [Code Installation](https://github.com/sapphire-p/SEI-Project-4#code-installation)
-* [Technologies Used](https://github.com/sapphire-p/SEI-Project-4#technologies-used)
-* [Planning](https://github.com/sapphire-p/SEI-Project-4#planning)
-* [Development Process](https://github.com/sapphire-p/SEI-Project-4#tdevelopment-process)
-* [Challenges](https://github.com/sapphire-p/SEI-Project-4#challenges)
-* [Wins](https://github.com/sapphire-p/SEI-Project-4#wins)
-* [Future Improvements](https://github.com/sapphire-p/SEI-Project-4#future-improvements)
-* [Key Learnings](https://github.com/sapphire-p/SEI-Project-4#key-learnings)
+* [Deployed Project Link](https://github.com/sapphire-p/SEI-Project-3#deployed-project-link)
+* [The Brief](https://github.com/sapphire-p/SEI-Project-3#the-brief)
+* [Overview and Concept](https://github.com/sapphire-p/SEI-Project-3#overview-and-concept)
+* [Code Installation](https://github.com/sapphire-p/SEI-Project-3#code-installation)
+* [Technologies Used](https://github.com/sapphire-p/SEI-Project-3#technologies-used)
+* [Planning](https://github.com/sapphire-p/SEI-Project-3#planning)
+* [Development Process](https://github.com/sapphire-p/SEI-Project-3#tdevelopment-process)
+* [Challenges](https://github.com/sapphire-p/SEI-Project-3#challenges)
+* [Wins](https://github.com/sapphire-p/SEI-Project-3#wins)
+* [Future Improvements](https://github.com/sapphire-p/SEI-Project-3#future-improvements)
+* [Key Learnings](https://github.com/sapphire-p/SEI-Project-3#key-learnings)
 
 ## Deployed Project Link
 
@@ -56,7 +56,7 @@ Features include:
 My particular contributions included building registration and login components to enable user authentication, an interactive map using Mapbox API and react-map-gl, and multiple filters and search functionality to improve user experience. I also contributed much error handling and styling using Bulma and CSS.
 
 <p align="center">
-<img width="750" alt="Map-view" src="https://user-images.githubusercontent.com/84339614/148815586-0da3447e-102f-45d9-86ee-60505456b89b.png">
+<img width="760" alt="Map-view" src="https://user-images.githubusercontent.com/84339614/148815586-0da3447e-102f-45d9-86ee-60505456b89b.png">
 </p>
 
 <p align="center">

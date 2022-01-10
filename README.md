@@ -55,15 +55,15 @@ Features include:
 
 My particular contributions included building registration and login components to enable user authentication, an interactive map using Mapbox API and react-map-gl, and multiple filters and search functionality to improve user experience. I also contributed much error handling and styling using Bulma and CSS.
 
-<img width="1000" alt="Map-view" src="https://user-images.githubusercontent.com/84339614/148815586-0da3447e-102f-45d9-86ee-60505456b89b.png">
+<img width="800" alt="Map-view" src="https://user-images.githubusercontent.com/84339614/148815586-0da3447e-102f-45d9-86ee-60505456b89b.png">
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/84339614/148815698-6170c7b1-b185-40d0-9c2d-96a7a1768899.png" height="260" alt="Map Index">
-  <img src="https://user-images.githubusercontent.com/84339614/148815718-89be0163-c3e2-4f06-8a0b-602723738d76.png" height="260" alt="Museum Show">
+  <img src="https://user-images.githubusercontent.com/84339614/148815698-6170c7b1-b185-40d0-9c2d-96a7a1768899.png" height="250" alt="Map Index">
+  <img src="https://user-images.githubusercontent.com/84339614/148815718-89be0163-c3e2-4f06-8a0b-602723738d76.png" height="250" alt="Museum Show">
 </p>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/84339614/148816263-59f8ae4b-edbf-4a06-b8c7-62dff97588c1.png" height="260" alt="Profile page">
-  <img src="https://user-images.githubusercontent.com/84339614/148816273-ab2bcdac-0f66-4f80-b997-596e90238412.png" height="260" alt="Standout Exhibits">
+  <img src="https://user-images.githubusercontent.com/84339614/148816263-59f8ae4b-edbf-4a06-b8c7-62dff97588c1.png" height="250" alt="Profile page">
+  <img src="https://user-images.githubusercontent.com/84339614/148816273-ab2bcdac-0f66-4f80-b997-596e90238412.png" height="250" alt="Standout Exhibits">
 </p>
 
 ## Code Installation

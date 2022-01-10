@@ -55,7 +55,7 @@ Features include:
 
 My particular contributions included building registration and login components to enable user authentication, an interactive map using Mapbox API and react-map-gl, and multiple filters and search functionality to improve user experience. I also contributed much error handling and styling using Bulma and CSS.
 
-<img width="800" alt="Map-view" src="https://user-images.githubusercontent.com/84339614/148815586-0da3447e-102f-45d9-86ee-60505456b89b.png">
+<img width="1000" alt="Map-view" src="https://user-images.githubusercontent.com/84339614/148815586-0da3447e-102f-45d9-86ee-60505456b89b.png">
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/84339614/148815698-6170c7b1-b185-40d0-9c2d-96a7a1768899.png" height="250" alt="Map Index">

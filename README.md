@@ -105,7 +105,6 @@ If you would like to explore the code on your local machine:
 * Axios
 * Bulma
 * CSS
-* Http-proxy-middleware
 * react-map-gl
 
 **Other technologies**
@@ -115,8 +114,6 @@ If you would like to explore the code on your local machine:
 * Yarn
 * Insomnia
 * Git / GitHub
-* Chrome DevTools
-* React Developer Tools
 * Heroku (deployment)
 
 
